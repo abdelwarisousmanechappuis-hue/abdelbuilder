@@ -3,15 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" type="image/svg+xml" href="img/icon.svg">
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect x='2' y='6' width='28' height='20' rx='4' stroke='%236c5ce7' stroke-width='2' fill='none'/><line x1='10' y1='28' x2='22' y2='28' stroke='%236c5ce7' stroke-width='2' stroke-linecap='round'/><line x1='16' y1='26' x2='16' y2='28' stroke='%236c5ce7' stroke-width='2' stroke-linecap='round'/><text x='16' y='21' text-anchor='middle' font-size='12' font-weight='800' fill='%236c5ce7' font-family='Inter,sans-serif'>AB</text></svg>">
     <title>AbdelBuilder - Création de site web professionnel | Site vitrine & E-commerce</title>
     <meta name="description" content="Création de site vitrine et boutique e-commerce par AbdelBuilder. Design moderne, responsive, livré rapidement. Offre de lancement : site vitrine offert pour les 3 premiers clients.">
     <meta name="keywords" content="création site web, site vitrine, e-commerce, développeur freelance, site internet pas cher, site professionnel, abdelbuilder">
     <meta name="robots" content="index, follow">
-    <link rel="canonical" href="https://abdelwarisousmanechappuis-hue.github.io/abdelbuilder/">
+    <link rel="canonical" href="https://abdelbuilder.netlify.app">
     <meta property="og:title" content="AbdelBuilder - Création de site web professionnel">
     <meta property="og:description" content="Création de site vitrine et boutique e-commerce. Design moderne, responsive, livré rapidement. Offre de lancement disponible.">
-    <meta property="og:url" content="https://abdelwarisousmanechappuis-hue.github.io/abdelbuilder/">
+    <meta property="og:url" content="https://abdelbuilder.netlify.app">
     <meta property="og:type" content="website">
     <meta property="og:locale" content="fr_FR">
     <meta name="twitter:card" content="summary_large_image">
@@ -25,7 +25,7 @@
         "@context": "https://schema.org",
         "@type": "WebSite",
         "name": "AbdelBuilder",
-        "url": "https://abdelwarisousmanechappuis-hue.github.io/abdelbuilder/",
+        "url": "https://abdelbuilder.netlify.app",
         "description": "Création de sites vitrines et e-commerce professionnels.",
         "author": {
             "@type": "Person",
@@ -66,16 +66,27 @@
     <nav class="navbar">
         <div class="container">
 <a href="#" class="logo">
-    <img src="img/icon.svg" alt="AbdelBuilder" width="32" height="32" style="vertical-align:middle;margin-right:8px;">
+    <svg width="32" height="32" viewBox="0 0 32 32" fill="none" style="vertical-align:middle;margin-right:8px;">
+        <rect x="2" y="6" width="28" height="20" rx="4" stroke="url(#lg1)" stroke-width="2" fill="none"/>
+        <line x1="10" y1="28" x2="22" y2="28" stroke="url(#lg1)" stroke-width="2" stroke-linecap="round"/>
+        <line x1="16" y1="26" x2="16" y2="28" stroke="url(#lg1)" stroke-width="2" stroke-linecap="round"/>
+        <text x="16" y="21" text-anchor="middle" font-size="12" font-weight="800" fill="url(#lg1)" font-family="Inter,sans-serif">AB</text>
+        <defs>
+            <linearGradient id="lg1" x1="0" y1="0" x2="32" y2="32">
+                <stop stop-color="#6c5ce7"/>
+                <stop offset="1" stop-color="#00cec9"/>
+            </linearGradient>
+        </defs>
+    </svg>
     AbdelBuilder
 </a>
             <ul class="nav-links" id="navLinks">
                 <li><a href="#about">À propos</a></li>
-                <li><a href="services.html">Services</a></li>
+                <li><a href="#services">Services</a></li>
                 <li><a href="#pricing">Tarifs</a></li>
-                <li><a href="blog.html">Blog</a></li>
                 <li><a href="#contact">Devis gratuit</a></li>
                 <li><a href="#reviews">Avis</a></li>
+                <li><a id="authNavBtn" style="cursor:pointer;">Connexion</a></li>
             </ul>
             <div class="hamburger" id="hamburger">
                 <span></span>
@@ -93,7 +104,7 @@
                 <p>Un site vitrine ou e-commerce sur mesure, design moderne, responsive, livré en 1 semaine. <strong>Satisfait ou remboursé.</strong></p>
                 <div class="hero-actions">
                     <a href="#contact" class="btn btn-primary">💎 Obtenir mon site pro <i class="fas fa-arrow-right"></i></a>
-                    <a href="services.html" class="btn btn-outline">Voir mes services</a>
+                    <a href="#pricing" class="btn btn-outline">Voir mes offres</a>
                 </div>
                 <div class="hero-proof">
                     <div class="proof-item"><i class="fas fa-check-circle"></i> Déjà <strong>3 sites</strong> livrés</div>
@@ -345,15 +356,9 @@
                 <div class="contact-sidebar">
                     <div class="contact-info">
                         <div class="info-card">
-                            <i class="fab fa-whatsapp"></i>
-                            <h4>WhatsApp</h4>
-                            <p><a href="https://wa.me/33604057265" target="_blank" rel="noopener" class="whatsapp-link">06 04 05 72 65</a></p>
-                            <span class="info-badge">Réponse immédiate</span>
-                        </div>
-                        <div class="info-card">
                             <i class="fas fa-envelope"></i>
                             <h4>Email</h4>
-                            <p class="email-contact">abdelbuildepro@proton.me</p>
+                            <p>abdelbuildepro@proton.me</p>
                             <span class="info-badge">Réponse sous 24h</span>
                         </div>
                         <div class="info-card">
@@ -470,7 +475,18 @@
             <div class="footer-content">
                 <div class="footer-brand">
 <a href="#" class="logo">
-    <img src="img/icon.svg" alt="AbdelBuilder" width="32" height="32" style="vertical-align:middle;margin-right:8px;">
+    <svg width="32" height="32" viewBox="0 0 32 32" fill="none" style="vertical-align:middle;margin-right:8px;">
+        <rect x="2" y="6" width="28" height="20" rx="4" stroke="url(#lg)" stroke-width="2" fill="none"/>
+        <line x1="10" y1="28" x2="22" y2="28" stroke="url(#lg)" stroke-width="2" stroke-linecap="round"/>
+        <line x1="16" y1="26" x2="16" y2="28" stroke="url(#lg)" stroke-width="2" stroke-linecap="round"/>
+        <text x="16" y="21" text-anchor="middle" font-size="12" font-weight="800" fill="url(#lg)" font-family="Inter,sans-serif">AB</text>
+        <defs>
+            <linearGradient id="lg" x1="0" y1="0" x2="32" y2="32">
+                <stop stop-color="#6c5ce7"/>
+                <stop offset="1" stop-color="#00cec9"/>
+            </linearGradient>
+        </defs>
+    </svg>
     AbdelBuilder
 </a>
                     <p>Des sites professionnels pour tous.</p>
@@ -479,9 +495,8 @@
                     <h4>Liens</h4>
                     <ul>
                         <li><a href="#about">À propos</a></li>
-                        <li><a href="services.html">Services</a></li>
+                        <li><a href="#services">Services</a></li>
                         <li><a href="#pricing">Tarifs</a></li>
-                        <li><a href="blog.html">Blog</a></li>
                         <li><a href="#contact">Contact</a></li>
                     </ul>
                 </div>

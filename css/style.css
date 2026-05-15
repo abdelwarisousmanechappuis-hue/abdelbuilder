@@ -141,15 +141,14 @@ body {
     display: inline-block;
     padding: 8px 20px;
     border-radius: 50px;
-    background: linear-gradient(135deg, rgba(255, 45, 45, 0.25), rgba(204, 0, 0, 0.25));
-    color: #ff2d2d;
-    font-size: 0.85rem;
-    font-weight: 800;
+    background: linear-gradient(135deg, rgba(255, 107, 107, 0.2), rgba(238, 90, 36, 0.2));
+    color: #ff6b6b;
+    font-size: 0.8rem;
+    font-weight: 700;
     margin-bottom: 20px;
-    border: 1px solid rgba(255, 45, 45, 0.5);
+    border: 1px solid rgba(255, 107, 107, 0.3);
     text-transform: uppercase;
-    letter-spacing: 1px;
-    animation: pulseBadge 1.5s infinite;
+    letter-spacing: 0.5px;
 }
 
 .hero h1 {
@@ -628,23 +627,22 @@ section {
     top: -14px;
     left: 50%;
     transform: translateX(-50%);
-    background: linear-gradient(135deg, #ff2d2d, #cc0000);
+    background: linear-gradient(135deg, #ff6b6b, #ee5a24);
     color: #fff;
-    font-size: 0.85rem;
-    font-weight: 900;
-    padding: 8px 24px;
+    font-size: 0.8rem;
+    font-weight: 800;
+    padding: 6px 20px;
     border-radius: 50px;
     white-space: nowrap;
     text-transform: uppercase;
-    letter-spacing: 2px;
-    box-shadow: 0 4px 25px rgba(204, 0, 0, 0.6);
-    animation: pulseBadge 1.2s infinite;
-    border: 2px solid #ff6b6b;
+    letter-spacing: 1px;
+    box-shadow: 0 4px 20px rgba(238, 90, 36, 0.5);
+    animation: pulseBadge 2s infinite;
 }
 
 @keyframes pulseBadge {
-    0%, 100% { transform: translateX(-50%) scale(1); box-shadow: 0 4px 25px rgba(204, 0, 0, 0.6); }
-    50% { transform: translateX(-50%) scale(1.08); box-shadow: 0 4px 40px rgba(204, 0, 0, 0.9); }
+    0%, 100% { transform: translateX(-50%) scale(1); }
+    50% { transform: translateX(-50%) scale(1.05); }
 }
 
 .pricing-card h3 {
@@ -661,16 +659,8 @@ section {
 
 .pricing-price .price {
     font-size: 3rem;
-    font-weight: 900;
+    font-weight: 800;
     color: #fff;
-    text-shadow: 0 0 30px rgba(108, 92, 231, 0.3);
-    letter-spacing: 1px;
-}
-
-.pricing-card.featured .pricing-price .price {
-    color: #00ff88;
-    text-shadow: 0 0 40px rgba(0, 255, 136, 0.4);
-    font-size: 3.5rem;
 }
 
 .pricing-price .price-note {
@@ -678,12 +668,6 @@ section {
     font-size: 0.85rem;
     color: var(--text-muted);
     margin-top: 4px;
-}
-
-.pricing-card.featured .pricing-price .price-note {
-    color: #ff6b6b;
-    font-weight: 700;
-    font-size: 0.9rem;
 }
 
 .pricing-features {
@@ -888,24 +872,6 @@ section {
     font-size: 0.85rem;
     color: var(--text-muted);
     margin-bottom: 8px;
-}
-
-.whatsapp-link {
-    color: #25D366;
-    text-decoration: none;
-    font-weight: 700;
-    font-size: 1.1rem;
-    letter-spacing: 0.5px;
-    transition: color 0.2s;
-}
-.whatsapp-link:hover {
-    color: #1ebe5d;
-    text-decoration: underline;
-}
-
-.email-contact {
-    color: #74b9ff !important;
-    font-weight: 600;
 }
 
 .info-badge {
