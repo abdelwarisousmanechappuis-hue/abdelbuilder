@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Coiffure Céline D - Salon de coiffure | Le Châtelard</title>
     <meta name="description" content="Salon de coiffure Céline D au Le Châtelard. Coupe homme, femme, enfant, coloration, lissage, extensions. Ambiance chaleureuse et professionnelle. Prenez rendez-vous !">
-    <link rel="icon" type="image/png" href="images/logo-salon.png">
+    <link rel="icon" type="image/png" href="images/logo-salon.png?v=1">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
     <style>
@@ -39,8 +39,8 @@
             padding: 16px 0; transition: all 0.3s;
         }
         .navbar .container { display: flex; align-items: center; justify-content: space-between; }
-        .logo { display: flex; align-items: center; }
-        .logo img { height: 40px; width: auto; display: block; }
+        .logo { display: flex; align-items: center; height: 40px; }
+        .logo img { height: 100%; width: auto; max-width: 200px; object-fit: contain; }
         .nav-links { list-style: none; display: flex; align-items: center; gap: 32px; }
         .nav-links a { font-size: 0.8rem; font-weight: 500; color: #8b7d72; text-transform: uppercase; letter-spacing: 1.5px; transition: color 0.3s; }
         .nav-links a:hover { color: #3d322c; }
@@ -276,7 +276,7 @@
 
     <nav class="navbar">
         <div class="container">
-            <a href="#" class="logo"><img src="images/logo-salon.png" alt="Coiffure Céline D." style="height:36px;width:auto;vertical-align:middle;"></a>
+            <a href="#" class="logo"><img src="images/logo-salon.png?v=1" alt="Coiffure Céline D."></a>
             <ul class="nav-links">
                 <li><a href="#presentation">Présentation</a></li>
                 <li><a href="#prestations">Prestations</a></li>
