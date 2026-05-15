@@ -13,8 +13,8 @@
         html { scroll-behavior: smooth; }
         body {
             font-family: 'Inter', sans-serif;
-            background: #f7f3ef;
-            color: #6b5d53;
+            background: #f5f7f4;
+            color: #4a5a4c;
             line-height: 1.7;
             overflow-x: hidden;
             -webkit-font-smoothing: antialiased;
@@ -26,7 +26,7 @@
 
         .section-tag {
             display: inline-block; padding: 6px 20px; border-radius: 50px;
-            background: rgba(201, 176, 160, 0.15); color: #8b7d72;
+            background: rgba(92, 138, 103, 0.12); color: #5c8a67;
             font-size: 0.65rem; font-weight: 600; text-transform: uppercase; letter-spacing: 3px;
             margin-bottom: 20px;
         }
@@ -34,22 +34,22 @@
         /* ── NAVBAR ── */
         .navbar {
             position: fixed; top: 0; width: 100%; z-index: 100;
-            background: rgba(247, 243, 239, 0.95); backdrop-filter: blur(20px);
-            border-bottom: 1px solid rgba(139, 125, 114, 0.08);
+            background: rgba(245, 247, 244, 0.95); backdrop-filter: blur(20px);
+            border-bottom: 1px solid rgba(92, 138, 103, 0.08);
             padding: 16px 0; transition: all 0.3s;
         }
         .navbar .container { display: flex; align-items: center; justify-content: space-between; }
-        .logo { display: flex; align-items: center; height: 40px; }
-        .logo img { height: 100%; width: auto; max-width: 200px; object-fit: contain; }
+        .logo { display: flex; align-items: center; height: 52px; }
+        .logo img { height: 100%; width: auto; max-width: 240px; object-fit: contain; }
         .nav-links { list-style: none; display: flex; align-items: center; gap: 32px; }
-        .nav-links a { font-size: 0.8rem; font-weight: 500; color: #8b7d72; text-transform: uppercase; letter-spacing: 1.5px; transition: color 0.3s; }
-        .nav-links a:hover { color: #3d322c; }
+        .nav-links a { font-size: 0.8rem; font-weight: 500; color: #5c8a67; text-transform: uppercase; letter-spacing: 1.5px; transition: color 0.3s; }
+        .nav-links a:hover { color: #2c4230; }
         .nav-cta {
             padding: 10px 24px; border-radius: 50px;
-            background: #3d322c; color: #f7f3ef !important; font-weight: 500;
+            background: #2c4230; color: #f5f7f4 !important; font-weight: 500;
             letter-spacing: 1px; font-size: 0.75rem;
         }
-        .nav-cta:hover { background: #2a1f1a; color: #fff !important; }
+        .nav-cta:hover { background: #1a2e1d; color: #fff !important; }
 
         /* ── HERO ── */
         .hero {
@@ -60,23 +60,23 @@
         .hero::before {
             content: ''; position: absolute; top: -30%; right: -15%;
             width: 700px; height: 700px; border-radius: 50%;
-            background: radial-gradient(circle, rgba(201, 176, 160, 0.08) 0%, transparent 70%);
+            background: radial-gradient(circle, rgba(92, 138, 103, 0.08) 0%, transparent 70%);
         }
         .hero-content { position: relative; z-index: 1; max-width: 680px; }
         .hero-badge {
             display: inline-flex; align-items: center; gap: 8px;
             padding: 8px 20px; border-radius: 50px;
-            background: rgba(139, 125, 114, 0.08); border: 1px solid rgba(139, 125, 114, 0.1);
-            color: #8b7d72; font-size: 0.75rem; font-weight: 500; letter-spacing: 0.5px; margin-bottom: 32px;
+            background: rgba(92, 138, 103, 0.08); border: 1px solid rgba(92, 138, 103, 0.1);
+            color: #5c8a67; font-size: 0.75rem; font-weight: 500; letter-spacing: 0.5px; margin-bottom: 32px;
         }
         .hero h1 {
             font-family: 'Cormorant Garamond', serif;
-            font-size: 4rem; font-weight: 600; color: #3d322c; line-height: 1.1;
+            font-size: 4rem; font-weight: 600; color: #2c4230; line-height: 1.1;
             margin-bottom: 20px; letter-spacing: -0.5px;
         }
-        .hero h1 em { font-style: italic; color: #8b7d72; }
+        .hero h1 em { font-style: italic; color: #5c8a67; }
         .hero p {
-            font-size: 1rem; color: #7a6b60; max-width: 520px;
+            font-size: 1rem; color: #5a725c; max-width: 520px;
             margin-bottom: 40px; line-height: 1.8; font-weight: 300;
         }
         .hero-actions { display: flex; gap: 16px; flex-wrap: wrap; margin-bottom: 44px; }
@@ -86,49 +86,48 @@
             font-size: 0.85rem; transition: all 0.4s; cursor: pointer; border: none; letter-spacing: 0.3px;
         }
         .btn-primary {
-            background: #3d322c; color: #f7f3ef;
-            box-shadow: 0 4px 24px rgba(61, 50, 44, 0.15);
+            background: #2c4230; color: #f5f7f4;
+            box-shadow: 0 4px 24px rgba(44, 66, 48, 0.15);
         }
-        .btn-primary:hover { transform: translateY(-3px); box-shadow: 0 8px 36px rgba(61, 50, 44, 0.2); background: #2a1f1a; }
+        .btn-primary:hover { transform: translateY(-3px); box-shadow: 0 8px 36px rgba(44, 66, 48, 0.2); background: #1a2e1d; }
         .btn-outline {
-            background: transparent; color: #3d322c;
-            border: 1px solid rgba(61, 50, 44, 0.2);
+            background: transparent; color: #2c4230;
+            border: 1px solid rgba(44, 66, 48, 0.2);
         }
-        .btn-outline:hover { border-color: #3d322c; background: rgba(61, 50, 44, 0.03); }
-        .hero-proof { display: flex; gap: 32px; flex-wrap: wrap; }
-        .hero-proof span { font-size: 0.82rem; color: #8b7d72; display: flex; align-items: center; gap: 8px; font-weight: 400; }
-        .hero-proof i { color: #8b7d72; font-size: 0.75rem; }
+        .btn-outline:hover { border-color: #2c4230; background: rgba(44, 66, 48, 0.03); }
+        .hero-proof span { font-size: 0.82rem; color: #5c8a67; display: flex; align-items: center; gap: 8px; font-weight: 400; }
+        .hero-proof i { color: #5c8a67; font-size: 0.75rem; }
 
         /* ── SECTIONS ── */
         section { padding: 110px 0; }
         .section-header { text-align: center; margin-bottom: 64px; }
         .section-header h2 {
             font-family: 'Cormorant Garamond', serif;
-            font-size: 2.8rem; font-weight: 600; color: #3d322c; margin-bottom: 12px; letter-spacing: -0.3px;
+            font-size: 2.8rem; font-weight: 600; color: #2c4230; margin-bottom: 12px; letter-spacing: -0.3px;
         }
-        .section-header h2 em { font-style: italic; color: #8b7d72; }
-        .section-header p { color: #8b7d72; font-size: 0.92rem; max-width: 480px; margin: 0 auto; font-weight: 300; }
+        .section-header h2 em { font-style: italic; color: #5c8a67; }
+        .section-header p { color: #5c8a67; font-size: 0.92rem; max-width: 480px; margin: 0 auto; font-weight: 300; }
 
         /* ── ABOUT ── */
         .about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 64px; align-items: center; }
         .about-visual {
-            background: rgba(201, 176, 160, 0.06);
-            border: 1px solid rgba(201, 176, 160, 0.1); border-radius: 24px;
+            background: rgba(92, 138, 103, 0.05);
+            border: 1px solid rgba(92, 138, 103, 0.1); border-radius: 24px;
             padding: 80px 40px; text-align: center; min-height: 320px;
             display: flex; flex-direction: column; align-items: center; justify-content: center;
         }
-        .about-visual i { font-size: 2.8rem; color: #c9b0a0; margin-bottom: 16px; }
-        .about-visual p { color: #b8a898; font-size: 0.8rem; font-style: italic; letter-spacing: 0.5px; }
+        .about-visual i { font-size: 2.8rem; color: #8fb896; margin-bottom: 16px; }
+        .about-visual p { color: #a0b8a3; font-size: 0.8rem; font-style: italic; letter-spacing: 0.5px; }
         .about-text h2 {
-            font-family: 'Cormorant Garamond', serif; font-size: 2.2rem; font-weight: 600; color: #3d322c; margin-bottom: 20px;
+            font-family: 'Cormorant Garamond', serif; font-size: 2.2rem; font-weight: 600; color: #2c4230; margin-bottom: 20px;
         }
-        .about-text p { color: #6b5d53; margin-bottom: 12px; font-size: 0.92rem; line-height: 1.8; font-weight: 300; }
+        .about-text p { color: #4a5a4c; margin-bottom: 12px; font-size: 0.92rem; line-height: 1.8; font-weight: 300; }
         .about-features { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-top: 24px; }
         .about-features li {
             display: flex; align-items: center; gap: 10px;
-            color: #6b5d53; font-size: 0.85rem; list-style: none; font-weight: 400;
+            color: #4a5a4c; font-size: 0.85rem; list-style: none; font-weight: 400;
         }
-        .about-features li i { color: #c9b0a0; font-size: 0.7rem; }
+        .about-features li i { color: #8fb896; font-size: 0.7rem; }
 
         /* ── SERVICES ── */
         .services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 20px; }
@@ -138,9 +137,9 @@
             box-shadow: 0 2px 20px rgba(0,0,0,0.03);
         }
         .service-card:hover { border-color: rgba(201, 176, 160, 0.15); box-shadow: 0 8px 32px rgba(0,0,0,0.04); transform: translateY(-2px); }
-        .service-card i { font-size: 1.6rem; color: #c9b0a0; margin-bottom: 16px; display: block; }
-        .service-card h3 { font-size: 1rem; color: #3d322c; margin-bottom: 8px; font-weight: 500; }
-        .service-card p { font-size: 0.82rem; color: #8b7d72; line-height: 1.7; font-weight: 300; }
+        .service-card i { font-size: 1.6rem; color: #8fb896; margin-bottom: 16px; display: block; }
+        .service-card h3 { font-size: 1rem; color: #2c4230; margin-bottom: 8px; font-weight: 500; }
+        .service-card p { font-size: 0.82rem; color: #5c8a67; line-height: 1.7; font-weight: 300; }
 
         /* ── PRICING ── */
         .pricing-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 24px; }
@@ -155,12 +154,12 @@
             box-shadow: 0 4px 28px rgba(61, 50, 44, 0.04);
         }
         .pricing-card .icon { font-size: 2rem; margin-bottom: 16px; display: block; }
-        .pricing-card h3 { font-family: 'Cormorant Garamond', serif; font-size: 1.3rem; color: #3d322c; margin-bottom: 8px; font-weight: 600; }
-        .pricing-card .price { font-size: 2.2rem; font-weight: 600; color: #3d322c; margin: 16px 0; }
-        .pricing-card .price small { font-size: 0.85rem; font-weight: 300; color: #8b7d72; }
+        .pricing-card h3 { font-family: 'Cormorant Garamond', serif; font-size: 1.3rem; color: #2c4230; margin-bottom: 8px; font-weight: 600; }
+        .pricing-card .price { font-size: 2.2rem; font-weight: 600; color: #2c4230; margin: 16px 0; }
+        .pricing-card .price small { font-size: 0.85rem; font-weight: 300; color: #5c8a67; }
         .pricing-card ul { list-style: none; margin: 20px 0 28px; text-align: left; }
-        .pricing-card li { padding: 7px 0; font-size: 0.82rem; color: #6b5d53; display: flex; align-items: center; gap: 10px; font-weight: 300; }
-        .pricing-card li i { color: #c9b0a0; font-size: 0.7rem; }
+        .pricing-card li { padding: 7px 0; font-size: 0.82rem; color: #4a5a4c; display: flex; align-items: center; gap: 10px; font-weight: 300; }
+        .pricing-card li i { color: #8fb896; font-size: 0.7rem; }
         .pricing-card .btn { width: 100%; justify-content: center; }
 
         /* ── GALLERY ── */
@@ -179,7 +178,7 @@
             background-color: rgba(201, 176, 160, 0.06);
             border: 1px solid rgba(201, 176, 160, 0.06);
             display: flex; align-items: center; justify-content: center;
-            color: #c9b0a0; font-size: 0.78rem; text-align: center; padding: 20px;
+            color: #8fb896; font-size: 0.78rem; text-align: center; padding: 20px;
             transition: all 0.3s; cursor: pointer;
             background-size: cover; background-position: center;
         }
@@ -193,32 +192,32 @@
             border-radius: 16px; padding: 32px;
             box-shadow: 0 2px 20px rgba(0,0,0,0.03);
         }
-        .review-card .stars { color: #c9b0a0; font-size: 0.85rem; margin-bottom: 12px; letter-spacing: 2px; }
-        .review-card .name { font-weight: 500; color: #3d322c; font-size: 0.9rem; }
-        .review-card .date { font-size: 0.72rem; color: #b8a898; margin-top: 2px; }
-        .review-card .text { font-size: 0.85rem; color: #6b5d53; margin: 12px 0 0; font-style: italic; line-height: 1.7; font-weight: 300; }
+        .review-card .stars { color: #8fb896; font-size: 0.85rem; margin-bottom: 12px; letter-spacing: 2px; }
+        .review-card .name { font-weight: 500; color: #2c4230; font-size: 0.9rem; }
+        .review-card .date { font-size: 0.72rem; color: #a0b8a3; margin-top: 2px; }
+        .review-card .text { font-size: 0.85rem; color: #4a5a4c; margin: 12px 0 0; font-style: italic; line-height: 1.7; font-weight: 300; }
 
         /* ── CONTACT ── */
         .contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 64px; }
-        .contact-info h3 { font-family: 'Cormorant Garamond', serif; font-size: 1.5rem; color: #3d322c; margin-bottom: 20px; font-weight: 600; }
-        .contact-info p { color: #6b5d53; font-size: 0.88rem; margin-bottom: 10px; display: flex; align-items: center; gap: 12px; font-weight: 300; }
-        .contact-info i { color: #c9b0a0; width: 20px; text-align: center; font-size: 0.9rem; }
+        .contact-info h3 { font-family: 'Cormorant Garamond', serif; font-size: 1.5rem; color: #2c4230; margin-bottom: 20px; font-weight: 600; }
+        .contact-info p { color: #4a5a4c; font-size: 0.88rem; margin-bottom: 10px; display: flex; align-items: center; gap: 12px; font-weight: 300; }
+        .contact-info i { color: #8fb896; width: 20px; text-align: center; font-size: 0.9rem; }
         .contact-card {
             background: #fff; border: 1px solid rgba(201, 176, 160, 0.06);
             border-radius: 16px; padding: 32px; margin-bottom: 20px;
             box-shadow: 0 2px 20px rgba(0,0,0,0.03);
         }
         .hours-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 8px 24px; margin: 20px 0 0; }
-        .hours-grid .day { color: #8b7d72; font-size: 0.82rem; font-weight: 400; }
-        .hours-grid .time { color: #3d322c; font-size: 0.82rem; font-weight: 500; text-align: right; }
-        .hours-grid .closed { color: #c9b0a0; font-size: 0.82rem; text-align: right; }
+        .hours-grid .day { color: #5c8a67; font-size: 0.82rem; font-weight: 400; }
+        .hours-grid .time { color: #2c4230; font-size: 0.82rem; font-weight: 500; text-align: right; }
+        .hours-grid .closed { color: #8fb896; font-size: 0.82rem; text-align: right; }
         .map-placeholder {
             border-radius: 16px; overflow: hidden; min-height: 260px;
             background: rgba(201, 176, 160, 0.05); border: 1px solid rgba(201, 176, 160, 0.06);
             display: flex; flex-direction: column; align-items: center; justify-content: center;
-            color: #8b7d72; padding: 40px;
+            color: #5c8a67; padding: 40px;
         }
-        .map-placeholder i { font-size: 2.2rem; color: #c9b0a0; margin-bottom: 12px; }
+        .map-placeholder i { font-size: 2.2rem; color: #8fb896; margin-bottom: 12px; }
         .map-placeholder p { font-size: 0.85rem; text-align: center; line-height: 1.6; }
         .map-placeholder .btn { margin-top: 16px; }
 
@@ -229,19 +228,19 @@
             padding: 64px; text-align: center; margin-top: 40px;
             box-shadow: 0 4px 32px rgba(0,0,0,0.03);
         }
-        .cta-block h2 { font-family: 'Cormorant Garamond', serif; font-size: 2.2rem; font-weight: 600; color: #3d322c; margin-bottom: 12px; }
-        .cta-block p { color: #8b7d72; margin-bottom: 28px; font-weight: 300; }
+        .cta-block h2 { font-family: 'Cormorant Garamond', serif; font-size: 2.2rem; font-weight: 600; color: #2c4230; margin-bottom: 12px; }
+        .cta-block p { color: #5c8a67; margin-bottom: 28px; font-weight: 300; }
         .cta-block .btn { font-size: 1rem; padding: 16px 44px; }
 
         /* ── FOOTER ── */
         .footer {
             border-top: 1px solid rgba(201, 176, 160, 0.06); padding: 32px 0;
-            text-align: center; font-size: 0.78rem; color: #b8a898; font-weight: 300;
+            text-align: center; font-size: 0.78rem; color: #a0b8a3; font-weight: 300;
         }
-        .footer a { color: #8b7d72; font-weight: 400; }
+        .footer a { color: #5c8a67; font-weight: 400; }
 
         /* ── DIVIDER ── */
-        .section-alt { background: rgba(201, 176, 160, 0.04); }
+        .section-alt { background: rgba(92, 138, 103, 0.04); }
 
         /* ── RESPONSIVE ── */
             @media (max-width: 768px) {
@@ -327,7 +326,7 @@
                 </div>
                 <div>
                     <span class="section-tag">Présentation</span>
-                    <h2 class="about-text" style="font-family:'Cormorant Garamond',serif;font-size:2.2rem;font-weight:600;color:#3d322c;margin-bottom:20px;">Un salon où l'on prend soin de vous</h2>
+                    <h2 class="about-text" style="font-family:'Cormorant Garamond',serif;font-size:2.2rem;font-weight:600;color:#2c4230;margin-bottom:20px;">Un salon où l'on prend soin de vous</h2>
                     <div class="about-text">
                         <p>Niché au cœur du Châtelard, le salon <strong>Coiffure Céline D.</strong> vous accueille dans une ambiance chaleureuse et conviviale. Passionnée par mon métier, je mets tout mon savoir-faire à votre service pour vous offrir une expérience sur mesure.</p>
                         <p>Forte de plusieurs années d'expérience, je vous conseille et vous accompagne pour trouver le style qui vous correspond, dans une démarche de qualité et de proximité.</p>
@@ -497,7 +496,7 @@
                     <div class="contact-card">
                         <h3>Coordonnées</h3>
                         <p><i class="fas fa-map-marker-alt"></i> Immeuble Julioz, 90 place René Cassin<br>73630 Le Châtelard</p>
-                        <p><i class="fas fa-phone"></i> <a href="tel:0479548467" style="color:#8b7d72;font-weight:500;letter-spacing:0.5px;">04 79 54 84 67</a></p>
+                        <p><i class="fas fa-phone"></i> <a href="tel:0479548467" style="color:#5c8a67;font-weight:500;letter-spacing:0.5px;">04 79 54 84 67</a></p>
                         <p><i class="fas fa-credit-card"></i> Chèque — Espèces — CB</p>
                     </div>
                     <div class="contact-card">
@@ -523,7 +522,7 @@
                     </div>
                     <div class="cta-block">
                         <h2>Prêt(e) à prendre rendez-vous ?</h2>
-                        <p>Appelez au <strong style="color:#3d322c;">04 79 54 84 67</strong> ou passez directement au salon.<br>À très vite chez Céline D. !</p>
+                        <p>Appelez au <strong style="color:#2c4230;">04 79 54 84 67</strong> ou passez directement au salon.<br>À très vite chez Céline D. !</p>
                         <a href="tel:0479548467" class="btn btn-primary">
                             <i class="fas fa-phone" style="margin-right:8px;"></i> 04 79 54 84 67
                         </a>
