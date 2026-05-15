@@ -460,27 +460,41 @@ section {
     gap: 10px;
 }
 
-.mockup-line {
-    height: 10px;
-    background: #333;
-    border-radius: 4px;
+.bad-mockup {
+    background: #f5f5f5;
+    border: 2px solid #ccc;
 }
 
-.mockup-square {
-    width: calc(50% - 5px);
-    height: 60px;
-    background: #2a2a4a;
-    border-radius: 6px;
+.bar-ugly span {
+    background: #999 !important;
+}
+
+.bad-body {
+    padding: 0 !important;
+    gap: 0 !important;
+    font-family: 'Arial', sans-serif;
+}
+
+.ugly-line {
+    height: 8px;
+    background: #ddd !important;
+    border-radius: 2px;
+}
+
+.good-mockup {
+    background: #0d0d24;
+}
+
+.good-body {
+    padding: 14px !important;
+    gap: 0 !important;
 }
 
 .good-line {
+    height: 8px;
     background: linear-gradient(90deg, #6c5ce7, #00cec9);
-    opacity: 0.6;
-}
-
-.good-square {
-    background: linear-gradient(135deg, rgba(108,92,231,0.3), rgba(0,206,201,0.2));
-    border: 1px solid rgba(108,92,231,0.2);
+    opacity: 0.4;
+    border-radius: 4px;
 }
 
 .showcase-vs {
