@@ -109,7 +109,7 @@
                 btnSpinner.classList.add('hidden');
             }
 
-            var w3k = localStorage.getItem('web3forms_key') || 'b4adb0a9-f8e8-44ef-a456-777e675efb00';
+            var w3k = localStorage.getItem('web3forms_key') || 'fa94af8e-8b30-4f97-a8dc-63e6f990b365';
             var xhr = new XMLHttpRequest();
             xhr.open('POST', 'https://api.web3forms.com/submit', true);
             xhr.setRequestHeader('Content-Type', 'application/json');
