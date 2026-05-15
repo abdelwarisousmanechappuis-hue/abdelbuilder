@@ -163,9 +163,16 @@
         .pricing-card .btn { width: 100%; justify-content: center; }
 
         /* ── GALLERY ── */
-        .gallery-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
-        .gallery-grid .gallery-item { background-repeat: no-repeat; }
+        .gallery-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+        .gallery-grid .gallery-item { background-repeat: no-repeat; border-radius: 20px; }
         .gallery-grid .gallery-item:hover { transform: scale(1.02); }
+        .gallery-grid .gallery-item.wide { grid-column: span 2; aspect-ratio: 2/1; }
+        .gallery-grid .gallery-item.tall { grid-row: span 2; }
+        .gallery-grid .gallery-item::after { content: '+'; position: absolute; top: 50%; left: 50%; transform: translate(-50%,-50%) scale(0); font-size: 2rem; color: #fff; font-weight: 200; opacity: 0; transition: all 0.3s; z-index: 2; }
+        .gallery-grid .gallery-item:hover::after { transform: translate(-50%,-50%) scale(1); opacity: 0.6; }
+        .gallery-grid .gallery-item::before { content: ''; position: absolute; inset: 0; background: rgba(61,50,44,0); transition: all 0.3s; z-index: 1; border-radius: 20px; }
+        .gallery-grid .gallery-item:hover::before { background: rgba(61,50,44,0.3); }
+        .gallery-item { position: relative; }
         .gallery-item {
             aspect-ratio: 1; border-radius: 16px; overflow: hidden;
             background-color: rgba(201, 176, 160, 0.06);
@@ -241,6 +248,8 @@
             .about-grid, .contact-grid { grid-template-columns: 1fr; gap: 40px; }
             .gallery-grid { grid-template-columns: repeat(2, 1fr); gap: 16px; }
             .gallery-grid .gallery-item { aspect-ratio: 1; }
+            .gallery-grid .gallery-item.wide { grid-column: span 1; aspect-ratio: 1; }
+            .gallery-grid .gallery-item.tall { grid-row: span 1; }
 
             .hours-grid { grid-template-columns: 1fr; }
             .section-header h2 { font-size: 2rem; }
@@ -430,15 +439,15 @@
                 <p>Quelques photos de notre salon</p>
             </div>
             <div class="gallery-grid">
-                <div class="gallery-item" style="background-image:url('images/o.jpg')"><div style="opacity:0;">o</div></div>
-                <div class="gallery-item" style="background-image:url('images/t.jpg')"><div style="opacity:0;">t</div></div>
+                <div class="gallery-item wide" style="background-image:url('images/o.jpg')"><div style="opacity:0;">o</div></div>
+                <div class="gallery-item tall" style="background-image:url('images/t.jpg')"><div style="opacity:0;">t</div></div>
                 <div class="gallery-item" style="background-image:url('images/l.jpg')"><div style="opacity:0;">l</div></div>
                 <div class="gallery-item" style="background-image:url('images/xx.jpg')"><div style="opacity:0;">xx</div></div>
                 <div class="gallery-item" style="background-image:url('images/n.jpg')"><div style="opacity:0;">n</div></div>
                 <div class="gallery-item" style="background-image:url('images/v.jpg')"><div style="opacity:0;">v</div></div>
-                <div class="gallery-item" style="background-image:url('images/d.jpg')"><div style="opacity:0;">d</div></div>
+                <div class="gallery-item wide" style="background-image:url('images/d.jpg')"><div style="opacity:0;">d</div></div>
                 <div class="gallery-item" style="background-image:url('images/w.jpg')"><div style="opacity:0;">w</div></div>
-                <div class="gallery-item" style="background-image:url('images/b.jpg')"><div style="opacity:0;">b</div></div>
+                <div class="gallery-item tall" style="background-image:url('images/b.jpg')"><div style="opacity:0;">b</div></div>
                 <div class="gallery-item" style="background-image:url('images/p.jpg')"><div style="opacity:0;">p</div></div>
                 <div class="gallery-item" style="background-image:url('images/f.jpg')"><div style="opacity:0;">f</div></div>
             </div>
