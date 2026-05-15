@@ -372,7 +372,7 @@
     var clearReviewsBtn = document.getElementById('clearReviewsBtn');
 
     if (adminTrigger && configPanel) {
-        cfgKey.value = localStorage.getItem('web3forms_key') || '8a049345-927c-4ff2-b9c6-f7bea57a48d5';
+        cfgKey.value = localStorage.getItem('web3forms_key') || 'b4adb0a9-f8e8-44ef-a456-777e675efb00';
 
         adminTrigger.addEventListener('dblclick', function () {
             if (!currentUser) return showToast('Connecte-toi d\'abord.', true);
