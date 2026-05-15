@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Setup Gmail PDF Monitor (Gemini Gratuit)</title>
+    <style>
+        body { font-family: 'Inter', sans-serif; background: #0a0a1a; color: #e8e8f0; padding: 40px; max-width: 700px; margin: auto; line-height: 1.7; }
+        h1 { color: #fff; font-size: 2rem; }
+        h2 { color: #6c5ce7; margin-top: 32px; }
+        code { background: #1a1a3a; padding: 2px 8px; border-radius: 4px; color: #00cec9; }
+        pre { background: #12122a; padding: 20px; border-radius: 12px; border: 1px solid #2a2a4a; overflow-x: auto; }
+        .step { background: #12122a; border: 1px solid #2a2a4a; border-radius: 12px; padding: 20px; margin: 16px 0; }
+        .step strong { color: #fff; font-size: 1.1rem; }
+    </style>
+</head>
+<body>
+    <h1>Gmail PDF Monitor — AbdelBuilder</h1>
+    <p>Surveille tes mails, extrait les infos des PDF avec <strong>Google Gemini</strong> (gratuit), envoie via API.</p>
+
+    <div class="step">
+        <strong>1. Crée le projet Apps Script</strong>
+        <p>Va sur <a href="https://script.google.com" style="color:#6c5ce7;">script.google.com</a> → <strong>Nouveau projet</strong></p>
+    </div>
+
+    <div class="step">
+        <strong>2. Colle le code</strong>
+        <p>Ouvre le fichier <code>Code.gs</code>, copie tout le contenu, colle-le dans l'éditeur.</p>
+    </div>
+
+    <div class="step">
+        <strong>3. Crée ta clé API Gemini (gratuite)</strong>
+        <p>Va sur <a href="https://aistudio.google.com/app/apikey" style="color:#6c5ce7;" target="_blank">aistudio.google.com/app/apikey</a><br>
+        Clique sur <strong>Créer une clé API</strong> → copie la clé.</p>
+        <p>Dans le code, remplace <code>ta-cle-gemini-ici</code> par ta clé.</p>
+        <p>Remplace aussi <code>API_ENDPOINT</code> par l'URL du logiciel du client.</p>
+    </div>
+
+    <div class="step">
+        <strong>4. Lance le déclencheur</strong>
+        <p>Dans l'éditeur Apps Script :</p>
+        <p>⏰ Horloge → <strong>Ajouter déclencheur</strong></p>
+        <p>Fonction : <code>processPDFs</code> → Temps → Toutes les 10 minutes</p>
+        <p>La 1ʳᵉ exécution demandera les autorisations (Gmail, Drive, URL Fetch). Accepte.</p>
+    </div>
+
+    <div class="step">
+        <strong>✅ C'est prêt !</strong>
+        <p>Le script tourne 24h/24 gratuitement sur les serveurs Google.</p>
+        <p>Gemini 1.5 Flash = <strong>0€</strong> (60 requêtes/min gratuites).</p>
+    </div>
+</body>
+</html>

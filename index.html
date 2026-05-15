@@ -3,22 +3,59 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DevShowcase - Sites Vitrines Gratuits</title>
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect x='2' y='6' width='28' height='20' rx='4' stroke='%236c5ce7' stroke-width='2' fill='none'/><line x1='10' y1='28' x2='22' y2='28' stroke='%236c5ce7' stroke-width='2' stroke-linecap='round'/><line x1='16' y1='26' x2='16' y2='28' stroke='%236c5ce7' stroke-width='2' stroke-linecap='round'/><text x='16' y='21' text-anchor='middle' font-size='12' font-weight='800' fill='%236c5ce7' font-family='Inter,sans-serif'>AB</text></svg>">
+    <title>AbdelBuilder - Création de site web | Offre de lancement</title>
+    <meta name="description" content="Offre de lancement : site vitrine offert pour les 3 premiers clients. Design moderne, responsive, livré en 48h. Profitez-en !">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://abdelbuilder.netlify.app">
+    <meta property="og:title" content="AbdelBuilder - Création de site web">
+    <meta property="og:description" content="Offre de lancement : site vitrine offert pour les 3 premiers clients. Design moderne, responsive.">
+    <meta property="og:url" content="https://abdelbuilder.netlify.app">
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="fr_FR">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="AbdelBuilder - Création de site web">
+    <meta name="twitter:description" content="Offre de lancement : site vitrine offert pour les 3 premiers clients. Design moderne, responsive.">
+    <link rel="stylesheet" href="css/style.css?v=2">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Abdel",
+        "jobTitle": "Développeur web freelance",
+        "url": "https://abdelbuilder.netlify.app",
+        "description": "Création de sites vitrines professionnels — offre de lancement en cours."
+    }
+    </script>
 </head>
 <body>
 
     <nav class="navbar">
         <div class="container">
-            <a href="#" class="logo">DevShowcase</a>
+<a href="#" class="logo">
+    <svg width="32" height="32" viewBox="0 0 32 32" fill="none" style="vertical-align:middle;margin-right:8px;">
+        <rect x="2" y="6" width="28" height="20" rx="4" stroke="url(#lg1)" stroke-width="2" fill="none"/>
+        <line x1="10" y1="28" x2="22" y2="28" stroke="url(#lg1)" stroke-width="2" stroke-linecap="round"/>
+        <line x1="16" y1="26" x2="16" y2="28" stroke="url(#lg1)" stroke-width="2" stroke-linecap="round"/>
+        <text x="16" y="21" text-anchor="middle" font-size="12" font-weight="800" fill="url(#lg1)" font-family="Inter,sans-serif">AB</text>
+        <defs>
+            <linearGradient id="lg1" x1="0" y1="0" x2="32" y2="32">
+                <stop stop-color="#6c5ce7"/>
+                <stop offset="1" stop-color="#00cec9"/>
+            </linearGradient>
+        </defs>
+    </svg>
+    AbdelBuilder
+</a>
             <ul class="nav-links" id="navLinks">
                 <li><a href="#about">À propos</a></li>
                 <li><a href="#services">Services</a></li>
-                <li><a href="#portfolio">Portfolio</a></li>
+                <li><a href="#pricing">Tarifs</a></li>
                 <li><a href="#contact">Demande</a></li>
                 <li><a href="#reviews">Avis</a></li>
+                <li><a id="authNavBtn" style="cursor:pointer;">Connexion</a></li>
             </ul>
             <div class="hamburger" id="hamburger">
                 <span></span>
@@ -31,15 +68,15 @@
     <section class="hero">
         <div class="container">
             <div class="hero-content">
-                <span class="badge">Freelance — Sites gratuits</span>
+                <span class="badge">Promo lancement — offre limitée</span>
                 <h1>Un site vitrine <span class="gradient-text">offert</span> pour lancer votre projet</h1>
-                <p>Je crée votre site vitrine professionnel <strong>gratuitement</strong> pour vous aider à démarrer. Vous ne payez que si vous êtes satisfait.</p>
+                <p>Je crée votre site vitrine professionnel <strong>gratuitement</strong> dans le cadre de mon offre de lancement. Prix spécial pour mes 3 premiers clients.</p>
                 <div class="hero-actions">
                     <a href="#contact" class="btn btn-primary">Faire une demande <i class="fas fa-arrow-right"></i></a>
-                    <a href="#portfolio" class="btn btn-outline">Voir mes réalisations</a>
+                    <a href="#pricing" class="btn btn-outline">Voir mes offres</a>
                 </div>
                 <div class="hero-stats">
-                    <div class="stat"><span class="num">0€</span><span class="label">Le site</span></div>
+                    <div class="stat"><span class="num">0€</span><span class="label">offre de lancement</span></div>
                     <div class="stat"><span class="num">100%</span><span class="label">Satisfait ou remboursé</span></div>
                     <div class="stat"><span class="num">24/7</span><span class="label">Disponible</span></div>
                 </div>
@@ -63,8 +100,8 @@
                 <div class="about-text">
                     <span class="section-tag">Qui suis-je ?</span>
                     <h2>Développeur passionné, <span class="gradient-text">engagé</span></h2>
-                    <p>Je m'appelle <strong>Alex</strong>, développeur web freelance. Je crée des sites vitrines modernes et responsives pour les entrepreneurs, artisans et petites associations.</p>
-                    <p><strong>Pourquoi gratuit ?</strong> Parce que je veux me constituer un portfolio solide et vous prouver ma valeur. Vous ne payez <strong>rien</strong> tant que vous n'êtes pas entièrement satisfait.</p>
+                    <p>Je m'appelle <strong>Abdel</strong>, développeur web freelance. Je crée des sites vitrines modernes et responsives pour les entrepreneurs, artisans et petites associations.</p>
+                    <p><strong>Pourquoi une offre de lancement ?</strong> Je me constitue un portfolio solide. En échange, vous profitez d'un site professionnel à <strong>prix cassé</strong>, sans aucun risque.</p>
                     <div class="about-features">
                         <div class="about-feature"><i class="fas fa-check-circle"></i><span>Design moderne et responsive</span></div>
                         <div class="about-feature"><i class="fas fa-check-circle"></i><span>Hébergement offert la 1ʳᵉ année</span></div>
@@ -108,37 +145,44 @@
         </div>
     </section>
 
-    <section class="portfolio" id="portfolio">
+    <section class="pricing" id="pricing">
         <div class="container">
             <div class="section-header">
-                <span class="section-tag">Réalisations</span>
-                <h2>Quelques <span class="gradient-text">exemples</span></h2>
-                <p>Des sites que j'ai créés pour mes clients.</p>
+                <span class="section-tag">Tarifs</span>
+                <h2>Mes <span class="gradient-text">offres</span></h2>
+                <p>Du site vitrine à la boutique en ligne, prix fixes et sans surprise.</p>
             </div>
-            <div class="portfolio-grid">
-                <div class="portfolio-card">
-                    <div class="portfolio-img"><i class="fas fa-store"></i></div>
-                    <div class="portfolio-info">
-                        <h3>Boulangerie du Coin</h3>
-                        <p>Site vitrine avec galerie photos et horaires</p>
-                        <span class="tag">Gratuit</span>
+            <div class="pricing-grid">
+                <div class="pricing-card featured">
+                    <div class="pricing-badge">Promo lancement</div>
+                    <h3>Site Vitrine</h3>
+                    <div class="pricing-price">
+                        <span class="price">0€</span>
+                        <span class="price-note">au lieu de 297€ — négociable</span>
                     </div>
+                    <ul class="pricing-features">
+                        <li><i class="fas fa-check"></i> Design sur mesure (mobile + desktop)</li>
+                        <li><i class="fas fa-check"></i> Jusqu'à 5 pages</li>
+                        <li><i class="fas fa-check"></i> Formulaire de contact</li>
+                        <li><i class="fas fa-check"></i> Hébergement offert 1 an</li>
+                        <li><i class="fas fa-check"></i> Livré sous 1 semaine max</li>
+                    </ul>
+                    <a href="#contact" class="btn btn-primary" style="width:100%;">Commander <i class="fas fa-arrow-right"></i></a>
                 </div>
-                <div class="portfolio-card">
-                    <div class="portfolio-img"><i class="fas fa-dumbbell"></i></div>
-                    <div class="portfolio-info">
-                        <h3>FitClub</h3>
-                        <p>Page d'accueil pour salle de sport</p>
-                        <span class="tag">Gratuit</span>
+                <div class="pricing-card">
+                    <h3>Boutique E‑commerce</h3>
+                    <div class="pricing-price">
+                        <span class="price">597€</span>
+                        <span class="price-note">prix de base — négociable</span>
                     </div>
-                </div>
-                <div class="portfolio-card">
-                    <div class="portfolio-img"><i class="fas fa-paw"></i></div>
-                    <div class="portfolio-info">
-                        <h3>Canil du Parc</h3>
-                        <p>Presentation d'élevage canin avec galerie</p>
-                        <span class="tag">Gratuit</span>
-                    </div>
+                    <ul class="pricing-features">
+                        <li><i class="fas fa-check"></i> Catalogue produits + catégories</li>
+                        <li><i class="fas fa-check"></i> Panier et paiement Stripe/PayPal</li>
+                        <li><i class="fas fa-check"></i> Dashboard commandes</li>
+                        <li><i class="fas fa-check"></i> Design responsive</li>
+                        <li><i class="fas fa-check"></i> Hébergement inclus</li>
+                    </ul>
+                    <a href="#contact" class="btn btn-outline" style="width:100%;">Demander un devis <i class="fas fa-arrow-right"></i></a>
                 </div>
             </div>
         </div>
@@ -147,9 +191,9 @@
     <section class="contact" id="contact">
         <div class="container">
             <div class="section-header">
-                <span class="section-tag">Votre projet</span>
-                <h2>Envoyez-moi votre <span class="gradient-text">demande</span></h2>
-                <p>Remplissez ce formulaire et je vous recontacte sous 24h avec une proposition.</p>
+                <span class="section-tag">Contact</span>
+                <h2>Parlons de votre <span class="gradient-text">projet</span></h2>
+                <p>Réponse garantie sous 24h. Aucun engagement, juste une conversation.</p>
             </div>
             <div class="contact-wrapper">
                 <form class="contact-form" id="contactForm">
@@ -168,30 +212,65 @@
                         <input type="text" id="company" name="company" placeholder="Ma Super Entreprise">
                     </div>
                     <div class="form-group">
-                        <label for="message">Décrivez brièvement votre projet *</label>
+                        <label>Sujet</label>
+                        <div class="subject-options">
+                            <label class="subject-option">
+                                <input type="radio" name="subject" value="site-vitrine" checked>
+                                <span>Site vitrine</span>
+                            </label>
+                            <label class="subject-option">
+                                <input type="radio" name="subject" value="ecommerce">
+                                <span>E‑commerce</span>
+                            </label>
+                            <label class="subject-option">
+                                <input type="radio" name="subject" value="dashboard">
+                                <span>Application</span>
+                            </label>
+                            <label class="subject-option">
+                                <input type="radio" name="subject" value="autre">
+                                <span>Autre</span>
+                            </label>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Décrivez votre projet *</label>
                         <textarea id="message" name="message" rows="5" placeholder="Parlez-moi de votre activité, de vos besoins, des pages souhaitées..." required></textarea>
                     </div>
                     <button type="submit" class="btn btn-primary btn-submit">
-                        <span id="btnText">Envoyer ma demande <i class="fas fa-paper-plane"></i></span>
+                        <span id="btnText">Envoyer <i class="fas fa-paper-plane"></i></span>
                         <span id="btnSpinner" class="hidden"><i class="fas fa-spinner fa-spin"></i> Envoi...</span>
                     </button>
                     <p class="form-note"><i class="fas fa-lock"></i> Vos données restent confidentielles.</p>
                 </form>
-                <div class="contact-info">
-                    <div class="info-card">
-                        <i class="fas fa-envelope"></i>
-                        <h4>Email</h4>
-                        <p>abdelwarisousmanechappuis@gmail.com</p>
+                <div class="contact-sidebar">
+                    <div class="contact-info">
+                        <div class="info-card">
+                            <i class="fas fa-envelope"></i>
+                            <h4>Email</h4>
+                            <p>abdelbuildepro@proton.me</p>
+                            <span class="info-badge">Réponse sous 24h</span>
+                        </div>
+                        <div class="info-card">
+                            <i class="fas fa-clock"></i>
+                            <h4>Disponibilité</h4>
+                            <p>Immédiate</p>
+                            <span class="info-badge">Nouveaux projets ouverts</span>
+                        </div>
                     </div>
-                    <div class="info-card">
-                        <i class="fas fa-clock"></i>
-                        <h4>Disponibilité</h4>
-                        <p>24h/24 — 7j/7</p>
-                    </div>
-                    <div class="info-card">
-                        <i class="fas fa-comment-dots"></i>
-                        <h4>Délai de réponse</h4>
-                        <p>Moins de 24h</p>
+                    <div class="contact-faq">
+                        <h4>Questions rapides</h4>
+                        <div class="faq-item">
+                            <strong>Combien de temps pour livrer ?</strong>
+                            <p>5 à 35 jours selon le projet, avec une estimation précise après notre échange.</p>
+                        </div>
+                        <div class="faq-item">
+                            <strong>Je ne suis pas technique, je peux quand même vous contacter ?</strong>
+                            <p>Oui. Vous venez avec votre vision, je m'occupe de tout.</p>
+                        </div>
+                        <div class="faq-item">
+                            <strong>Que se passe-t-il après la livraison ?</strong>
+                            <p>Un mois de support inclus, puis maintenance disponible si besoin.</p>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -243,29 +322,42 @@
         <div class="container">
             <div class="footer-content">
                 <div class="footer-brand">
-                    <a href="#" class="logo">DevShowcase</a>
-                    <p>Des sites vitrines gratuits pour tous.</p>
+<a href="#" class="logo">
+    <svg width="32" height="32" viewBox="0 0 32 32" fill="none" style="vertical-align:middle;margin-right:8px;">
+        <rect x="2" y="6" width="28" height="20" rx="4" stroke="url(#lg)" stroke-width="2" fill="none"/>
+        <line x1="10" y1="28" x2="22" y2="28" stroke="url(#lg)" stroke-width="2" stroke-linecap="round"/>
+        <line x1="16" y1="26" x2="16" y2="28" stroke="url(#lg)" stroke-width="2" stroke-linecap="round"/>
+        <text x="16" y="21" text-anchor="middle" font-size="12" font-weight="800" fill="url(#lg)" font-family="Inter,sans-serif">AB</text>
+        <defs>
+            <linearGradient id="lg" x1="0" y1="0" x2="32" y2="32">
+                <stop stop-color="#6c5ce7"/>
+                <stop offset="1" stop-color="#00cec9"/>
+            </linearGradient>
+        </defs>
+    </svg>
+    AbdelBuilder
+</a>
+                    <p>Des sites professionnels pour tous.</p>
                 </div>
                 <div class="footer-links">
                     <h4>Liens</h4>
                     <ul>
                         <li><a href="#about">À propos</a></li>
                         <li><a href="#services">Services</a></li>
-                        <li><a href="#portfolio">Portfolio</a></li>
+                        <li><a href="#pricing">Tarifs</a></li>
                         <li><a href="#contact">Contact</a></li>
                     </ul>
                 </div>
                 <div class="footer-social">
                     <h4>Suivez-moi</h4>
                     <div class="social-icons">
-                        <a href="#"><i class="fab fa-github"></i></a>
-                        <a href="#"><i class="fab fa-linkedin"></i></a>
-                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="https://github.com/abdelwarisousmanechappuis-hue" target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i></a>
+                        <a href="https://www.reddit.com/user/SimpleTime2731/" target="_blank" rel="noopener noreferrer"><i class="fab fa-reddit-alien"></i></a>
                     </div>
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; 2026 DevShowcase — Fait avec <i class="fas fa-heart" style="color: var(--primary);"></i> — <span id="adminTrigger" style="cursor:default;">admin</span></p>
+                <p>&copy; 2026 AbdelBuilder — Fait avec <i class="fas fa-heart" style="color: var(--primary);"></i> — <span id="adminTrigger" style="cursor:default;">admin</span></p>
             </div>
         </div>
     </footer>
@@ -287,6 +379,61 @@
         <button class="btn btn-outline" id="cfgClose" style="width:100%;margin-top:8px;">Fermer</button>
     </div>
 
+    <!-- Auth Modal -->
+    <div class="modal-overlay hidden" id="authModal">
+        <div class="modal">
+            <button class="modal-close" id="authModalClose">&times;</button>
+
+            <div id="loginForm">
+                <h2>Connexion</h2>
+                <div class="form-group">
+                    <label>Email</label>
+                    <input type="email" id="loginEmail" placeholder="email@exemple.fr">
+                </div>
+                <div class="form-group">
+                    <label>Mot de passe</label>
+                    <input type="password" id="loginPassword" placeholder="••••••••">
+                </div>
+                <button class="btn btn-primary" style="width:100%;" id="loginBtn">Se connecter</button>
+                <p class="form-note" style="margin-top:12px;">
+                    Pas encore de compte ? <a href="#" id="showRegisterLink">S'inscrire</a>
+                </p>
+            </div>
+
+            <div id="registerForm" class="hidden">
+                <h2>Créer un compte</h2>
+                <div class="form-group">
+                    <label>Nom</label>
+                    <input type="text" id="regName" placeholder="Votre nom">
+                </div>
+                <div class="form-group">
+                    <label>Email</label>
+                    <input type="email" id="regEmail" placeholder="email@exemple.fr">
+                </div>
+                <div class="form-group">
+                    <label>Mot de passe</label>
+                    <input type="password" id="regPassword" placeholder="Au moins 6 caractères">
+                </div>
+                <button class="btn btn-primary" style="width:100%;" id="registerBtn">Créer mon compte</button>
+                <p class="form-note" style="margin-top:12px;">
+                    Déjà un compte ? <a href="#" id="showLoginLink">Se connecter</a>
+                </p>
+            </div>
+
+            <div id="verifyInfo" class="hidden">
+                <h2>Vérifie ton email</h2>
+                <p style="color:var(--text-muted);font-size:0.9rem;margin-bottom:16px;">
+                    Un lien de vérification vient d'être envoyé.<br>
+                    Clique dessus, puis connecte-toi.
+                </p>
+                <button class="btn btn-outline" style="width:100%;" id="resendVerifyBtn">Renvoyer l'email</button>
+                <p class="form-note" style="margin-top:12px;">
+                    <a href="#" id="verifyBackToLogin">Se connecter</a>
+                </p>
+            </div>
+        </div>
+    </div>
+
     <div class="toast hidden" id="toast">
         <div class="toast-content">
             <i class="fas fa-check-circle" id="toastIcon"></i>
@@ -294,6 +441,19 @@
         </div>
     </div>
 
-    <script src="js/script.js?v=3"></script>
+    <!-- Firebase SDK -->
+    <script src="https://www.gstatic.com/firebasejs/10.14.1/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.14.1/firebase-auth-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.14.1/firebase-firestore-compat.js"></script>
+    <script>
+        try { firebase.initializeApp({
+            apiKey: "AIzaSyByEQHbt-LvG2ILJV6i8QasVJ_MUTQvuCg",
+            authDomain: "devshowcase-7a4c5.firebaseapp.com",
+            projectId: "devshowcase-7a4c5",
+            appId: "1:432204959852:web:8057b54e446f4f09564849"
+        }); } catch (e) {}
+    </script>
+
+    <script src="js/script.js?v=4"></script>
 </body>
 </html>

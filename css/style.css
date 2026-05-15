@@ -64,10 +64,13 @@ body {
     font-weight: 800;
     color: #fff;
     text-decoration: none;
-    background: linear-gradient(135deg, var(--primary), var(--secondary));
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.logo svg {
+    flex-shrink: 0;
 }
 
 .nav-links {
@@ -136,14 +139,16 @@ body {
 
 .badge {
     display: inline-block;
-    padding: 6px 16px;
+    padding: 8px 20px;
     border-radius: 50px;
-    background: rgba(108, 92, 231, 0.15);
-    color: var(--primary);
+    background: linear-gradient(135deg, rgba(255, 107, 107, 0.2), rgba(238, 90, 36, 0.2));
+    color: #ff6b6b;
     font-size: 0.8rem;
-    font-weight: 600;
+    font-weight: 700;
     margin-bottom: 20px;
-    border: 1px solid rgba(108, 92, 231, 0.3);
+    border: 1px solid rgba(255, 107, 107, 0.3);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
 }
 
 .hero h1 {
@@ -227,6 +232,11 @@ body {
     font-size: 1.3rem;
     font-weight: 700;
     color: #fff;
+}
+
+.stat:first-child .num {
+    color: #ff6b6b;
+    font-size: 1.6rem;
 }
 
 .stat .label {
@@ -414,6 +424,122 @@ section {
     line-height: 1.6;
 }
 
+/* ─── Pricing ─── */
+
+.pricing {
+    background: var(--bg);
+}
+
+.pricing-grid {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 24px;
+}
+
+.pricing-card {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 40px 32px;
+    max-width: 400px;
+    width: 100%;
+    transition: all 0.3s;
+    position: relative;
+}
+
+.pricing-card:hover {
+    border-color: var(--primary);
+    transform: translateY(-4px);
+    box-shadow: var(--shadow);
+}
+
+.pricing-card.featured {
+    border-color: var(--primary);
+    box-shadow: 0 0 40px rgba(108, 92, 231, 0.15);
+}
+
+.pricing-badge {
+    position: absolute;
+    top: -14px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: linear-gradient(135deg, #ff6b6b, #ee5a24);
+    color: #fff;
+    font-size: 0.8rem;
+    font-weight: 800;
+    padding: 6px 20px;
+    border-radius: 50px;
+    white-space: nowrap;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    box-shadow: 0 4px 20px rgba(238, 90, 36, 0.5);
+    animation: pulseBadge 2s infinite;
+}
+
+@keyframes pulseBadge {
+    0%, 100% { transform: translateX(-50%) scale(1); }
+    50% { transform: translateX(-50%) scale(1.05); }
+}
+
+.pricing-card h3 {
+    font-size: 1.3rem;
+    color: #fff;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.pricing-price {
+    text-align: center;
+    margin-bottom: 24px;
+}
+
+.pricing-price .price {
+    font-size: 3rem;
+    font-weight: 800;
+    color: #fff;
+}
+
+.pricing-price .price-note {
+    display: block;
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    margin-top: 4px;
+}
+
+.pricing-features {
+    list-style: none;
+    margin-bottom: 28px;
+}
+
+.pricing-features li {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 0;
+    font-size: 0.9rem;
+    color: var(--text);
+    border-bottom: 1px solid var(--border);
+}
+
+.pricing-features li:last-child {
+    border-bottom: none;
+}
+
+.pricing-features li i {
+    color: var(--secondary);
+    font-size: 0.9rem;
+}
+
+@media (max-width: 480px) {
+    .pricing-card {
+        padding: 28px 20px;
+    }
+    .pricing-price .price {
+        font-size: 2.2rem;
+    }
+}
+
 /* ─── Portfolio ─── */
 
 .portfolio {
@@ -440,14 +566,10 @@ section {
 }
 
 .portfolio-img {
+    width: 100%;
     height: 200px;
-    background: linear-gradient(135deg, var(--primary), var(--secondary));
-    opacity: 0.7;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 3.5rem;
-    color: #fff;
+    object-fit: cover;
+    display: block;
 }
 
 .portfolio-info {
@@ -568,6 +690,7 @@ section {
     border-radius: var(--radius);
     padding: 24px;
     text-align: center;
+    position: relative;
 }
 
 .info-card i {
@@ -585,6 +708,104 @@ section {
 .info-card p {
     font-size: 0.85rem;
     color: var(--text-muted);
+    margin-bottom: 8px;
+}
+
+.info-badge {
+    display: inline-block;
+    padding: 3px 12px;
+    border-radius: 50px;
+    background: rgba(0, 206, 201, 0.1);
+    color: var(--secondary);
+    font-size: 0.72rem;
+    font-weight: 600;
+}
+
+/* ─── Subject options ─── */
+
+.subject-options {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.subject-option {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    padding: 10px 18px;
+    background: var(--bg);
+    border: 1px solid var(--border);
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s;
+    font-size: 0.85rem;
+    color: var(--text-muted);
+}
+
+.subject-option:hover {
+    border-color: var(--primary);
+    color: #fff;
+}
+
+.subject-option input[type="radio"] {
+    display: none;
+}
+
+.subject-option input[type="radio"]:checked + span {
+    color: #fff;
+}
+
+.subject-option:has(input:checked) {
+    background: rgba(108, 92, 231, 0.15);
+    border-color: var(--primary);
+    color: #fff;
+}
+
+/* ─── Contact sidebar ─── */
+
+.contact-sidebar {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.contact-faq {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 24px;
+}
+
+.contact-faq h4 {
+    font-size: 0.95rem;
+    color: #fff;
+    margin-bottom: 16px;
+}
+
+.faq-item {
+    margin-bottom: 16px;
+    padding-bottom: 16px;
+    border-bottom: 1px solid var(--border);
+}
+
+.faq-item:last-child {
+    margin-bottom: 0;
+    padding-bottom: 0;
+    border-bottom: none;
+}
+
+.faq-item strong {
+    display: block;
+    font-size: 0.85rem;
+    color: #fff;
+    margin-bottom: 4px;
+}
+
+.faq-item p {
+    font-size: 0.82rem;
+    color: var(--text-muted);
+    line-height: 1.5;
 }
 
 /* ─── Reviews ─── */
