@@ -167,13 +167,14 @@
         .gallery-grid .gallery-item { background-repeat: no-repeat; }
         .gallery-item {
             aspect-ratio: 1; border-radius: 16px; overflow: hidden;
-            background: rgba(201, 176, 160, 0.06);
+            background-color: rgba(201, 176, 160, 0.06);
             border: 1px solid rgba(201, 176, 160, 0.06);
             display: flex; align-items: center; justify-content: center;
             color: #c9b0a0; font-size: 0.78rem; text-align: center; padding: 20px;
             transition: all 0.3s; cursor: pointer;
+            background-size: cover; background-position: center;
         }
-        .gallery-item:hover { border-color: rgba(201, 176, 160, 0.15); background: rgba(201, 176, 160, 0.04); }
+        .gallery-item:hover { border-color: rgba(201, 176, 160, 0.15); background-color: rgba(201, 176, 160, 0.04); }
         .gallery-item i { font-size: 1.8rem; margin-bottom: 8px; display: block; }
 
         /* ── REVIEWS ── */
