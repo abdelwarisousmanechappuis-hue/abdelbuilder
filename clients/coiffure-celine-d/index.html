@@ -1,0 +1,544 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coiffure Céline D - Salon de coiffure | Le Châtelard</title>
+    <meta name="description" content="Salon de coiffure Céline D au Le Châtelard. Coupe homme, femme, enfant, coloration, lissage, extensions. Ambiance chaleureuse et professionnelle. Prenez rendez-vous !">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        html { scroll-behavior: smooth; }
+        body {
+            font-family: 'Inter', sans-serif;
+            background: #0a0a0f;
+            color: #e8e4e0;
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+        a { text-decoration: none; color: inherit; }
+        img { max-width: 100%; }
+
+        .gold { color: #c9a84c; }
+        .gold-bg { background: linear-gradient(135deg, #c9a84c, #a8882e); }
+        .gold-text { background: linear-gradient(135deg, #c9a84c, #e8c96a); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        .section-tag {
+            display: inline-block; padding: 6px 18px; border-radius: 50px;
+            background: rgba(201, 168, 76, 0.12); color: #c9a84c;
+            font-size: 0.75rem; font-weight: 600; text-transform: uppercase; letter-spacing: 2px;
+            margin-bottom: 16px;
+        }
+        .container { max-width: 1100px; margin: 0 auto; padding: 0 24px; }
+
+        /* ── NAVBAR ── */
+        .navbar {
+            position: fixed; top: 0; width: 100%; z-index: 100;
+            background: rgba(10, 10, 15, 0.92); backdrop-filter: blur(16px);
+            border-bottom: 1px solid rgba(201, 168, 76, 0.12);
+            padding: 14px 0;
+        }
+        .navbar .container { display: flex; align-items: center; justify-content: space-between; }
+        .logo { font-family: 'Playfair Display', serif; font-size: 1.3rem; font-weight: 700; color: #fff; }
+        .logo span { color: #c9a84c; }
+        .nav-links { list-style: none; display: flex; gap: 28px; }
+        .nav-links a { font-size: 0.85rem; font-weight: 500; color: rgba(255,255,255,0.7); transition: color 0.3s; }
+        .nav-links a:hover { color: #c9a84c; }
+        .nav-cta {
+            padding: 8px 20px; border-radius: 50px;
+            background: linear-gradient(135deg, #c9a84c, #a8882e); color: #fff !important;
+            font-weight: 600; font-size: 0.8rem;
+        }
+
+        /* ── HERO ── */
+        .hero {
+            min-height: 100vh; display: flex; align-items: center;
+            background: linear-gradient(135deg, #0a0a0f 0%, #1a1425 50%, #0d0d14 100%);
+            position: relative; overflow: hidden; padding: 120px 0 80px;
+        }
+        .hero::before {
+            content: ''; position: absolute; top: -30%; right: -20%;
+            width: 600px; height: 600px; border-radius: 50%;
+            background: radial-gradient(circle, rgba(201,168,76,0.06) 0%, transparent 70%);
+        }
+        .hero::after {
+            content: ''; position: absolute; bottom: -20%; left: -10%;
+            width: 500px; height: 500px; border-radius: 50%;
+            background: radial-gradient(circle, rgba(201,168,76,0.04) 0%, transparent 70%);
+        }
+        .hero-content { position: relative; z-index: 1; max-width: 700px; }
+        .hero-badge {
+            display: inline-flex; align-items: center; gap: 8px;
+            padding: 8px 20px; border-radius: 50px;
+            background: rgba(201, 168, 76, 0.1); border: 1px solid rgba(201, 168, 76, 0.2);
+            color: #c9a84c; font-size: 0.8rem; font-weight: 600; margin-bottom: 24px;
+        }
+        .hero h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 3.5rem; font-weight: 700; color: #fff; line-height: 1.15;
+            margin-bottom: 20px;
+        }
+        .hero h1 .gold-text { -webkit-text-fill-color: transparent; }
+        .hero p {
+            font-size: 1.1rem; color: rgba(255,255,255,0.6); max-width: 560px;
+            margin-bottom: 36px; line-height: 1.7;
+        }
+        .hero-actions { display: flex; gap: 16px; flex-wrap: wrap; margin-bottom: 40px; }
+        .btn {
+            display: inline-flex; align-items: center; gap: 10px;
+            padding: 14px 32px; border-radius: 50px; font-weight: 600;
+            font-size: 0.9rem; transition: all 0.3s; cursor: pointer; border: none;
+        }
+        .btn-primary {
+            background: linear-gradient(135deg, #c9a84c, #a8882e);
+            color: #fff; box-shadow: 0 4px 30px rgba(201,168,76,0.3);
+        }
+        .btn-primary:hover { transform: translateY(-2px); box-shadow: 0 8px 40px rgba(201,168,76,0.4); }
+        .btn-outline {
+            background: transparent; color: #e8e4e0;
+            border: 1px solid rgba(201, 168, 76, 0.3);
+        }
+        .btn-outline:hover { border-color: #c9a84c; background: rgba(201,168,76,0.05); }
+        .hero-proof { display: flex; gap: 24px; flex-wrap: wrap; }
+        .hero-proof span { font-size: 0.85rem; color: rgba(255,255,255,0.5); display: flex; align-items: center; gap: 8px; }
+        .hero-proof i { color: #c9a84c; font-size: 0.8rem; }
+
+        /* ── SECTION ── */
+        section { padding: 100px 0; }
+        .section-header { text-align: center; margin-bottom: 60px; }
+        .section-header h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.5rem; font-weight: 700; color: #fff; margin-bottom: 12px;
+        }
+        .section-header p { color: rgba(255,255,255,0.5); font-size: 1rem; max-width: 500px; margin: 0 auto; }
+
+        /* ── ABOUT ── */
+        .about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center; }
+        .about-visual {
+            background: linear-gradient(135deg, rgba(201,168,76,0.05), rgba(201,168,76,0.02));
+            border: 1px solid rgba(201,168,76,0.1); border-radius: 20px;
+            padding: 60px 40px; text-align: center; min-height: 300px;
+            display: flex; flex-direction: column; align-items: center; justify-content: center;
+        }
+        .about-visual i { font-size: 3rem; color: #c9a84c; margin-bottom: 16px; opacity: 0.6; }
+        .about-visual p { color: rgba(255,255,255,0.3); font-size: 0.9rem; }
+        .about-text h2 {
+            font-family: 'Playfair Display', serif; font-size: 2rem; color: #fff; margin-bottom: 16px;
+        }
+        .about-text p { color: rgba(255,255,255,0.6); margin-bottom: 12px; font-size: 0.95rem; line-height: 1.8; }
+        .about-features { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-top: 20px; }
+        .about-features li {
+            display: flex; align-items: center; gap: 8px;
+            color: rgba(255,255,255,0.7); font-size: 0.85rem; list-style: none;
+        }
+        .about-features li i { color: #c9a84c; font-size: 0.8rem; }
+
+        /* ── SERVICES / PRICING ── */
+        .pricing-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 24px; }
+        .pricing-card {
+            background: linear-gradient(145deg, rgba(201,168,76,0.03), transparent);
+            border: 1px solid rgba(201,168,76,0.1); border-radius: 16px;
+            padding: 36px 28px; text-align: center; transition: all 0.4s;
+        }
+        .pricing-card:hover { border-color: rgba(201,168,76,0.3); transform: translateY(-4px); }
+        .pricing-card.featured {
+            border-color: rgba(201,168,76,0.3);
+            background: linear-gradient(145deg, rgba(201,168,76,0.08), rgba(201,168,76,0.02));
+            position: relative;
+        }
+        .pricing-card h3 { font-size: 1.1rem; color: #fff; margin-bottom: 8px; }
+        .pricing-card .price { font-size: 2rem; font-weight: 800; color: #c9a84c; margin: 12px 0; }
+        .pricing-card .price small { font-size: 0.9rem; font-weight: 400; color: rgba(255,255,255,0.4); }
+        .pricing-card .icon { font-size: 2rem; margin-bottom: 12px; opacity: 0.8; }
+        .pricing-card ul { list-style: none; margin: 16px 0 24px; text-align: left; }
+        .pricing-card li { padding: 6px 0; font-size: 0.85rem; color: rgba(255,255,255,0.6); display: flex; align-items: center; gap: 8px; }
+        .pricing-card li i { color: #c9a84c; font-size: 0.75rem; }
+        .pricing-card .btn { width: 100%; justify-content: center; }
+
+        /* ── PREstations ── */
+        .services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 20px; }
+        .service-card {
+            background: rgba(255,255,255,0.02); border: 1px solid rgba(201,168,76,0.08);
+            border-radius: 14px; padding: 28px 24px; text-align: center; transition: all 0.3s;
+        }
+        .service-card:hover { border-color: rgba(201,168,76,0.2); background: rgba(201,168,76,0.03); }
+        .service-card i { font-size: 1.8rem; color: #c9a84c; margin-bottom: 12px; opacity: 0.8; }
+        .service-card h3 { font-size: 1rem; color: #fff; margin-bottom: 6px; }
+        .service-card p { font-size: 0.85rem; color: rgba(255,255,255,0.5); }
+
+        /* ── GALERIE ── */
+        .gallery-grid {
+            display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px;
+        }
+        .gallery-item {
+            aspect-ratio: 1; border-radius: 12px; overflow: hidden;
+            background: linear-gradient(135deg, rgba(201,168,76,0.06), rgba(201,168,76,0.02));
+            border: 1px solid rgba(201,168,76,0.08);
+            display: flex; align-items: center; justify-content: center;
+            color: rgba(255,255,255,0.15); font-size: 0.8rem; text-align: center; padding: 20px;
+            transition: all 0.3s; cursor: pointer;
+        }
+        .gallery-item:hover { border-color: rgba(201,168,76,0.2); background: rgba(201,168,76,0.05); }
+        .gallery-item i { font-size: 2rem; margin-bottom: 8px; display: block; }
+
+        /* ── AVIS ── */
+        .reviews-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; }
+        .review-card {
+            background: rgba(255,255,255,0.02); border: 1px solid rgba(201,168,76,0.08);
+            border-radius: 14px; padding: 28px;
+        }
+        .review-card .stars { color: #c9a84c; font-size: 0.9rem; margin-bottom: 10px; }
+        .review-card .name { font-weight: 600; color: #fff; font-size: 0.9rem; }
+        .review-card .date { font-size: 0.75rem; color: rgba(255,255,255,0.3); }
+        .review-card p { font-size: 0.85rem; color: rgba(255,255,255,0.6); margin: 10px 0; font-style: italic; line-height: 1.6; }
+
+        /* ── CONTACT / LOCALISATION ── */
+        .contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; }
+        .contact-info h3 { font-family: 'Playfair Display', serif; font-size: 1.5rem; color: #fff; margin-bottom: 20px; }
+        .contact-info p { color: rgba(255,255,255,0.6); font-size: 0.9rem; margin-bottom: 8px; display: flex; align-items: center; gap: 12px; }
+        .contact-info i { color: #c9a84c; width: 20px; text-align: center; }
+        .contact-card {
+            background: rgba(255,255,255,0.02); border: 1px solid rgba(201,168,76,0.1);
+            border-radius: 14px; padding: 28px; margin-bottom: 16px;
+        }
+        .hours-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 6px 24px; margin: 16px 0; }
+        .hours-grid .day { color: rgba(255,255,255,0.5); font-size: 0.85rem; }
+        .hours-grid .time { color: #fff; font-size: 0.85rem; font-weight: 500; text-align: right; }
+        .hours-grid .closed { color: #ff6b6b; font-size: 0.85rem; text-align: right; }
+        .map-placeholder {
+            border-radius: 14px; overflow: hidden; min-height: 300px;
+            background: linear-gradient(135deg, rgba(201,168,76,0.04), rgba(201,168,76,0.01));
+            border: 1px solid rgba(201,168,76,0.08);
+            display: flex; flex-direction: column; align-items: center; justify-content: center;
+            color: rgba(255,255,255,0.3);
+        }
+        .map-placeholder i { font-size: 2.5rem; color: #c9a84c; opacity: 0.4; margin-bottom: 12px; }
+
+        /* ── CTA FINAL ── */
+        .cta-section {
+            background: linear-gradient(135deg, rgba(201,168,76,0.06), rgba(201,168,76,0.02));
+            border: 1px solid rgba(201,168,76,0.1); border-radius: 20px;
+            padding: 60px; text-align: center; margin-top: 40px;
+        }
+        .cta-section h2 { font-family: 'Playfair Display', serif; font-size: 2rem; color: #fff; margin-bottom: 12px; }
+        .cta-section p { color: rgba(255,255,255,0.5); margin-bottom: 28px; }
+
+        /* ── FOOTER ── */
+        .footer {
+            border-top: 1px solid rgba(201,168,76,0.08); padding: 32px 0;
+            text-align: center; font-size: 0.8rem; color: rgba(255,255,255,0.3);
+        }
+        .footer a { color: #c9a84c; }
+
+        /* ── RESPONSIVE ── */
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 2.2rem; }
+            .about-grid, .contact-grid { grid-template-columns: 1fr; gap: 40px; }
+            .gallery-grid { grid-template-columns: repeat(2, 1fr); }
+            .hours-grid { grid-template-columns: 1fr; }
+            .section-header h2 { font-size: 1.8rem; }
+            .nav-links { display: none; }
+            .cta-section { padding: 36px 24px; }
+            .pricing-grid { grid-template-columns: 1fr; }
+            .about-features { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- ─── NAVBAR ─── -->
+    <nav class="navbar">
+        <div class="container">
+            <a href="#" class="logo">Céline <span>D.</span></a>
+            <ul class="nav-links">
+                <li><a href="#presentation">Présentation</a></li>
+                <li><a href="#prestations">Prestations</a></li>
+                <li><a href="#tarifs">Tarifs</a></li>
+                <li><a href="#avis">Avis</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li><a href="#contact" class="nav-cta">💎 Prendre RDV</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- ─── HERO ─── -->
+    <section class="hero" id="accueil">
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-badge">
+                    <i class="fas fa-star"></i> 4.7/5 — 73 avis Google
+                </div>
+                <h1>
+                    Votre salon de coiffure<br>
+                    <span class="gold-text">au cœur des Bauges</span>
+                </h1>
+                <p>
+                    Chez Céline D., chaque coupe est une expérience. Ambiance chaleureuse,
+                    conseils personnalisés et savoir-faire pour révéler votre beauté.
+                    Hommes, femmes, enfants — bienvenue à tous.
+                </p>
+                <div class="hero-actions">
+                    <a href="#contact" class="btn btn-primary">
+                        Prendre rendez-vous <i class="fas fa-arrow-right"></i>
+                    </a>
+                    <a href="#tarifs" class="btn btn-outline">
+                        Voir les tarifs
+                    </a>
+                </div>
+                <div class="hero-proof">
+                    <span><i class="fas fa-check-circle"></i> Coupe homme dès 14€</span>
+                    <span><i class="fas fa-check-circle"></i> Coupe femme dès 25€</span>
+                    <span><i class="fas fa-check-circle"></i> Paiement CB accepté</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ─── PRÉSENTATION ─── -->
+    <section id="presentation">
+        <div class="container">
+            <div class="about-grid">
+                <div class="about-visual">
+                    <i class="fas fa-cut"></i>
+                    <p style="color:rgba(255,255,255,0.3);font-size:0.85rem;font-style:italic;">Photo du salon à venir</p>
+                </div>
+                <div class="about-text">
+                    <span class="section-tag">Présentation</span>
+                    <h2>Un salon où l'on prend soin de vous</h2>
+                    <p>
+                        Niché au cœur du Châtelard, le salon <strong>Coiffure Céline D.</strong> vous accueille
+                        dans une ambiance chaleureuse et conviviale. Passionnée par mon métier,
+                        je mets tout mon savoir-faire à votre service pour vous offrir une expérience
+                        sur mesure.
+                    </p>
+                    <p>
+                        Forte de plusieurs années d'expérience, je vous conseille et vous accompagne
+                        pour trouver le style qui vous correspond, dans une démarche de qualité
+                        et de proximité.
+                    </p>
+                    <ul class="about-features">
+                        <li><i class="fas fa-check"></i> Ambiance chaleureuse</li>
+                        <li><i class="fas fa-check"></i> Conseils personnalisés</li>
+                        <li><i class="fas fa-check"></i> Hommes, femmes, enfants</li>
+                        <li><i class="fas fa-check"></i> Produits capillaires de qualité</li>
+                        <li><i class="fas fa-check"></i> Paiement par CB, chèque, espèces</li>
+                        <li><i class="fas fa-check"></i> Proche de chez vous</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ─── PRESTATIONS ─── -->
+    <section id="prestations" style="background:rgba(255,255,255,0.01);">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Savoir-faire</span>
+                <h2>Nos <span class="gold-text">prestations</span></h2>
+                <p>Du simple shampoing au relooking complet, chaque service est pensé pour votre satisfaction.</p>
+            </div>
+            <div class="services-grid">
+                <div class="service-card">
+                    <i class="fas fa-cut"></i>
+                    <h3>Coupe homme</h3>
+                    <p>Coupe moderne et traditionnelle, barbe et entretien. À partir de 14€.</p>
+                </div>
+                <div class="service-card">
+                    <i class="fas fa-wind"></i>
+                    <h3>Coupe femme</h3>
+                    <p>Coupe, brushing, mise en plis. Un résultat impeccable pour toutes les longueurs. À partir de 25€.</p>
+                </div>
+                <div class="service-card">
+                    <i class="fas fa-palette"></i>
+                    <h3>Coloration</h3>
+                    <p>Coloration, balayage, mèches, reflets. Des produits de qualité pour des couleurs éclatantes.</p>
+                </div>
+                <div class="service-card">
+                    <i class="fas fa-magic"></i>
+                    <h3>Lissage</h3>
+                    <p>Lissage brésilien, japonais, soins lissants. Retrouvez des cheveux lisses et brillants.</p>
+                </div>
+                <div class="service-card">
+                    <i class="fas fa-star"></i>
+                    <h3>Relooking</h3>
+                    <p>Conseil en image, transformation complète. Un nouveau look qui vous ressemble.</p>
+                </div>
+                <div class="service-card">
+                    <i class="fas fa-plus-circle"></i>
+                    <h3>Pose d'extensions</h3>
+                    <p>Extensions capillaires pour volume et longueur. Résultat naturel et sur mesure.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ─── TARIFS ─── -->
+    <section id="tarifs">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Tarifs</span>
+                <h2>Des prix <span class="gold-text">transparents</span></h2>
+                <p>Qualité professionnelle à prix doux. Devis gratuit sur demande.</p>
+            </div>
+            <div class="pricing-grid">
+                <div class="pricing-card">
+                    <div class="icon">✂️</div>
+                    <h3>Coupe Homme</h3>
+                    <div class="price">14€ <small>et +</small></div>
+                    <ul>
+                        <li><i class="fas fa-check"></i> Coupe + shampooing</li>
+                        <li><i class="fas fa-check"></i> Coiffage</li>
+                        <li><i class="fas fa-check"></i> Conseils d'entretien</li>
+                    </ul>
+                    <a href="#contact" class="btn btn-outline">Demander un RDV</a>
+                </div>
+                <div class="pricing-card featured">
+                    <div class="icon">💇‍♀️</div>
+                    <h3>Coupe Femme</h3>
+                    <div class="price">25€ <small>et +</small></div>
+                    <ul>
+                        <li><i class="fas fa-check"></i> Coupe + shampooing</li>
+                        <li><i class="fas fa-check"></i> Brushing / mise en plis</li>
+                        <li><i class="fas fa-check"></i> Conseil personnalisé</li>
+                    </ul>
+                    <a href="#contact" class="btn btn-primary">Prendre RDV</a>
+                </div>
+                <div class="pricing-card">
+                    <div class="icon">🎨</div>
+                    <h3>Coloration</h3>
+                    <div class="price">Sur devis</div>
+                    <ul>
+                        <li><i class="fas fa-check"></i> Coloration complète</li>
+                        <li><i class="fas fa-check"></i> Balayage / mèches</li>
+                        <li><i class="fas fa-check"></i> Soin après coloration</li>
+                    </ul>
+                    <a href="#contact" class="btn btn-outline">Demander un devis</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ─── GALERIE ─── -->
+    <section id="galerie" style="background:rgba(255,255,255,0.01);">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Galerie</span>
+                <h2>Notre <span class="gold-text">travail</span></h2>
+                <p>Quelques réalisations pour vous donner une idée de notre savoir-faire.</p>
+            </div>
+            <div class="gallery-grid">
+                <div class="gallery-item">
+                    <div><i class="fas fa-image"></i><br>Photo 1</div>
+                </div>
+                <div class="gallery-item">
+                    <div><i class="fas fa-image"></i><br>Photo 2</div>
+                </div>
+                <div class="gallery-item">
+                    <div><i class="fas fa-image"></i><br>Photo 3</div>
+                </div>
+                <div class="gallery-item">
+                    <div><i class="fas fa-image"></i><br>Photo 4</div>
+                </div>
+                <div class="gallery-item">
+                    <div><i class="fas fa-image"></i><br>Photo 5</div>
+                </div>
+                <div class="gallery-item">
+                    <div><i class="fas fa-image"></i><br>Photo 6</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ─── AVIS ─── -->
+    <section id="avis">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Avis clients</span>
+                <h2>Ce qu'ils disent de <span class="gold-text">nous</span></h2>
+                <p>Noté 4.7/5 sur Google — 73 avis. La satisfaction avant tout.</p>
+            </div>
+            <div class="reviews-grid">
+                <div class="review-card">
+                    <div class="stars">★★★★★</div>
+                    <div class="name">Liline Gwendoline</div>
+                    <div class="date">Février 2021</div>
+                    <p>"Je vais chez Céline depuis mon arrivée en Bauges. Toujours le sourire, le professionnalisme et la pêche, de bon conseil par passion et non dans la surconsommation. Merci."</p>
+                </div>
+                <div class="review-card">
+                    <div class="stars">★★★★★</div>
+                    <div class="name">Nanette Michel</div>
+                    <div class="date">Juin 2019</div>
+                    <p>"Accueil sympa, personnel professionnel et tarifs intéressants."</p>
+                </div>
+                <div class="review-card">
+                    <div class="stars">★★★★★</div>
+                    <div class="name">Avis Google</div>
+                    <div class="date">Note globale</div>
+                    <p>"Noté 4.7/5 par 73 clients Google. Un salon de confiance recommandé par toute la communauté des Bauges."</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ─── CONTACT ─── -->
+    <section id="contact" style="background:rgba(255,255,255,0.01);">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Contact</span>
+                <h2>Prenez <span class="gold-text">rendez-vous</span></h2>
+                <p>Envie de changer de look ? Appelez ou passez au salon. Réponse rapide garantie.</p>
+            </div>
+            <div class="contact-grid">
+                <div class="contact-info">
+                    <div class="contact-card">
+                        <h3>📍 Coordonnées</h3>
+                        <p><i class="fas fa-map-marker-alt"></i> Immeuble Julioz, 90 place René Cassin<br>73630 Le Châtelard</p>
+                        <p><i class="fas fa-phone"></i> <a href="tel:0479548467" style="color:#c9a84c;">04 79 54 84 67</a></p>
+                        <p><i class="fab fa-whatsapp" style="color:#25D366;"></i> <a href="https://wa.me/33479548467" style="color:#25D366;">04 79 54 84 67</a></p>
+                        <p><i class="fas fa-credit-card"></i> Chèque — Espèces — CB</p>
+                    </div>
+                    <div class="contact-card">
+                        <h3>🕐 Horaires d'ouverture</h3>
+                        <div class="hours-grid">
+                            <span class="day">Lundi</span><span class="closed">Fermé</span>
+                            <span class="day">Mardi</span><span class="time">09h00–12h00 / 14h00–19h00</span>
+                            <span class="day">Mercredi</span><span class="time">09h00–12h00 / 14h00–19h00</span>
+                            <span class="day">Jeudi</span><span class="time">09h00–12h00 / 14h00–19h00</span>
+                            <span class="day">Vendredi</span><span class="time">09h00–12h00 / 14h00–19h00</span>
+                            <span class="day">Samedi</span><span class="closed">Fermé</span>
+                            <span class="day">Dimanche</span><span class="closed">Fermé</span>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <div class="map-placeholder">
+                        <i class="fas fa-map"></i>
+                        <p>Immeuble Julioz, 90 place René Cassin<br>73630 Le Châtelard</p>
+                        <a href="https://www.google.com/maps/dir/?api=1&destination=90+place+Rene+Cassin+73630+Le+Chatelard" target="_blank" class="btn btn-outline" style="margin-top:16px;">
+                            <i class="fas fa-directions"></i> Voir sur Google Maps
+                        </a>
+                    </div>
+                    <div class="cta-section">
+                        <h2>Prêt(e) à prendre rendez-vous ?</h2>
+                        <p>Appelez au <strong style="color:#c9a84c;">04 79 54 84 67</strong> ou passez directement au salon.<br> À très vite chez Céline D. !</p>
+                        <a href="tel:0479548467" class="btn btn-primary" style="font-size:1.1rem;padding:16px 40px;">
+                            <i class="fas fa-phone"></i> 04 79 54 84 67
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ─── FOOTER ─── -->
+    <footer class="footer">
+        <div class="container">
+            <p>
+                © 2026 Coiffure Céline D. — Le Châtelard (73630) —
+                Réalisé avec <i class="fas fa-heart" style="color:#c9a84c;"></i> par <a href="https://abdelwarisousmanechappuis-hue.github.io/abdelbuilder/" target="_blank">AbdelBuilder</a>
+            </p>
+        </div>
+    </footer>
+
+</body>
+</html>
