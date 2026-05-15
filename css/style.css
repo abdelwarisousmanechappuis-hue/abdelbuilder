@@ -377,6 +377,155 @@ section {
     font-size: 1rem;
 }
 
+/* ─── Hero Proof ─── */
+
+.hero-proof {
+    display: flex;
+    gap: 24px;
+    margin-top: 24px;
+    flex-wrap: wrap;
+}
+
+.proof-item {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+}
+
+.proof-item i {
+    color: var(--secondary);
+    margin-right: 6px;
+}
+
+.proof-item strong {
+    color: #fff;
+}
+
+/* ─── Showcase (Avant/Après) ─── */
+
+.showcase {
+    background: var(--bg-card);
+}
+
+.showcase-grid {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.showcase-card {
+    flex: 1;
+    min-width: 280px;
+    max-width: 400px;
+}
+
+.showcase-label {
+    font-size: 0.85rem;
+    font-weight: 700;
+    margin-bottom: 12px;
+    text-align: center;
+    color: #fff;
+}
+
+.showcase-visual {
+    border-radius: var(--radius);
+    overflow: hidden;
+    border: 1px solid var(--border);
+}
+
+.mockup {
+    background: #1a1a2e;
+}
+
+.mockup-bar {
+    display: flex;
+    gap: 6px;
+    padding: 10px 14px;
+    background: #111122;
+    border-bottom: 1px solid #2a2a4a;
+}
+
+.mockup-bar span {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: #555;
+}
+
+.mockup-body {
+    padding: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.mockup-line {
+    height: 10px;
+    background: #333;
+    border-radius: 4px;
+}
+
+.mockup-square {
+    width: calc(50% - 5px);
+    height: 60px;
+    background: #2a2a4a;
+    border-radius: 6px;
+}
+
+.good-line {
+    background: linear-gradient(90deg, #6c5ce7, #00cec9);
+    opacity: 0.6;
+}
+
+.good-square {
+    background: linear-gradient(135deg, rgba(108,92,231,0.3), rgba(0,206,201,0.2));
+    border: 1px solid rgba(108,92,231,0.2);
+}
+
+.showcase-vs {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.vs-badge {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, var(--primary), var(--secondary));
+    color: #fff;
+    font-size: 1rem;
+    font-weight: 800;
+    box-shadow: 0 0 30px rgba(108,92,231,0.3);
+}
+
+.showcase-desc {
+    text-align: center;
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    margin-top: 12px;
+}
+
+@media (max-width: 768px) {
+    .showcase-grid {
+        flex-direction: column;
+    }
+    .showcase-card {
+        max-width: 100%;
+    }
+    .showcase-vs {
+        transform: rotate(90deg);
+    }
+    .hero-proof {
+        flex-direction: column;
+        gap: 8px;
+    }
+}
+
 /* ─── Services ─── */
 
 .services-grid {
