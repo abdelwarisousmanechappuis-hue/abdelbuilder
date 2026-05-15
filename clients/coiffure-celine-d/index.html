@@ -163,8 +163,9 @@
         .pricing-card .btn { width: 100%; justify-content: center; }
 
         /* ── GALLERY ── */
-        .gallery-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 10px; }
+        .gallery-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
         .gallery-grid .gallery-item { background-repeat: no-repeat; }
+        .gallery-grid .gallery-item:hover { transform: scale(1.02); }
         .gallery-item {
             aspect-ratio: 1; border-radius: 16px; overflow: hidden;
             background-color: rgba(201, 176, 160, 0.06);
@@ -238,7 +239,7 @@
             @media (max-width: 768px) {
             .hero h1 { font-size: 2.6rem; }
             .about-grid, .contact-grid { grid-template-columns: 1fr; gap: 40px; }
-            .gallery-grid { grid-template-columns: repeat(2, 1fr); }
+            .gallery-grid { grid-template-columns: repeat(2, 1fr); gap: 16px; }
             .gallery-grid .gallery-item { aspect-ratio: 1; }
 
             .hours-grid { grid-template-columns: 1fr; }
@@ -426,7 +427,7 @@
             <div class="section-header">
                 <span class="section-tag">Galerie</span>
                 <h2>Notre <em>travail</em></h2>
-                <p>Quelques réalisations pour vous donner une idée de notre savoir-faire.</p>
+                <p>Quelques photos de notre salon</p>
             </div>
             <div class="gallery-grid">
                 <div class="gallery-item" style="background-image:url('images/o.jpg')"><div style="opacity:0;">o</div></div>
