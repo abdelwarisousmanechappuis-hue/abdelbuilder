@@ -874,15 +874,6 @@ section {
     margin-bottom: 8px;
 }
 
-.whatsapp-link {
-    color: #25D366;
-    text-decoration: none;
-    font-weight: 600;
-}
-.whatsapp-link:hover {
-    text-decoration: underline;
-}
-
 .info-badge {
     display: inline-block;
     padding: 3px 12px;
