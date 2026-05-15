@@ -163,7 +163,8 @@
         .pricing-card .btn { width: 100%; justify-content: center; }
 
         /* ── GALLERY ── */
-        .gallery-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; }
+        .gallery-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 10px; }
+        .gallery-grid .gallery-item { background-repeat: no-repeat; }
         .gallery-item {
             aspect-ratio: 1; border-radius: 16px; overflow: hidden;
             background: rgba(201, 176, 160, 0.06);
@@ -233,10 +234,12 @@
         .section-alt { background: rgba(201, 176, 160, 0.04); }
 
         /* ── RESPONSIVE ── */
-        @media (max-width: 768px) {
+            @media (max-width: 768px) {
             .hero h1 { font-size: 2.6rem; }
             .about-grid, .contact-grid { grid-template-columns: 1fr; gap: 40px; }
             .gallery-grid { grid-template-columns: repeat(2, 1fr); }
+            .gallery-grid .gallery-item { aspect-ratio: 1; }
+
             .hours-grid { grid-template-columns: 1fr; }
             .section-header h2 { font-size: 2rem; }
             .about-text h2 { font-size: 1.8rem; }
@@ -427,12 +430,18 @@
                 <p>Quelques réalisations pour vous donner une idée de notre savoir-faire.</p>
             </div>
             <div class="gallery-grid">
-                <div class="gallery-item"><div><i class="fas fa-image"></i><br>Photo 1</div></div>
-                <div class="gallery-item"><div><i class="fas fa-image"></i><br>Photo 2</div></div>
-                <div class="gallery-item"><div><i class="fas fa-image"></i><br>Photo 3</div></div>
-                <div class="gallery-item"><div><i class="fas fa-image"></i><br>Photo 4</div></div>
-                <div class="gallery-item"><div><i class="fas fa-image"></i><br>Photo 5</div></div>
-                <div class="gallery-item"><div><i class="fas fa-image"></i><br>Photo 6</div></div>
+                <div class="gallery-item" style="background-image:url('images/o.jpg');background-size:cover;background-position:center;"><div style="opacity:0;">o</div></div>
+                <div class="gallery-item" style="background-image:url('images/t.jpg');background-size:cover;background-position:center;"><div style="opacity:0;">t</div></div>
+                <div class="gallery-item" style="background-image:url('images/l.jpg');background-size:cover;background-position:center;"><div style="opacity:0;">l</div></div>
+                <div class="gallery-item" style="background-image:url('images/xx.jpg');background-size:cover;background-position:center;"><div style="opacity:0;">xx</div></div>
+                <div class="gallery-item" style="background-image:url('images/n.jpg');background-size:cover;background-position:center;"><div style="opacity:0;">n</div></div>
+                <div class="gallery-item" style="background-image:url('images/v.jpg');background-size:cover;background-position:center;"><div style="opacity:0;">v</div></div>
+                <div class="gallery-item" style="background-image:url('images/d.jpg');background-size:cover;background-position:center;"><div style="opacity:0;">d</div></div>
+                <div class="gallery-item" style="background-image:url('images/w.jpg');background-size:cover;background-position:center;"><div style="opacity:0;">w</div></div>
+                <div class="gallery-item" style="background-image:url('images/b.jpg');background-size:cover;background-position:center;"><div style="opacity:0;">b</div></div>
+                <div class="gallery-item" style="background-image:url('images/p.jpg');background-size:cover;background-position:center;"><div style="opacity:0;">p</div></div>
+                <div class="gallery-item" style="background-image:url('images/f.jpg');background-size:cover;background-position:center;"><div style="opacity:0;">f</div></div>
+                <div class="gallery-item" style="background-image:url('images/i.jpg');background-size:cover;background-position:center;"><div style="opacity:0;">i</div></div>
             </div>
         </div>
     </section>
