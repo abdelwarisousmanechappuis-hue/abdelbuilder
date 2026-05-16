@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Templates sites web professionnels | AbdelBuilder</title>
+<meta name="description" content="Templates HTML/CSS prêts à l'emploi : coiffure, restaurant, artisan. Personnalisez et déployez votre site en 1 heure. 29€ seulement.">
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif; background: #0f0f1a; color: #e0e0f0; line-height: 1.6; }
+.container { max-width: 1000px; margin: 0 auto; padding: 0 20px; }
+
+.header { text-align: center; padding: 60px 0 40px; }
+.header h1 { font-size: 2.5rem; background: linear-gradient(135deg, #6c5ce7, #00cec9); -webkit-background-clip: text; -webkit-text-fill-color: transparent; margin-bottom: 12px; }
+.header p { color: #8888aa; font-size: 1.1rem; max-width: 600px; margin: 0 auto; }
+.header .price-badge { display: inline-block; background: linear-gradient(135deg, #6c5ce7, #00cec9); color: #fff; padding: 8px 24px; border-radius: 50px; font-weight: 700; font-size: 1.2rem; margin-top: 16px; }
+
+.template-grid { display: grid; gap: 24px; padding: 20px 0 60px; }
+.template-card { background: #1a1a2e; border-radius: 20px; overflow: hidden; border: 1px solid #2a2a4a; display: flex; flex-direction: column; }
+.template-preview { padding: 40px; background: #12121f; min-height: 200px; display: flex; align-items: center; justify-content: center; font-size: 3rem; position: relative; }
+.template-preview .label { position: absolute; top: 16px; left: 16px; background: #6c5ce7; color: #fff; padding: 4px 14px; border-radius: 50px; font-size: 0.75rem; font-weight: 600; text-transform: uppercase; }
+.template-body { padding: 28px; flex: 1; display: flex; flex-direction: column; }
+.template-body h2 { font-size: 1.3rem; color: #fff; margin-bottom: 8px; }
+.template-body p { color: #8888aa; font-size: 0.9rem; margin-bottom: 12px; flex: 1; }
+.template-features { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 16px; }
+.template-features span { background: rgba(108,92,231,0.15); color: #a29bfe; padding: 4px 12px; border-radius: 50px; font-size: 0.75rem; font-weight: 500; }
+.template-body .btn { display: inline-block; background: linear-gradient(135deg, #6c5ce7, #00cec9); color: #fff; padding: 12px 28px; border-radius: 50px; font-weight: 600; font-size: 0.9rem; text-decoration: none; text-align: center; transition: opacity 0.3s; }
+.template-body .btn:hover { opacity: 0.85; }
+
+.how { background: #1a1a2e; border-radius: 20px; padding: 40px; margin-bottom: 40px; border: 1px solid #2a2a4a; }
+.how h2 { font-size: 1.4rem; color: #fff; margin-bottom: 20px; text-align: center; }
+.how ol { max-width: 500px; margin: 0 auto; padding-left: 20px; }
+.how li { color: #8888aa; margin-bottom: 10px; font-size: 0.95rem; }
+.how li strong { color: #a29bfe; }
+
+.footer { text-align: center; padding: 30px 0; color: #555; font-size: 0.85rem; }
+.footer a { color: #6c5ce7; text-decoration: none; }
+
+@media (min-width: 700px) {
+  .template-card { flex-direction: row; }
+  .template-preview { flex: 0 0 280px; min-height: auto; }
+}
+</style>
+</head>
+<body>
+
+<div class="container">
+
+  <div class="header">
+    <h1>&#x1F4E6; Templates site web</h1>
+    <p>Des sites prêts à l'emploi — tu personnalises le texte, tu déploies sur GitHub Pages, et t'as un site pro en 1 heure.</p>
+    <div class="price-badge">29€ l'unité</div>
+  </div>
+
+  <div class="template-grid">
+
+    <div class="template-card">
+      <div class="template-preview" style="background:linear-gradient(135deg,#1a1a2e,#16213e);color:#e84393;">
+        <div class="label">Coiffure</div>
+        &#x2702;
+      </div>
+      <div class="template-body">
+        <h2>Template Coiffure & Salon</h2>
+        <p>Site vitrine pour salon de coiffure, barbershop ou institut de beauté. Services, galerie, avis clients, contact.</p>
+        <div class="template-features">
+          <span>Responsive</span>
+          <span>Galerie photos</span>
+          <span>Avis clients</span>
+          <span>CTA téléphone</span>
+        </div>
+        <a href="coiffure.html" class="btn" target="_blank">&#x1F50D; Voir le template</a>
+      </div>
+    </div>
+
+    <div class="template-card">
+      <div class="template-preview" style="background:linear-gradient(135deg,#1a3c2a,#2c5a3e);color:#e8b83a;">
+        <div class="label">Restaurant</div>
+        &#x1F372;
+      </div>
+      <div class="template-body">
+        <h2>Template Restaurant & Bar</h2>
+        <p>Site complet pour restaurant, bar, pizzeria ou food-truck. Menu avec prix, galerie, avis, contact et Google Maps.</p>
+        <div class="template-features">
+          <span>Responsive</span>
+          <span>Menu avec prix</span>
+          <span>Avis Google</span>
+          <span>Google Maps</span>
+        </div>
+        <a href="restaurant.html" class="btn" target="_blank">&#x1F50D; Voir le template</a>
+      </div>
+    </div>
+
+    <div class="template-card">
+      <div class="template-preview" style="background:linear-gradient(135deg,#2d2b55,#1a1a3e);color:#6c5ce7;">
+        <div class="label">Artisan / Service</div>
+        &#x1F527;
+      </div>
+      <div class="template-body">
+        <h2>Template Artisan & Service Pro</h2>
+        <p>Site pour artisans, entrepreneurs, coachs, auto-entrepreneurs. Présentation, services, galerie avant/après, contact.</p>
+        <div class="template-features">
+          <span>Responsive</span>
+          <span>Galerie photos</span>
+          <span>Section services</span>
+          <span>CTA devis</span>
+        </div>
+        <a href="artisan.html" class="btn" target="_blank">&#x1F50D; Voir le template</a>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="how">
+    <h2>&#x1F4A1; Comment ça marche</h2>
+    <ol>
+      <li><strong>Tu achètes</strong> le template sur Gumroad (paiement via carte ou PayPal)</li>
+      <li><strong>Tu reçois</strong> le fichier HTML par email</li>
+      <li><strong>Tu ouvres</strong> dans un éditeur (Bloc-notes, VS Code) et tu remplaces les textes entre <code>=== ... ===</code></li>
+      <li><strong>Tu pushes</strong> sur GitHub Pages — et t'as un site pro en ligne gratuitement</li>
+      <li><strong>Support inclus</strong> : je t'aide si t'es bloqué</li>
+    </ol>
+  </div>
+
+</div>
+
+<footer class="footer">
+  <div class="container">
+    <p>&copy; 2026 <a href="https://abdelbuilder.com">AbdelBuilder</a> — Templates sites web professionnels</p>
+  </div>
+</footer>
+
+</body>
+</html>

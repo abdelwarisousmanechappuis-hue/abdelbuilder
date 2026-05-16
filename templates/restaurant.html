@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>=== NOM DU RESTAURANT === | Restaurant === TYPE DE CUISINE === à === VILLE ===</title>
+<meta name="description" content="=== DESCRIPTION === | Restaurant === TYPE === à === VILLE ===. === HORAIRE OU ACCROCHE ===">
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif; background: #fdfaf7; color: #2c2018; line-height: 1.6; }
+.container { max-width: 1100px; margin: 0 auto; padding: 0 20px; }
+
+/* ── HERO ── */
+.hero { position: relative; min-height: 80vh; display: flex; align-items: center; justify-content: center; text-align: center; color: #fff; background: linear-gradient(135deg, #1a3c2a, #2c5a3e); overflow: hidden; }
+.hero-bg { position: absolute; inset: 0; background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" opacity="0.06"><path d="M50 0 L100 50 L50 100 L0 50 Z" fill="white"/></svg>') repeat; background-size: 40px; }
+.hero-content { position: relative; z-index: 1; padding: 40px 20px; }
+.hero h1 { font-size: 2.8rem; margin-bottom: 8px; font-weight: 800; }
+.hero h1 span { background: linear-gradient(135deg, #e8b83a, #f5d06a); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+.hero .tagline { font-size: 1.15rem; color: rgba(255,255,255,0.85); margin-bottom: 24px; }
+.hero .btn-menu { display: inline-block; background: #e8b83a; color: #1a3c2a; padding: 14px 36px; border-radius: 50px; font-weight: 700; font-size: 1rem; text-decoration: none; transition: opacity 0.3s; margin: 0 6px 8px; }
+.hero .btn-contact { display: inline-block; background: transparent; color: #fff; padding: 14px 36px; border-radius: 50px; font-weight: 600; font-size: 1rem; text-decoration: none; border: 2px solid rgba(255,255,255,0.3); transition: background 0.3s; margin: 0 6px 8px; }
+.hero .btn-menu:hover { opacity: 0.9; }
+.hero .btn-contact:hover { background: rgba(255,255,255,0.1); }
+
+/* ── SECTION ── */
+.section { padding: 60px 0; }
+.section-alt { background: #fff; }
+.section-title { text-align: center; font-size: 1.8rem; margin-bottom: 40px; color: #2c2018; }
+.section-title span { background: linear-gradient(135deg, #1a3c2a, #2c5a3e); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+
+/* ── MENU ── */
+.menu-category { margin-bottom: 40px; }
+.menu-category h3 { font-size: 1.3rem; color: #1a3c2a; border-bottom: 2px solid #e8b83a; padding-bottom: 8px; margin-bottom: 16px; }
+.menu-item { display: flex; justify-content: space-between; align-items: center; padding: 10px 0; border-bottom: 1px dashed #e0d6cc; }
+.menu-item .name { font-weight: 500; }
+.menu-item .desc { font-size: 0.85rem; color: #8a7a6e; }
+.menu-item .price { font-weight: 700; color: #1a3c2a; font-size: 1.05rem; white-space: nowrap; margin-left: 16px; }
+
+/* ── GALERIE ── */
+.gallery-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 12px; }
+.gallery-item { aspect-ratio: 1; border-radius: 12px; overflow: hidden; background: #f0f0f0; display: flex; align-items: center; justify-content: center; color: #ccc; font-size: 0.85rem; }
+.gallery-item img { width: 100%; height: 100%; object-fit: cover; }
+.gallery-item.tall { aspect-ratio: 1/1.5; grid-row: span 2; }
+
+/* ── AVIS ── */
+.avis-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 16px; }
+.avis-card { background: #faf3ea; border-radius: 12px; padding: 20px; border: 1px solid rgba(44,32,24,0.04); }
+.avis-stars { color: #e8b83a; margin-bottom: 8px; font-size: 0.8rem; letter-spacing: 2px; }
+.avis-text { font-style: italic; color: #4a3d34; font-size: 0.9rem; margin-bottom: 12px; }
+.avis-name { font-weight: 600; font-size: 0.85rem; color: #2c2018; }
+
+/* ── CONTACT ── */
+.contact-info { text-align: center; max-width: 500px; margin: 0 auto; }
+.contact-info p { margin: 10px 0; color: #4a3d34; font-size: 1rem; }
+.contact-info a { color: #1a3c2a; text-decoration: none; font-weight: 500; }
+.contact-info a:hover { text-decoration: underline; }
+.contact-info .btn { display: inline-block; margin-top: 20px; background: linear-gradient(135deg, #1a3c2a, #2c5a3e); color: #fff; padding: 14px 36px; border-radius: 50px; font-size: 1rem; font-weight: 600; text-decoration: none; }
+
+/* ── FOOTER ── */
+.footer { background: #1a3c2a; color: rgba(255,255,255,0.6); text-align: center; padding: 24px 0; font-size: 0.85rem; }
+.footer a { color: #e8b83a; text-decoration: none; }
+
+@media (max-width: 600px) {
+  .hero h1 { font-size: 1.8rem; }
+  .hero { min-height: 60vh; }
+}
+</style>
+</head>
+<body>
+
+<!-- ═══════════════════════════════════════════════════
+     ⚡ TEMPLATE RESTAURANT — AbdelBuilder
+     Remplace tout ce qui est entre "=== ... ==="
+     ═══════════════════════════════════════════════════ -->
+
+<section class="hero">
+  <div class="hero-bg"></div>
+  <div class="hero-content">
+    <h1>=== NOM DU RESTAURANT ===<br><span>=== SLOGAN (ex: Cuisine italienne authentique) ===</span></h1>
+    <p class="tagline">=== ACCROCHE (ex: Ouvert du mardi au dimanche, de 12h à 14h et de 19h à 21h30) ===</p>
+    <a href="#menu" class="btn-menu">&#x1F372; Voir le menu</a>
+    <a href="#contact" class="btn-contact">&#x1F4CD; Nous trouver</a>
+  </div>
+</section>
+
+<section class="section" id="histoire">
+  <div class="container">
+    <h2 class="section-title">Notre <span>histoire</span></h2>
+    <p style="text-align:center;max-width:700px;margin:0 auto;color:#4a3d34;">=== L'HISTOIRE DU RESTAURANT (ex: Ouvert en 2026 par ..., le restaurant propose une cuisine ... dans un cadre ...) ===</p>
+  </div>
+</section>
+
+<section class="section section-alt" id="menu">
+  <div class="container">
+    <h2 class="section-title">Notre <span>menu</span></h2>
+
+    <!-- ⚡ Catégorie : copie/colle ce bloc -->
+    <div class="menu-category">
+      <h3>=== NOM CATÉGORIE (ex: Antipasti) ===</h3>
+      <div class="menu-item">
+        <div><div class="name">=== NOM PLAT ===</div><div class="desc">=== DESCRIPTION ===</div></div>
+        <div class="price">=== PRIX ===€</div>
+      </div>
+      <div class="menu-item">
+        <div><div class="name">=== NOM PLAT 2 ===</div><div class="desc">=== DESCRIPTION ===</div></div>
+        <div class="price">=== PRIX ===€</div>
+      </div>
+    </div>
+
+    <div class="menu-category">
+      <h3>=== NOM CATÉGORIE 2 (ex: Pâtes & Pizza) ===</h3>
+      <div class="menu-item">
+        <div><div class="name">=== NOM PLAT ===</div><div class="desc">=== DESCRIPTION ===</div></div>
+        <div class="price">=== PRIX ===€</div>
+      </div>
+      <div class="menu-item">
+        <div><div class="name">=== NOM PLAT 2 ===</div><div class="desc">=== DESCRIPTION ===</div></div>
+        <div class="price">=== PRIX ===€</div>
+      </div>
+    </div>
+
+    <div class="menu-category">
+      <h3>=== NOM CATÉGORIE 3 (ex: Dolci) ===</h3>
+      <div class="menu-item">
+        <div><div class="name">=== NOM PLAT ===</div><div class="desc">=== DESCRIPTION ===</div></div>
+        <div class="price">=== PRIX ===€</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="avis">
+  <div class="container">
+    <h2 class="section-title">Avis <span>clients</span></h2>
+    <div class="avis-grid">
+      <div class="avis-card">
+        <div class="avis-stars">★★★★★</div>
+        <div class="avis-text">"=== AVIS 1 ==="</div>
+        <div class="avis-name">=== PRÉNOM NOM ===</div>
+      </div>
+      <div class="avis-card">
+        <div class="avis-stars">★★★★★</div>
+        <div class="avis-text">"=== AVIS 2 ==="</div>
+        <div class="avis-name">=== PRÉNOM NOM ===</div>
+      </div>
+      <div class="avis-card">
+        <div class="avis-stars">★★★★★</div>
+        <div class="avis-text">"=== AVIS 3 ==="</div>
+        <div class="avis-name">=== PRÉNOM NOM ===</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section section-alt" id="galerie">
+  <div class="container">
+    <h2 class="section-title">Notre <span>galerie</span></h2>
+    <div class="gallery-grid">
+      <div class="gallery-item">Photo 1</div>
+      <div class="gallery-item tall">Photo 2</div>
+      <div class="gallery-item">Photo 3</div>
+      <div class="gallery-item">Photo 4</div>
+      <div class="gallery-item">Photo 5</div>
+      <div class="gallery-item">Photo 6</div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="contact">
+  <div class="container">
+    <h2 class="section-title"><span>Contact & accès</span></h2>
+    <div class="contact-info">
+      <p>&#x1F4CD; === ADRESSE, CODE POSTAL VILLE ===</p>
+      <p>&#x260E; <a href="tel:=== TÉLÉPHONE ===">=== TÉLÉPHONE ===</a></p>
+      <p>&#x2709; <a href="mailto:=== EMAIL ===">=== EMAIL ===</a></p>
+      <p>&#x1F5D3; Ouvert === JOURS ET HORAIRES ===</p>
+      <a href="https://www.google.com/maps/search/?api=1&query=== ADRESSE ENCODÉE ===" class="btn" target="_blank">&#x1F4CD; Voir sur Google Maps</a>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="container">
+    <p>&copy; 2026 === NOM DU RESTAURANT === | Site par <a href="https://abdelbuilder.com">AbdelBuilder</a></p>
+  </div>
+</footer>
+
+</body>
+</html>

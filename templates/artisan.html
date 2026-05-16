@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>=== NOM ENTREPRISE === | === MÉTIER === à === VILLE ===</title>
+<meta name="description" content="=== MÉTIER === à === VILLE ===. === ACCROCHE ===. Contactez-nous pour un devis gratuit.">
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif; background: #fff; color: #1a1a2e; line-height: 1.7; }
+.container { max-width: 1100px; margin: 0 auto; padding: 0 20px; }
+a { text-decoration: none; }
+
+/* ── HERO ── */
+.hero { background: linear-gradient(135deg, #2d2b55, #1a1a3e); color: #fff; padding: 80px 0 60px; }
+.hero-grid { display: flex; align-items: center; gap: 40px; }
+.hero-text { flex: 1; }
+.hero h1 { font-size: 2.4rem; margin-bottom: 16px; line-height: 1.2; }
+.hero h1 span { background: linear-gradient(135deg, #6c5ce7, #00cec9); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+.hero p { font-size: 1.05rem; color: #b0b0d0; margin-bottom: 24px; }
+.hero .btn { display: inline-block; background: linear-gradient(135deg, #6c5ce7, #00cec9); color: #fff; padding: 14px 32px; border-radius: 50px; font-weight: 600; transition: opacity 0.3s; }
+.hero .btn:hover { opacity: 0.85; }
+.hero-badge { display: inline-block; background: rgba(108,92,231,0.2); padding: 6px 16px; border-radius: 50px; font-size: 0.8rem; font-weight: 600; color: #a29bfe; margin-bottom: 16px; }
+
+/* ── SECTION ── */
+.section { padding: 60px 0; }
+.section-alt { background: #f8f7ff; }
+.section-title { text-align: center; font-size: 1.7rem; margin-bottom: 40px; }
+.section-title span { background: linear-gradient(135deg, #6c5ce7, #00cec9); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+
+/* ── SERVICES ── */
+.services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 20px; }
+.service-card { background: #fff; border-radius: 16px; padding: 28px; text-align: center; border: 1px solid #eee; transition: transform 0.3s; }
+.service-card:hover { transform: translateY(-4px); }
+.service-card i { font-size: 2rem; color: #6c5ce7; margin-bottom: 12px; }
+.service-card h3 { font-size: 1.1rem; margin-bottom: 8px; }
+.service-card p { color: #666; font-size: 0.9rem; }
+
+/* ── GALLERY ── */
+.gallery-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 12px; }
+.gallery-item { aspect-ratio: 4/3; border-radius: 12px; overflow: hidden; background: #f0f0f0; display: flex; align-items: center; justify-content: center; color: #ccc; }
+.gallery-item img { width: 100%; height: 100%; object-fit: cover; }
+
+/* ── CONTACT ── */
+.contact-wrap { max-width: 500px; margin: 0 auto; text-align: center; }
+.contact-wrap p { margin: 10px 0; color: #444; }
+.contact-wrap a { color: #6c5ce7; font-weight: 500; }
+.contact-wrap .btn { display: inline-block; margin-top: 20px; background: linear-gradient(135deg, #6c5ce7, #00cec9); color: #fff; padding: 14px 36px; border-radius: 50px; font-weight: 600; }
+
+/* ── FOOTER ── */
+.footer { background: #2d2b55; color: rgba(255,255,255,0.5); text-align: center; padding: 20px 0; font-size: 0.85rem; }
+.footer a { color: #a29bfe; }
+
+@media (max-width: 700px) {
+  .hero-grid { flex-direction: column; text-align: center; }
+  .hero h1 { font-size: 1.7rem; }
+}
+</style>
+</head>
+<body>
+
+<!-- ═══════════════════════════════════════════════════
+     ⚡ TEMPLATE ARTISAN / SERVICE — AbdelBuilder
+     Remplace tout ce qui est entre "=== ... ==="
+     ═══════════════════════════════════════════════════ -->
+
+<section class="hero">
+  <div class="container">
+    <div class="hero-grid">
+      <div class="hero-text">
+        <div class="hero-badge">&#x1F3E6; === VILLE, RÉGION ===</div>
+        <h1>=== NOM ENTREPRISE ===<br><span>=== SLOGAN (ex: Votre partenaire de confiance) ===</span></h1>
+        <p>=== ACCROCHE (ex: Spécialiste en ... avec plus de ... d'expérience. Devis gratuit, intervention rapide.) ===</p>
+        <a href="#contact" class="btn">&#x1F4DE; Demander un devis</a>
+      </div>
+      <!-- ⚡ Tu peux remplacer par une vraie photo -->
+      <div style="flex:0 0 280px;aspect-ratio:1;border-radius:20px;background:linear-gradient(135deg,#6c5ce7,#00cec9);display:flex;align-items:center;justify-content:center;color:rgba(255,255,255,0.4);font-size:4rem;overflow:hidden;">&#x1F4F7;</div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="about">
+  <div class="container">
+    <h2 class="section-title">À <span>propos</span></h2>
+    <p style="text-align:center;max-width:700px;margin:0 auto;color:#555;">=== À PROPOS : qui êtes-vous, votre expérience, vos valeurs, ce qui vous rend unique. ===</p>
+  </div>
+</section>
+
+<section class="section section-alt" id="services">
+  <div class="container">
+    <h2 class="section-title">Mes <span>services</span></h2>
+    <div class="services-grid">
+      <div class="service-card">
+        <i class="fas fa-wrench"></i>
+        <h3>=== SERVICE 1 ===</h3>
+        <p>=== DESCRIPTION ===</p>
+      </div>
+      <div class="service-card">
+        <i class="fas fa-tools"></i>
+        <h3>=== SERVICE 2 ===</h3>
+        <p>=== DESCRIPTION ===</p>
+      </div>
+      <div class="service-card">
+        <i class="fas fa-paint-roller"></i>
+        <h3>=== SERVICE 3 ===</h3>
+        <p>=== DESCRIPTION ===</p>
+      </div>
+      <!-- ⚡ Copie/colle pour plus de services -->
+    </div>
+  </div>
+</section>
+
+<section class="section" id="galerie">
+  <div class="container">
+    <h2 class="section-title">Mes <span>réalisations</span></h2>
+    <div class="gallery-grid">
+      <div class="gallery-item">Avant/Après 1</div>
+      <div class="gallery-item">Avant/Après 2</div>
+      <div class="gallery-item">Avant/Après 3</div>
+      <div class="gallery-item">Réalisation 4</div>
+      <div class="gallery-item">Réalisation 5</div>
+      <div class="gallery-item">Réalisation 6</div>
+    </div>
+  </div>
+</section>
+
+<section class="section section-alt" id="contact">
+  <div class="container">
+    <h2 class="section-title"><span>Contact</span></h2>
+    <div class="contact-wrap">
+      <p>&#x1F4DE; <a href="tel:=== TÉLÉPHONE ===">=== TÉLÉPHONE ===</a></p>
+      <p>&#x2709; <a href="mailto:=== EMAIL ===">=== EMAIL ===</a></p>
+      <p>&#x1F4CD; === ADRESSE ===</p>
+      <a href="tel:=== TÉLÉPHONE ===" class="btn">&#x1F4DE; Appeler</a>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="container">
+    <p>&copy; 2026 === NOM ENTREPRISE === | Site par <a href="https://abdelbuilder.com">AbdelBuilder</a></p>
+  </div>
+</footer>
+
+<!-- Font Awesome (nécessaire pour les icônes) -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</body>
+</html>

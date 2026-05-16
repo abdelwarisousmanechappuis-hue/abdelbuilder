@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>=== NOM DU SALON === | Coiffure</title>
+<meta name="description" content="=== DESCRIPTION DU SALON === | Coiffeur à === VILLE ===">
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif; background: #fff; color: #1a1a2e; line-height: 1.6; }
+.container { max-width: 1100px; margin: 0 auto; padding: 0 20px; }
+
+/* ── HERO ── */
+.hero { background: linear-gradient(135deg, #1a1a2e, #16213e); color: #fff; padding: 80px 0 60px; text-align: center; }
+.hero h1 { font-size: 2.5rem; margin-bottom: 12px; }
+.hero h1 span { background: linear-gradient(135deg, #e84393, #fd79a8); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+.hero p { font-size: 1.1rem; color: #b0b0c8; margin-bottom: 24px; max-width: 600px; margin-inline: auto; }
+.hero-phone { display: inline-block; background: linear-gradient(135deg, #e84393, #fd79a8); color: #fff; padding: 14px 36px; border-radius: 50px; font-size: 1.1rem; font-weight: 600; text-decoration: none; transition: opacity 0.3s; }
+.hero-phone:hover { opacity: 0.85; }
+
+/* ── SECTION ── */
+.section { padding: 60px 0; }
+.section-alt { background: #f8f5f2; }
+.section-title { text-align: center; font-size: 1.8rem; margin-bottom: 40px; color: #1a1a2e; }
+.section-title span { background: linear-gradient(135deg, #e84393, #fd79a8); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+
+/* ── SERVICES ── */
+.services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; }
+.service-card { background: #fff; border-radius: 16px; padding: 28px; text-align: center; border: 1px solid #eee; transition: transform 0.3s; }
+.service-card:hover { transform: translateY(-4px); }
+.service-card h3 { font-size: 1.1rem; margin-bottom: 6px; }
+.service-card .price { font-size: 1.3rem; font-weight: 700; color: #e84393; margin: 8px 0; }
+.service-card p { color: #666; font-size: 0.9rem; }
+
+/* ── GALERIE ── */
+.gallery-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 12px; }
+.gallery-item { aspect-ratio: 1; border-radius: 12px; overflow: hidden; background: #f0f0f0; display: flex; align-items: center; justify-content: center; color: #ccc; font-size: 0.85rem; }
+.gallery-item img { width: 100%; height: 100%; object-fit: cover; }
+
+/* ── CONTACT ── */
+.contact-info { text-align: center; }
+.contact-info p { margin: 8px 0; color: #444; font-size: 1rem; }
+.contact-info a { color: #e84393; text-decoration: none; font-weight: 500; }
+.contact-info a:hover { text-decoration: underline; }
+.contact-info .btn { display: inline-block; margin-top: 16px; background: linear-gradient(135deg, #e84393, #fd79a8); color: #fff; padding: 14px 36px; border-radius: 50px; font-size: 1rem; font-weight: 600; text-decoration: none; }
+
+/* ── AVIS ── */
+.avis-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 16px; }
+.avis-card { background: #fff; border-radius: 12px; padding: 20px; border: 1px solid #eee; }
+.avis-stars { color: #f1c40f; margin-bottom: 8px; }
+.avis-text { font-style: italic; color: #555; font-size: 0.9rem; margin-bottom: 12px; }
+.avis-name { font-weight: 600; font-size: 0.85rem; color: #1a1a2e; }
+.avis-source { font-size: 0.75rem; color: #999; }
+
+/* ── FOOTER ── */
+.footer { background: #1a1a2e; color: #888; text-align: center; padding: 24px 0; font-size: 0.85rem; }
+.footer a { color: #e84393; text-decoration: none; }
+
+/* ── ADAPTATIF ― */
+@media (max-width: 600px) {
+  .hero h1 { font-size: 1.8rem; }
+  .hero { padding: 60px 0 40px; }
+}
+</style>
+</head>
+<body>
+
+<!-- ═══════════════════════════════════════════════
+     ⚡ TEMPLATE COIFFURE — AbdelBuilder
+     Instructions : remplace tout ce qui est entre
+     "=== ... ===" par les infos du salon.
+     ═══════════════════════════════════════════════ -->
+
+<section class="hero">
+  <div class="container">
+    <h1>=== NOM DU SALON ===<br><span>=== SLOGAN (ex: Votre beauté, notre passion) ===</span></h1>
+    <p>=== ACCROCHE (ex: Coiffure mixte, couleur, coupe, barbe — prenez rendez-vous dès maintenant.) ===</p>
+    <a href="tel:=== TÉLÉPHONE ===" class="hero-phone">&#x2706; === TÉLÉPHONE ===</a>
+  </div>
+</section>
+
+<section class="section" id="services">
+  <div class="container">
+    <h2 class="section-title">Nos <span>prestations</span></h2>
+    <div class="services-grid">
+      <!-- ⚡ Copie/colle ce bloc pour chaque service -->
+      <div class="service-card">
+        <h3>=== NOM SERVICE (ex: Coupe Homme) ===</h3>
+        <div class="price">=== PRIX ===€</div>
+        <p>=== DESCRIPTION (ex: Coupe tendance + shampooing) ===</p>
+      </div>
+      <div class="service-card">
+        <h3>=== NOM SERVICE 2 ===</h3>
+        <div class="price">=== PRIX ===€</div>
+        <p>=== DESCRIPTION ===</p>
+      </div>
+      <div class="service-card">
+        <h3>=== NOM SERVICE 3 ===</h3>
+        <div class="price">=== PRIX ===€</div>
+        <p>=== DESCRIPTION ===</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section section-alt" id="galerie">
+  <div class="container">
+    <h2 class="section-title">Nos <span>réalisations</span></h2>
+    <div class="gallery-grid">
+      <!-- ⚡ Remplace les src par tes vraies photos -->
+      <div class="gallery-item">Photo 1</div>
+      <div class="gallery-item">Photo 2</div>
+      <div class="gallery-item">Photo 3</div>
+      <div class="gallery-item">Photo 4</div>
+      <div class="gallery-item">Photo 5</div>
+      <div class="gallery-item">Photo 6</div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="avis">
+  <div class="container">
+    <h2 class="section-title">Ce que disent <span>nos clients</span></h2>
+    <div class="avis-grid">
+      <div class="avis-card">
+        <div class="avis-stars">★★★★★</div>
+        <div class="avis-text">"=== AVIS CLIENT 1 ==="</div>
+        <div class="avis-name">=== PRÉNOM NOM ===</div>
+        <div class="avis-source">Google</div>
+      </div>
+      <div class="avis-card">
+        <div class="avis-stars">★★★★★</div>
+        <div class="avis-text">"=== AVIS CLIENT 2 ==="</div>
+        <div class="avis-name">=== PRÉNOM NOM ===</div>
+        <div class="avis-source">Google</div>
+      </div>
+      <div class="avis-card">
+        <div class="avis-stars">★★★★★</div>
+        <div class="avis-text">"=== AVIS CLIENT 3 ==="</div>
+        <div class="avis-name">=== PRÉNOM NOM ===</div>
+        <div class="avis-source">Google</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section section-alt" id="contact">
+  <div class="container">
+    <h2 class="section-title"><span>Contactez-nous</span></h2>
+    <div class="contact-info">
+      <p>&#x1F4CD; === ADRESSE (ex: 123 Rue Principale, 73000 Ville) ===</p>
+      <p>&#x260E; <a href="tel:=== TÉLÉPHONE ===">=== TÉLÉPHONE ===</a></p>
+      <p>&#x2709; <a href="mailto:=== EMAIL ===">=== EMAIL ===</a></p>
+      <!-- ⚡ Lien Instagram, Facebook, etc. -->
+      <p>&#x1F4F7; <a href="=== LIEN INSTAGRAM ===">@=== INSTAGRAM ===</a></p>
+      <a href="tel:=== TÉLÉPHONE ===" class="btn">&#x2706; Appeler pour prendre RDV</a>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="container">
+    <p>&copy; 2026 === NOM DU SALON === | Site réalisé par <a href="https://abdelbuilder.com">AbdelBuilder</a></p>
+  </div>
+</footer>
+
+</body>
+</html>

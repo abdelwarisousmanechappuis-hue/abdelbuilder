@@ -1,0 +1,44 @@
+Tu veux un site pro pour ton activité sans payer un développeur 2000€ ?
+
+J'ai créé des templates HTML/CSS prêts à l'emploi. Tu télécharges, tu changes le texte, tu déploies sur GitHub Pages gratuitement — t'as un site en ligne en 1 heure.
+
+--- À SAVOIR ---
+- Fichier HTML unique (tout est dedans, pas de base de données)
+- Design responsive (marche sur téléphone, tablette, PC)
+- Pas besoin de savoir coder : les textes à changer sont marqués === COMME ÇA ===
+- Hébergement gratuit via GitHub Pages ou Netlify
+- Support inclus par email si t'es bloqué
+
+--- 3 TEMPLATES DISPONIBLES ---
+
+1. COIFFURE & SALON (29€)
+- Hero avec photo de profil et numéro de téléphone
+- Grille des prestations et tarifs
+- Galerie photos (6+ visuels)
+- Section avis clients (5★)
+- Contact : téléphone, email, adresse, Instagram
+
+2. RESTAURANT & BAR (29€)
+- Hero avec bannière et boutons Menu / Contact
+- Section "Notre histoire"
+- Menu complet par catégorie (entrée, plat, dessert) avec prix
+- Avis clients
+- Galerie photos (masonry)
+- Contact, horaires, Google Maps
+
+3. ARTISAN & SERVICE PRO (29€)
+- Hero avec photo + bouton devis
+- Section "À propos"
+- Grille des services avec icônes
+- Galerie avant/après
+- Contact téléphone/email/adresse
+
+--- COMMENT ÇA MARCHE ---
+1. Achète le template
+2. Reçois le fichier HTML par email
+3. Ouvre-le dans n'importe quel éditeur
+4. Remplace les textes entre === ET ===
+5. Déploie gratuitement sur GitHub Pages (je t'envoie le tuto)
+6. T'as un site pro en ligne !
+
+Des questions ? abdelbuilder@proton.me
