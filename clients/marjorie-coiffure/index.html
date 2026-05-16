@@ -1,0 +1,836 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Marjorie Coiffure - Salon de coiffure | Le Châtelard</title>
+    <meta name="description" content="Salon de coiffure Marjorie au Le Châtelard. Coupe homme, femme, enfant, coloration, mèches, balayage, lissage brésilien. Ambiance conviviale et conseils personnalisés.">
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0%25' y1='0%25' x2='100%25' y2='100%25'%3E%3Cstop offset='0%25' stop-color='%23c97b5e'/%3E%3Cstop offset='100%25' stop-color='%23d4a373'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='100' height='100' rx='20' fill='url(%23g)'/%3E%3Ctext x='50' y='68' font-size='50' text-anchor='middle' fill='white' font-family='serif'%3EM%3C/text%3E%3C/svg%3E">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        html { scroll-behavior: smooth; }
+        body {
+            font-family: 'Inter', sans-serif;
+            background: #0a0a0a;
+            color: #e0d8d0;
+            line-height: 1.7;
+            overflow-x: hidden;
+            -webkit-font-smoothing: antialiased;
+        }
+        a { text-decoration: none; color: inherit; }
+        img { max-width: 100%; display: block; }
+
+        .container { max-width: 1140px; margin: 0 auto; padding: 0 24px; }
+
+        /* ── SECTION TAG ── */
+        .section-tag {
+            display: inline-flex; align-items: center; gap: 8px;
+            padding: 6px 18px; border-radius: 50px;
+            background: rgba(201, 123, 94, 0.1); border: 1px solid rgba(201, 123, 94, 0.15);
+            color: #d4a373; font-size: 0.6rem; font-weight: 600;
+            text-transform: uppercase; letter-spacing: 3px; margin-bottom: 20px;
+        }
+        .section-tag i { font-size: 0.45rem; }
+
+        /* ── GRADIENT TEXT ── */
+        .gradient-text {
+            background: linear-gradient(135deg, #d4a373, #c97b5e, #e8b88a);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        /* ── DECORATIVE BLUR ── */
+        .blob {
+            position: absolute; border-radius: 50%;
+            filter: blur(80px); pointer-events: none; opacity: 0.4;
+        }
+
+        /* ── NAVBAR ── */
+        .navbar {
+            position: fixed; top: 0; width: 100%; z-index: 1000;
+            background: rgba(10, 10, 10, 0.85); backdrop-filter: blur(24px);
+            border-bottom: 1px solid rgba(212, 163, 115, 0.08);
+            padding: 10px 0; transition: all 0.3s;
+        }
+        .navbar.scrolled { background: rgba(10, 10, 10, 0.96); }
+        .navbar .container { display: flex; align-items: center; justify-content: space-between; }
+        .logo { display: flex; align-items: center; gap: 14px; }
+        .logo-icon {
+            width: 42px; height: 42px; border-radius: 12px;
+            background: linear-gradient(135deg, #c97b5e, #d4a373);
+            display: flex; align-items: center; justify-content: center;
+            font-family: 'Playfair Display', serif; font-size: 1.3rem; font-weight: 700; color: #fff;
+        }
+        .logo-text { font-family: 'Playfair Display', serif; font-size: 1.15rem; font-weight: 600; color: #e8e0d8; }
+        .logo-text span { color: #d4a373; }
+
+        .nav-links { list-style: none; display: flex; align-items: center; gap: 36px; }
+        .nav-links a {
+            font-size: 0.75rem; font-weight: 500; color: #a09890;
+            text-transform: uppercase; letter-spacing: 1.5px; transition: color 0.3s; position: relative;
+        }
+        .nav-links a::after {
+            content: ''; position: absolute; bottom: -4px; left: 0; width: 0; height: 2px;
+            background: linear-gradient(90deg, #d4a373, #c97b5e);
+            transition: width 0.3s;
+        }
+        .nav-links a:hover { color: #e8e0d8; }
+        .nav-links a:hover::after { width: 100%; }
+
+        .nav-cta {
+            padding: 10px 24px; border-radius: 50px;
+            background: linear-gradient(135deg, #c97b5e, #d4a373); color: #0a0a0a !important; font-weight: 700;
+            letter-spacing: 1px; font-size: 0.7rem; transition: all 0.3s;
+        }
+        .nav-cta:hover { transform: translateY(-2px); box-shadow: 0 8px 30px rgba(201, 123, 94, 0.3); color: #0a0a0a !important; }
+        .nav-cta::after { display: none !important; }
+
+        .hamburger { display: none; flex-direction: column; gap: 5px; cursor: pointer; padding: 4px; }
+        .hamburger span {
+            width: 24px; height: 2px; background: #e8e0d8;
+            transition: all 0.3s; border-radius: 2px;
+        }
+
+        /* ── HERO ── */
+        .hero {
+            min-height: 100vh; display: flex; align-items: center;
+            position: relative; overflow: hidden; padding: 160px 0 80px;
+        }
+        .hero::before {
+            content: ''; position: absolute; inset: 0;
+            background:
+                radial-gradient(ellipse at 20% 50%, rgba(201, 123, 94, 0.08) 0%, transparent 50%),
+                radial-gradient(ellipse at 80% 20%, rgba(212, 163, 115, 0.06) 0%, transparent 50%),
+                radial-gradient(ellipse at 50% 80%, rgba(201, 123, 94, 0.04) 0%, transparent 50%);
+        }
+        .hero-bg-shape {
+            position: absolute; top: -20%; right: -10%;
+            width: 600px; height: 600px; border-radius: 50%;
+            background: radial-gradient(circle, rgba(201, 123, 94, 0.1) 0%, transparent 70%);
+            filter: blur(60px);
+        }
+        .hero-content { position: relative; z-index: 1; max-width: 720px; }
+        .hero-badge {
+            display: inline-flex; align-items: center; gap: 10px;
+            padding: 8px 20px; border-radius: 50px;
+            background: rgba(212, 163, 115, 0.08); border: 1px solid rgba(212, 163, 115, 0.15);
+            color: #d4a373; font-size: 0.7rem; font-weight: 500; letter-spacing: 0.5px; margin-bottom: 28px;
+        }
+        .hero-badge i { font-size: 0.6rem; }
+        .hero h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 4.2rem; font-weight: 700; color: #f0e8e0; line-height: 1.08;
+            margin-bottom: 20px;
+        }
+        .hero p {
+            font-size: 1.1rem; color: #a09890; max-width: 540px;
+            margin-bottom: 36px; line-height: 1.8;
+        }
+        .hero-actions { display: flex; gap: 16px; flex-wrap: wrap; margin-bottom: 40px; }
+        .btn {
+            display: inline-flex; align-items: center; gap: 10px;
+            padding: 14px 32px; border-radius: 50px; font-size: 0.85rem;
+            font-weight: 600; letter-spacing: 0.5px; transition: all 0.3s; cursor: pointer; border: none;
+        }
+        .btn-primary {
+            background: linear-gradient(135deg, #c97b5e, #d4a373);
+            color: #0a0a0a; box-shadow: 0 4px 20px rgba(201, 123, 94, 0.25);
+        }
+        .btn-primary:hover { transform: translateY(-3px); box-shadow: 0 8px 35px rgba(201, 123, 94, 0.35); }
+        .btn-secondary {
+            background: transparent; color: #e8e0d8;
+            border: 1px solid rgba(212, 163, 115, 0.2);
+        }
+        .btn-secondary:hover { background: rgba(212, 163, 115, 0.05); border-color: rgba(212, 163, 115, 0.4); }
+
+        .hero-stats {
+            display: flex; gap: 40px; padding-top: 32px;
+            border-top: 1px solid rgba(212, 163, 115, 0.08);
+        }
+        .hero-stat-value {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.8rem; font-weight: 700; color: #f0e8e0;
+        }
+        .hero-stat-label { font-size: 0.75rem; color: #706860; text-transform: uppercase; letter-spacing: 1px; margin-top: 2px; }
+
+        /* ── ANIMATIONS ── */
+        .reveal {
+            opacity: 0; transform: translateY(30px);
+            transition: opacity 0.7s ease, transform 0.7s ease;
+        }
+        .reveal.visible { opacity: 1; transform: translateY(0); }
+        .reveal-delay-1 { transition-delay: 0.1s; }
+        .reveal-delay-2 { transition-delay: 0.2s; }
+        .reveal-delay-3 { transition-delay: 0.3s; }
+        .reveal-delay-4 { transition-delay: 0.4s; }
+
+        /* ── SECTION COMMON ── */
+        section { padding: 100px 0; position: relative; }
+        .section-header {
+            text-align: center; max-width: 600px; margin: 0 auto 60px;
+        }
+        .section-header h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.8rem; font-weight: 700; color: #f0e8e0;
+            line-height: 1.15;
+        }
+        .section-header p {
+            color: #706860; font-size: 0.95rem; margin-top: 16px;
+        }
+
+        /* ── SERVICES ── */
+        #services { background: linear-gradient(180deg, #0a0a0a 0%, #0f0e0c 100%); }
+        .services-grid {
+            display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+            gap: 20px;
+        }
+        .service-card {
+            background: rgba(255, 255, 255, 0.02);
+            border: 1px solid rgba(255, 255, 255, 0.04);
+            border-radius: 16px; padding: 32px 28px;
+            transition: all 0.4s; position: relative; overflow: hidden;
+        }
+        .service-card::before {
+            content: ''; position: absolute; top: 0; left: 0; right: 0; height: 2px;
+            background: linear-gradient(90deg, transparent, rgba(212, 163, 115, 0.3), transparent);
+            opacity: 0; transition: opacity 0.4s;
+        }
+        .service-card:hover { background: rgba(255, 255, 255, 0.04); border-color: rgba(212, 163, 115, 0.12); transform: translateY(-4px); }
+        .service-card:hover::before { opacity: 1; }
+        .service-icon {
+            width: 48px; height: 48px; border-radius: 12px;
+            background: rgba(201, 123, 94, 0.1);
+            display: flex; align-items: center; justify-content: center;
+            color: #d4a373; font-size: 1.2rem; margin-bottom: 18px;
+            transition: all 0.4s;
+        }
+        .service-card:hover .service-icon { background: rgba(201, 123, 94, 0.15); }
+        .service-card h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.2rem; font-weight: 600; color: #e8e0d8; margin-bottom: 8px;
+        }
+        .service-card p { font-size: 0.85rem; color: #706860; line-height: 1.6; }
+        .service-price {
+            display: inline-block; margin-top: 16px;
+            font-size: 0.75rem; font-weight: 600; color: #d4a373;
+            letter-spacing: 0.5px;
+        }
+
+        /* ── GALERIE ── */
+        #galerie { background: #0a0a0a; }
+        .galerie-grid {
+            display: grid; grid-template-columns: repeat(3, 1fr);
+            gap: 16px;
+        }
+        .galerie-item {
+            border-radius: 12px; overflow: hidden; position: relative;
+            background: rgba(255, 255, 255, 0.02); aspect-ratio: 4/3;
+            display: flex; align-items: center; justify-content: center;
+            border: 1px solid rgba(255, 255, 255, 0.04);
+            color: #403830; font-size: 0.8rem;
+        }
+        .galerie-item i { font-size: 2rem; color: rgba(212, 163, 115, 0.15); margin-bottom: 8px; }
+        .galerie-item span { display: block; }
+        .galerie-item .placeholder-content {
+            display: flex; flex-direction: column; align-items: center; gap: 4px;
+        }
+        .galerie-item.tall { grid-row: span 2; }
+        .galerie-item.wide { grid-column: span 2; }
+        .galerie-item img {
+            width: 100%; height: 100%; object-fit: cover; position: absolute; inset: 0;
+        }
+
+        .galerie-cta {
+            text-align: center; margin-top: 40px;
+        }
+        .galerie-cta p {
+            color: #706860; font-size: 0.9rem; margin-bottom: 16px;
+        }
+
+        /* ── TESTIMONIALS ── */
+        #avis { background: linear-gradient(180deg, #0a0a0a 0%, #0f0e0c 100%); }
+        .testimonials-grid {
+            display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+            gap: 24px;
+        }
+        .testimonial-card {
+            background: rgba(255, 255, 255, 0.02);
+            border: 1px solid rgba(255, 255, 255, 0.04);
+            border-radius: 16px; padding: 32px; transition: all 0.3s;
+        }
+        .testimonial-card:hover { background: rgba(255, 255, 255, 0.04); }
+        .testimonial-stars { color: #d4a373; font-size: 0.85rem; margin-bottom: 16px; letter-spacing: 4px; }
+        .testimonial-card blockquote {
+            font-size: 0.9rem; color: #b0a898; line-height: 1.7; font-style: italic;
+            margin-bottom: 20px;
+        }
+        .testimonial-author { display: flex; align-items: center; gap: 12px; }
+        .testimonial-avatar {
+            width: 40px; height: 40px; border-radius: 50%;
+            background: linear-gradient(135deg, rgba(201, 123, 94, 0.2), rgba(212, 163, 115, 0.2));
+            display: flex; align-items: center; justify-content: center;
+            color: #d4a373; font-size: 0.85rem; font-weight: 600;
+        }
+        .testimonial-name { font-size: 0.85rem; font-weight: 600; color: #e8e0d8; }
+        .testimonial-source { font-size: 0.7rem; color: #706860; }
+
+        /* ── CONTACT / LOCALISATION ── */
+        #contact { background: #0a0a0a; }
+        .contact-grid {
+            display: grid; grid-template-columns: 1fr 1fr;
+            gap: 48px; align-items: start;
+        }
+        .contact-info h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.6rem; color: #f0e8e0; margin-bottom: 20px;
+        }
+        .contact-info p { color: #706860; font-size: 0.9rem; line-height: 1.8; }
+        .contact-details { margin-top: 32px; display: flex; flex-direction: column; gap: 20px; }
+        .contact-detail {
+            display: flex; align-items: center; gap: 16px;
+        }
+        .contact-detail-icon {
+            width: 44px; height: 44px; border-radius: 12px;
+            background: rgba(201, 123, 94, 0.1);
+            display: flex; align-items: center; justify-content: center;
+            color: #d4a373; font-size: 1rem; flex-shrink: 0;
+        }
+        .contact-detail-label { font-size: 0.7rem; color: #706860; text-transform: uppercase; letter-spacing: 1px; }
+        .contact-detail-value { font-size: 0.95rem; color: #e0d8d0; font-weight: 500; }
+        .contact-detail-value a { color: #d4a373; }
+        .contact-detail-value a:hover { text-decoration: underline; }
+
+        .contact-map {
+            border-radius: 16px; overflow: hidden;
+            border: 1px solid rgba(255, 255, 255, 0.04);
+            background: rgba(255, 255, 255, 0.02);
+        }
+        .contact-map iframe {
+            width: 100%; height: 100%; min-height: 350px; display: block;
+            filter: grayscale(0.1) invert(0.9) hue-rotate(15deg);
+        }
+
+        /* ── HORAIRES ── */
+        .horaires-card {
+            margin-top: 40px;
+            background: rgba(255, 255, 255, 0.02);
+            border: 1px solid rgba(255, 255, 255, 0.04);
+            border-radius: 16px; padding: 32px;
+        }
+        .horaires-card h4 {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.1rem; color: #e8e0d8; margin-bottom: 20px;
+        }
+        .horaires-grid {
+            display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 12px;
+        }
+        .horaire-item {
+            display: flex; justify-content: space-between; align-items: center;
+            padding: 10px 16px; border-radius: 8px;
+            background: rgba(255, 255, 255, 0.02);
+            font-size: 0.85rem;
+        }
+        .horaire-day { color: #908880; }
+        .horaire-time { color: #e0d8d0; font-weight: 500; }
+        .horaire-item.ferme .horaire-time { color: #605850; }
+
+        /* ── CTA BANNER ── */
+        .cta-banner {
+            background: linear-gradient(135deg, rgba(201, 123, 94, 0.08), rgba(212, 163, 115, 0.04));
+            border: 1px solid rgba(212, 163, 115, 0.08);
+            border-radius: 24px; padding: 64px; text-align: center;
+            position: relative; overflow: hidden;
+        }
+        .cta-banner h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.4rem; color: #f0e8e0; margin-bottom: 16px;
+        }
+        .cta-banner p {
+            color: #908880; font-size: 1rem; max-width: 500px; margin: 0 auto 32px;
+        }
+
+        /* ── FOOTER ── */
+        footer {
+            border-top: 1px solid rgba(255, 255, 255, 0.04);
+            padding: 40px 0 24px; background: #080808;
+        }
+        .footer-grid {
+            display: grid; grid-template-columns: 2fr 1fr 1fr;
+            gap: 48px; margin-bottom: 32px;
+        }
+        .footer-brand .logo { margin-bottom: 16px; }
+        .footer-brand p {
+            color: #706860; font-size: 0.85rem; line-height: 1.7; max-width: 320px;
+        }
+        .footer-social { display: flex; gap: 12px; margin-top: 20px; }
+        .footer-social a {
+            width: 38px; height: 38px; border-radius: 10px;
+            background: rgba(255, 255, 255, 0.04);
+            display: flex; align-items: center; justify-content: center;
+            color: #706860; font-size: 0.9rem; transition: all 0.3s;
+        }
+        .footer-social a:hover { background: rgba(212, 163, 115, 0.1); color: #d4a373; }
+        .footer-col h4 {
+            font-size: 0.75rem; font-weight: 600; color: #e8e0d8;
+            text-transform: uppercase; letter-spacing: 2px; margin-bottom: 20px;
+        }
+        .footer-col a {
+            display: block; color: #706860; font-size: 0.85rem;
+            padding: 6px 0; transition: color 0.3s;
+        }
+        .footer-col a:hover { color: #d4a373; }
+        .footer-bottom {
+            padding-top: 24px; border-top: 1px solid rgba(255, 255, 255, 0.04);
+            display: flex; justify-content: space-between; align-items: center;
+            font-size: 0.8rem; color: #504840;
+        }
+        .footer-bottom a { color: #706860; }
+        .footer-bottom a:hover { color: #d4a373; }
+
+        /* ── WHATSAPP FAB ── */
+        .whatsapp-fab {
+            position: fixed; bottom: 24px; right: 24px; z-index: 999;
+            width: 56px; height: 56px; border-radius: 50%;
+            background: linear-gradient(135deg, #25d366, #128c7e);
+            display: flex; align-items: center; justify-content: center;
+            color: #fff; font-size: 1.6rem; cursor: pointer;
+            box-shadow: 0 4px 20px rgba(37, 211, 102, 0.3);
+            transition: all 0.3s;
+        }
+        .whatsapp-fab:hover { transform: translateY(-3px) scale(1.05); box-shadow: 0 8px 30px rgba(37, 211, 102, 0.4); }
+
+        /* ── RESPONSIVE ── */
+        @media (max-width: 768px) {
+            .nav-links { display: none; position: fixed; top: 0; left: 0; right: 0; bottom: 0;
+                background: rgba(10, 10, 10, 0.98); flex-direction: column; justify-content: center;
+                align-items: center; gap: 32px; backdrop-filter: blur(20px); z-index: 999;
+            }
+            .nav-links.open { display: flex; }
+            .nav-links a { font-size: 1.1rem; }
+            .hamburger { display: flex; z-index: 1001; }
+            .hamburger.open span:nth-child(1) { transform: rotate(45deg) translate(5px, 5px); }
+            .hamburger.open span:nth-child(2) { opacity: 0; }
+            .hamburger.open span:nth-child(3) { transform: rotate(-45deg) translate(5px, -5px); }
+
+            .hero h1 { font-size: 2.5rem; }
+            .hero-stats { flex-direction: column; gap: 16px; }
+            .section-header h2 { font-size: 2rem; }
+            .services-grid { grid-template-columns: 1fr; }
+            .galerie-grid { grid-template-columns: 1fr 1fr; }
+            .galerie-item.tall, .galerie-item.wide { grid-row: auto; grid-column: auto; }
+            .contact-grid { grid-template-columns: 1fr; }
+            .footer-grid { grid-template-columns: 1fr; gap: 32px; }
+            .cta-banner { padding: 40px 24px; }
+            .cta-banner h2 { font-size: 1.6rem; }
+            .testimonials-grid { grid-template-columns: 1fr; }
+            .horaires-grid { grid-template-columns: 1fr; }
+            .footer-bottom { flex-direction: column; gap: 8px; text-align: center; }
+        }
+        @media (max-width: 480px) {
+            .hero h1 { font-size: 2rem; }
+            .hero-actions { flex-direction: column; }
+            .btn { text-align: center; justify-content: center; }
+            .galerie-grid { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- ─── NAVBAR ─── -->
+    <nav class="navbar" id="navbar">
+        <div class="container">
+            <a href="#" class="logo">
+                <div class="logo-icon">M</div>
+                <span class="logo-text">Marjorie <span>Coiffure</span></span>
+            </a>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#services">Services</a></li>
+                <li><a href="#galerie">Galerie</a></li>
+                <li><a href="#avis">Avis</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li><a href="tel:+33479359787" class="nav-cta"><i class="fas fa-phone"></i> 04 79 35 97 87</a></li>
+            </ul>
+            <div class="hamburger" id="hamburger">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- ─── HERO ─── -->
+    <section class="hero" id="accueil">
+        <div class="hero-bg-shape"></div>
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-badge">
+                    <i class="fas fa-star"></i> Salon de coiffure — Le Châtelard
+                </div>
+                <h1 class="gradient-text">Votre salon<br>de coiffure</h1>
+                <p>Chez Marjorie, chaque coupe raconte une histoire. Dans une ambiance chaleureuse et professionnelle, je prends le temps de vous écouter pour révéler la plus belle version de vous-même.</p>
+                <div class="hero-actions">
+                    <a href="tel:+33479359787" class="btn btn-primary"><i class="fas fa-phone"></i> 04 79 35 97 87</a>
+                    <a href="#services" class="btn btn-secondary">Nos services</a>
+                </div>
+                <div class="hero-stats">
+                    <div>
+                        <div class="hero-stat-value" data-count="15">0</div>
+                        <div class="hero-stat-label">Années d'expérience</div>
+                    </div>
+                    <div>
+                        <div class="hero-stat-value" data-count="5000">0</div>
+                        <div class="hero-stat-label">Client·es satisfait·es</div>
+                    </div>
+                    <div>
+                        <div class="hero-stat-value" data-count="100">0</div>
+                        <div class="hero-stat-label">% Sur mesure</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ─── SERVICES ─── -->
+    <section id="services">
+        <div class="container">
+            <div class="section-header reveal">
+                <span class="section-tag"><i class="fas fa-cut"></i> Prestations</span>
+                <h2>Des soins pour <span class="gradient-text">révéler votre beauté</span></h2>
+                <p>Que vous souhaitiez un changement radical ou un simple rafraîchissement, je vous accompagne avec des prestations adaptées à vos envies et à la nature de vos cheveux.</p>
+            </div>
+            <div class="services-grid">
+                <div class="service-card reveal reveal-delay-1">
+                    <div class="service-icon"><i class="fas fa-cut"></i></div>
+                    <h3>Coupe Femme</h3>
+                    <p>Coupe personnalisée adaptée à votre morphologie et à votre style de vie. Conseils d'entretien inclus.</p>
+                    <span class="service-price">Sur mesure</span>
+                </div>
+                <div class="service-card reveal reveal-delay-2">
+                    <div class="service-icon"><i class="fas fa-user"></i></div>
+                    <h3>Coupe Homme</h3>
+                    <p>Coupe moderne ou classique, avec ou sans barbe. Finitions précises au rasoir.</p>
+                    <span class="service-price">Sur mesure</span>
+                </div>
+                <div class="service-card reveal reveal-delay-3">
+                    <div class="service-icon"><i class="fas fa-child"></i></div>
+                    <h3>Coupe Enfant</h3>
+                    <p>Premières coupes en douceur. Patience et bienveillance pour vos enfants.</p>
+                    <span class="service-price">Sur mesure</span>
+                </div>
+                <div class="service-card reveal reveal-delay-1">
+                    <div class="service-icon"><i class="fas fa-wind"></i></div>
+                    <h3>Brushing</h3>
+                    <p>Brushing lisse ou volumineux, au soufflet ou à la brosse ronde. Tenue longue durée.</p>
+                    <span class="service-price">Sur mesure</span>
+                </div>
+                <div class="service-card reveal reveal-delay-2">
+                    <div class="service-icon"><i class="fas fa-palette"></i></div>
+                    <h3>Coloration</h3>
+                    <p>Coloration naturelle ou de fantaisie, couverture des cheveux blancs. Produits de qualité professionnelle.</p>
+                    <span class="service-price">Sur mesure</span>
+                </div>
+                <div class="service-card reveal reveal-delay-3">
+                    <div class="service-icon"><i class="fas fa-highlighter"></i></div>
+                    <h3>Mèches & Balayage</h3>
+                    <p>Reflets naturels, mèches fines ou larges, balayage effet soleil. Techniques adaptées à votre carnation.</p>
+                    <span class="service-price">Sur mesure</span>
+                </div>
+                <div class="service-card reveal reveal-delay-1">
+                    <div class="service-icon"><i class="fas fa-magic"></i></div>
+                    <h3>Lissage Brésilien</h3>
+                    <p>Lissage progressif à la kératine. Cheveux lisses, brillants et disciplinés sans les abîmer.</p>
+                    <span class="service-price">Sur mesure</span>
+                </div>
+                <div class="service-card reveal reveal-delay-2">
+                    <div class="service-icon"><i class="fas fa-spa"></i></div>
+                    <h3>Soins Capillaires</h3>
+                    <p>Soins nutritifs, hydratants ou réparateurs. Masques professionnels pour cheveux abîmés ou secs.</p>
+                    <span class="service-price">Sur mesure</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ─── GALERIE ─── -->
+    <section id="galerie">
+        <div class="container">
+            <div class="section-header reveal">
+                <span class="section-tag"><i class="fas fa-images"></i> Galerie</span>
+                <h2>Quelques <span class="gradient-text">réalisations</span></h2>
+                <p>Découvrez mon travail à travers une sélection de photos de mes clientes et clients.</p>
+            </div>
+            <div class="galerie-grid">
+                <div class="galerie-item reveal reveal-delay-1">
+                    <div class="placeholder-content">
+                        <i class="fas fa-camera"></i>
+                        <span>Photo 1</span>
+                    </div>
+                </div>
+                <div class="galerie-item reveal reveal-delay-2">
+                    <div class="placeholder-content">
+                        <i class="fas fa-camera"></i>
+                        <span>Photo 2</span>
+                    </div>
+                </div>
+                <div class="galerie-item reveal reveal-delay-3">
+                    <div class="placeholder-content">
+                        <i class="fas fa-camera"></i>
+                        <span>Photo 3</span>
+                    </div>
+                </div>
+                <div class="galerie-item tall reveal reveal-delay-1">
+                    <div class="placeholder-content">
+                        <i class="fas fa-camera"></i>
+                        <span>Photo 4 (grand)</span>
+                    </div>
+                </div>
+                <div class="galerie-item reveal reveal-delay-2">
+                    <div class="placeholder-content">
+                        <i class="fas fa-camera"></i>
+                        <span>Photo 5</span>
+                    </div>
+                </div>
+                <div class="galerie-item wide reveal reveal-delay-3">
+                    <div class="placeholder-content">
+                        <i class="fas fa-camera"></i>
+                        <span>Photo 6 (large)</span>
+                    </div>
+                </div>
+                <div class="galerie-item reveal reveal-delay-1">
+                    <div class="placeholder-content">
+                        <i class="fas fa-camera"></i>
+                        <span>Photo 7</span>
+                    </div>
+                </div>
+                <div class="galerie-item reveal reveal-delay-2">
+                    <div class="placeholder-content">
+                        <i class="fas fa-camera"></i>
+                        <span>Photo 8</span>
+                    </div>
+                </div>
+            </div>
+            <div class="galerie-cta reveal">
+                <p>Vous souhaitez voir plus de réalisations ? Passez au salon ou suivez-moi sur les réseaux sociaux !</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ─── AVIS ─── -->
+    <section id="avis">
+        <div class="container">
+            <div class="section-header reveal">
+                <span class="section-tag"><i class="fas fa-star"></i> Témoignages</span>
+                <h2>Ce que disent <span class="gradient-text">nos client·es</span></h2>
+                <p>La satisfaction de mes clientes et clients est ma plus belle récompense. Voici quelques-uns de leurs retours.</p>
+            </div>
+            <div class="testimonials-grid">
+                <div class="testimonial-card reveal reveal-delay-1">
+                    <div class="testimonial-stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                    <blockquote>"Marjorie est une coiffeuse passionnée et à l'écoute. Elle a su me conseiller une coupe qui me va parfaitement. Son salon est chaleureux, on s'y sent tout de suite à l'aise. Je recommande les yeux fermés !"</blockquote>
+                    <div class="testimonial-author">
+                        <div class="testimonial-avatar">S</div>
+                        <div>
+                            <div class="testimonial-name">Sophie L.</div>
+                            <div class="testimonial-source">Cliente fidèle</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card reveal reveal-delay-2">
+                    <div class="testimonial-stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                    <blockquote>"Je suis allé chez Marjorie pour une coupe homme et j'ai été ravi du résultat. Très professionnelle, elle prend le temps de comprendre ce que l'on veut. Le rapport qualité-prix est excellent."</blockquote>
+                    <div class="testimonial-author">
+                        <div class="testimonial-avatar">T</div>
+                        <div>
+                            <div class="testimonial-name">Thomas M.</div>
+                            <div class="testimonial-source">Client régulier</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card reveal reveal-delay-3">
+                    <div class="testimonial-stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                    <blockquote>"Un grand merci à Marjorie pour mon balayage ! Le rendu est naturel et lumineux, exactement ce que je voulais. Ses conseils pour l'entretien à la maison sont précieux."</blockquote>
+                    <div class="testimonial-author">
+                        <div class="testimonial-avatar">C</div>
+                        <div>
+                            <div class="testimonial-name">Camille D.</div>
+                            <div class="testimonial-source">Cliente satisfaite</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ─── CONTACT ─── -->
+    <section id="contact">
+        <div class="container">
+            <div class="section-header reveal">
+                <span class="section-tag"><i class="fas fa-phone"></i> Contact</span>
+                <h2>Prenez <span class="gradient-text">rendez-vous</span></h2>
+                <p>Que ce soit pour une coupe, une couleur ou un simple conseil, je suis à votre disposition. Appelez-moi ou passez au salon !</p>
+            </div>
+            <div class="contact-grid">
+                <div class="contact-info reveal">
+                    <h3>Marjorie Coiffure</h3>
+                    <p>Un salon où l'écoute et le conseil personnalisé sont au cœur de chaque prestation. Dans une ambiance conviviale, je prends soin de vos cheveux avec des produits professionnels de qualité.</p>
+                    <div class="contact-details">
+                        <div class="contact-detail">
+                            <div class="contact-detail-icon"><i class="fas fa-map-marker-alt"></i></div>
+                            <div>
+                                <div class="contact-detail-label">Adresse</div>
+                                <div class="contact-detail-value">Carrefour Contact<br>73630 Le Châtelard</div>
+                            </div>
+                        </div>
+                        <div class="contact-detail">
+                            <div class="contact-detail-icon"><i class="fas fa-phone"></i></div>
+                            <div>
+                                <div class="contact-detail-label">Téléphone</div>
+                                <div class="contact-detail-value"><a href="tel:+33479359787">04 79 35 97 87</a></div>
+                            </div>
+                        </div>
+                        <div class="contact-detail">
+                            <div class="contact-detail-icon"><i class="fas fa-clock"></i></div>
+                            <div>
+                                <div class="contact-detail-label">Horaires</div>
+                                <div class="contact-detail-value">Du Mardi au Samedi</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="contact-map reveal reveal-delay-2">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2786.5!2d6.0947!3d45.6882!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNDXCsDQxJzE3LjUiTiA2wrAwNSc0MC45IkU!5e0!3m2!1sfr!2sfr!4v1" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+            </div>
+
+            <div class="horaires-card reveal">
+                <h4>Horaires d'ouverture</h4>
+                <div class="horaires-grid">
+                    <div class="horaire-item ferme"><span class="horaire-day">Lundi</span><span class="horaire-time">Fermé</span></div>
+                    <div class="horaire-item"><span class="horaire-day">Mardi</span><span class="horaire-time">09h – 12h · 14h – 19h</span></div>
+                    <div class="horaire-item"><span class="horaire-day">Mercredi</span><span class="horaire-time">09h – 12h · 14h – 19h</span></div>
+                    <div class="horaire-item"><span class="horaire-day">Jeudi</span><span class="horaire-time">09h – 12h · 14h – 19h</span></div>
+                    <div class="horaire-item"><span class="horaire-day">Vendredi</span><span class="horaire-time">09h – 12h · 14h – 19h</span></div>
+                    <div class="horaire-item"><span class="horaire-day">Samedi</span><span class="horaire-time">09h – 12h · 14h – 18h</span></div>
+                    <div class="horaire-item ferme"><span class="horaire-day">Dimanche</span><span class="horaire-time">Fermé</span></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ─── CTA BANNER ─── -->
+    <section style="padding-top:0">
+        <div class="container">
+            <div class="cta-banner reveal">
+                <h2>Envie de changer de look ?</h2>
+                <p>Prenez rendez-vous dès maintenant et laissez-moi révéler toute votre beauté.</p>
+                <a href="tel:+33479359787" class="btn btn-primary"><i class="fas fa-phone"></i> Appeler le 04 79 35 97 87</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ─── FOOTER ─── -->
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a href="#" class="logo">
+                        <div class="logo-icon">M</div>
+                        <span class="logo-text">Marjorie <span>Coiffure</span></span>
+                    </a>
+                    <p>Salon de coiffure mixte au Le Châtelard. Coupe, coloration, mèches, balayage, lissage brésilien et soins capillaires.</p>
+                    <div class="footer-social">
+                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" aria-label="Google"><i class="fab fa-google"></i></a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h4>Navigation</h4>
+                    <a href="#accueil">Accueil</a>
+                    <a href="#services">Services</a>
+                    <a href="#galerie">Galerie</a>
+                    <a href="#avis">Avis</a>
+                    <a href="#contact">Contact</a>
+                </div>
+                <div class="footer-col">
+                    <h4>Contact</h4>
+                    <a href="tel:+33479359787">04 79 35 97 87</a>
+                    <a href="#">Carrefour Contact<br>73630 Le Châtelard</a>
+                    <a href="#contact">Voir les horaires</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <span>&copy; 2026 Marjorie Coiffure. Tous droits réservés.</span>
+                <span>Site by <a href="https://abdelbuilder.com" target="_blank">AbdelBuilder</a></span>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ─── WHATSAPP ─── -->
+    <a href="https://wa.me/33479359787" class="whatsapp-fab" target="_blank" rel="noopener" aria-label="WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <script>
+        // ── Hamburger ──
+        const hamburger = document.getElementById('hamburger');
+        const navLinks = document.getElementById('navLinks');
+        hamburger.addEventListener('click', () => {
+            hamburger.classList.toggle('open');
+            navLinks.classList.toggle('open');
+        });
+        navLinks.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                hamburger.classList.remove('open');
+                navLinks.classList.remove('open');
+            });
+        });
+
+        // ── Scroll reveal ──
+        const revealEls = document.querySelectorAll('.reveal');
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, { threshold: 0.15 });
+        revealEls.forEach(el => observer.observe(el));
+
+        // ── Counter animation ──
+        const counterEls = document.querySelectorAll('[data-count]');
+        const counterObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const el = entry.target;
+                    const target = parseInt(el.dataset.count);
+                    const duration = 2000;
+                    const start = performance.now();
+                    const suffix = target === 100 ? '%' : '+';
+                    function update(now) {
+                        const elapsed = now - start;
+                        const progress = Math.min(elapsed / duration, 1);
+                        const eased = 1 - Math.pow(1 - progress, 3);
+                        const current = Math.round(eased * target);
+                        el.textContent = current.toLocaleString() + suffix;
+                        if (progress < 1) requestAnimationFrame(update);
+                        else el.textContent = target.toLocaleString() + suffix;
+                    }
+                    requestAnimationFrame(update);
+                    counterObserver.unobserve(el);
+                }
+            });
+        }, { threshold: 0.5 });
+        counterEls.forEach(el => counterObserver.observe(el));
+
+        // ── Navbar scroll effect ──
+        const navbar = document.getElementById('navbar');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 60) navbar.classList.add('scrolled');
+            else navbar.classList.remove('scrolled');
+        });
+    </script>
+</body>
+</html>

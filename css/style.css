@@ -540,6 +540,78 @@ section {
     }
 }
 
+/* ─── Portfolio / Réalisations ─── */
+
+.portfolio-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 24px;
+    max-width: 720px;
+    margin: 0 auto;
+}
+
+.portfolio-card {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding: 20px 24px;
+    background: var(--card-bg);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    transition: all 0.3s;
+    text-decoration: none;
+    color: inherit;
+}
+
+.portfolio-card:hover {
+    border-color: var(--primary);
+    transform: translateY(-3px);
+    box-shadow: 0 8px 30px rgba(108, 92, 231, 0.1);
+}
+
+.portfolio-thumb {
+    width: 64px;
+    height: 64px;
+    border-radius: 14px;
+    background: linear-gradient(135deg, var(--primary), #00cec9);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.portfolio-thumb-icon {
+    font-size: 1rem;
+    font-weight: 800;
+    color: #fff;
+    letter-spacing: -0.5px;
+}
+
+.portfolio-info h3 {
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--text);
+    margin-bottom: 2px;
+}
+
+.portfolio-tag {
+    display: inline-block;
+    padding: 2px 10px;
+    border-radius: 50px;
+    background: rgba(108, 92, 231, 0.1);
+    color: var(--primary);
+    font-size: 0.6rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 4px;
+}
+
+.portfolio-info p {
+    font-size: 0.8rem;
+    color: var(--text-muted);
+}
+
 /* ─── Services ─── */
 
 .services-grid {
