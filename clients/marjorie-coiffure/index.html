@@ -232,22 +232,8 @@
             border: 1px solid rgba(255, 255, 255, 0.04);
             color: #403830; font-size: 0.8rem;
         }
-        .galerie-item i { font-size: 2rem; color: rgba(212, 163, 115, 0.15); margin-bottom: 8px; }
-        .galerie-item span { display: block; }
-        .galerie-item .placeholder-content {
-            display: flex; flex-direction: column; align-items: center; gap: 4px;
-        }
-        .galerie-item.tall { grid-row: span 2; }
-        .galerie-item.wide { grid-column: span 2; }
         .galerie-item img {
             width: 100%; height: 100%; object-fit: cover; position: absolute; inset: 0;
-        }
-
-        .galerie-cta {
-            text-align: center; margin-top: 40px;
-        }
-        .galerie-cta p {
-            color: #706860; font-size: 0.9rem; margin-bottom: 16px;
         }
 
         /* ── TESTIMONIALS ── */
@@ -479,69 +465,35 @@
         </div>
     </section>
 
-    <!-- ─── SERVICES ─── -->
-    <section id="services">
+    <!-- ─── GALERIE ─── -->
+    <section id="galerie">
         <div class="container">
             <div class="section-header reveal">
-                <span class="section-tag"><i class="fas fa-cut"></i> Prestations</span>
-                <h2>Des soins pour <span class="gradient-text">révéler votre beauté</span></h2>
-                <p>Que vous souhaitiez un changement radical ou un simple rafraîchissement, je vous accompagne avec des prestations adaptées à vos envies et à la nature de vos cheveux.</p>
+                <span class="section-tag"><i class="fas fa-images"></i> Galerie</span>
+                <h2>Quelques <span class="gradient-text">réalisations</span></h2>
+                <p>Découvrez mon travail à travers une sélection de photos de mes clientes et clients.</p>
             </div>
-            <div class="services-grid">
-                <div class="service-card reveal reveal-delay-1">
-                    <div class="service-icon"><i class="fas fa-cut"></i></div>
-                    <h3>Coupe Femme</h3>
-                    <p>Coupe personnalisée adaptée à votre morphologie et à votre style de vie. Conseils d'entretien inclus.</p>
-                </div>
-                <div class="service-card reveal reveal-delay-2">
-                    <div class="service-icon"><i class="fas fa-user"></i></div>
-                    <h3>Coupe Homme</h3>
-                    <p>Coupe moderne ou classique, avec ou sans barbe. Finitions précises au rasoir.</p>
-                    <span class="service-price">À partir de 18€</span>
-                </div>
-                <div class="service-card reveal reveal-delay-3">
-                    <div class="service-icon"><i class="fas fa-child"></i></div>
-                    <h3>Coupe Enfant</h3>
-                    <p>Premières coupes en douceur. Patience et bienveillance pour vos enfants.</p>
-                    <span class="service-price">À partir de 15€</span>
-                </div>
-                <div class="service-card reveal reveal-delay-1">
-                    <div class="service-icon"><i class="fas fa-wind"></i></div>
-                    <h3>Brushing</h3>
-                    <p>Brushing lisse ou volumineux, au soufflet ou à la brosse ronde. Tenue longue durée.</p>
-                    <span class="service-price">Sur mesure</span>
-                </div>
-                <div class="service-card reveal reveal-delay-2">
-                    <div class="service-icon"><i class="fas fa-palette"></i></div>
-                    <h3>Coloration</h3>
-                    <p>Coloration naturelle ou de fantaisie, couverture des cheveux blancs. Produits de qualité professionnelle.</p>
-                    <span class="service-price">Sur mesure</span>
-                </div>
-                <div class="service-card reveal reveal-delay-3">
-                    <div class="service-icon"><i class="fas fa-highlighter"></i></div>
-                    <h3>Mèches & Balayage</h3>
-                    <p>Reflets naturels, mèches fines ou larges, balayage effet soleil. Techniques adaptées à votre carnation.</p>
-                    <span class="service-price">Sur mesure</span>
-                </div>
-                <div class="service-card reveal reveal-delay-1">
-                    <div class="service-icon"><i class="fas fa-magic"></i></div>
-                    <h3>Lissage Brésilien</h3>
-                    <p>Lissage progressif à la kératine. Cheveux lisses, brillants et disciplinés sans les abîmer.</p>
-                    <span class="service-price">Sur mesure</span>
-                </div>
-                <div class="service-card reveal reveal-delay-2">
-                    <div class="service-icon"><i class="fas fa-spa"></i></div>
-                    <h3>Soins Capillaires</h3>
-                    <p>Soins nutritifs, hydratants ou réparateurs. Masques professionnels pour cheveux abîmés ou secs.</p>
-                    <span class="service-price">Sur mesure</span>
-                </div>
+            <div class="galerie-grid">
+                <div class="galerie-item reveal reveal-delay-1"><img src="images/131130276_1246600255739703_6132670974515007773_n.jpg" alt="Réalisation coiffure" loading="lazy"></div>
+                <div class="galerie-item reveal reveal-delay-2"><img src="images/480684881_1128463075639232_1890612936977832442_n.jpg" alt="Réalisation coiffure" loading="lazy"></div>
+                <div class="galerie-item reveal reveal-delay-3"><img src="images/480881759_1128559342296272_60364470472676738_n.jpg" alt="Réalisation coiffure" loading="lazy"></div>
+                <div class="galerie-item reveal reveal-delay-1"><img src="images/480606535_1129107135574826_1769847721001391634_n.jpg" alt="Réalisation coiffure" loading="lazy"></div>
+                <div class="galerie-item reveal reveal-delay-2"><img src="images/480784962_1129107358908137_4003557194977396918_n.jpg" alt="Réalisation coiffure" loading="lazy"></div>
+                <div class="galerie-item reveal reveal-delay-3"><img src="images/480872527_1129838852168321_2845614241862226814_n.jpg" alt="Réalisation coiffure" loading="lazy"></div>
+                <div class="galerie-item reveal reveal-delay-1"><img src="images/482010394_1130100072142199_6009317558280524673_n.jpg" alt="Réalisation coiffure" loading="lazy"></div>
+                <div class="galerie-item reveal reveal-delay-2"><img src="images/480775743_1130113102140896_787771383687575076_n.jpg" alt="Réalisation coiffure" loading="lazy"></div>
+                <div class="galerie-item reveal reveal-delay-3"><img src="images/481047682_1133124275173112_6364979670925885763_n.jpg" alt="Réalisation coiffure" loading="lazy"></div>
+                <div class="galerie-item reveal reveal-delay-1"><img src="images/481137113_1133657118453161_775236289564183689_n.jpg" alt="Réalisation coiffure" loading="lazy"></div>
+                <div class="galerie-item reveal reveal-delay-2"><img src="images/484273193_1141818037637069_6201665228168423660_n.jpg" alt="Réalisation coiffure" loading="lazy"></div>
+                <div class="galerie-item reveal reveal-delay-3"><img src="images/484036975_1141819104303629_8000906137333788753_n.jpg" alt="Réalisation coiffure" loading="lazy"></div>
+                <div class="galerie-item reveal reveal-delay-1"><img src="images/497510014_1189740529511486_6408922258368017318_n.jpg" alt="Réalisation coiffure" loading="lazy"></div>
+                <div class="galerie-item reveal reveal-delay-2"><img src="images/515597167_1226748949143977_5889407267120989087_n.jpg" alt="Réalisation coiffure" loading="lazy"></div>
+                <div class="galerie-item reveal reveal-delay-3"><img src="images/513935583_1223380776147461_8593961698732405051_n.jpg" alt="Réalisation coiffure" loading="lazy"></div>
+                <div class="galerie-item reveal reveal-delay-1"><img src="images/513986863_1223381162814089_1365917653691858408_n.jpg" alt="Réalisation coiffure" loading="lazy"></div>
+                <div class="galerie-item reveal reveal-delay-2"><img src="images/592951473_1350123060139898_8161448742648444082_n.jpg" alt="Réalisation coiffure" loading="lazy"></div>
             </div>
         </div>
     </section>
-
-
-
-
 
     <!-- ─── CONTACT ─── -->
     <section id="contact">
