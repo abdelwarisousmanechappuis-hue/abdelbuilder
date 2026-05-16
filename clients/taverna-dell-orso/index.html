@@ -222,7 +222,34 @@
         }
         .menu-notes i { color: #009246; }
 
-        /* ─── GALERIE ── */
+        /* ─── AVIS ── */
+        #avis { background: #fff; }
+        .avis-slider {
+            display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 20px;
+        }
+        .avis-card {
+            background: #faf3ea; border-radius: 16px; padding: 28px;
+            border: 1px solid rgba(44, 32, 24, 0.04);
+        }
+        .avis-stars { color: #e8b83a; font-size: 0.8rem; letter-spacing: 2px; margin-bottom: 12px; }
+        .avis-text {
+            font-size: 0.9rem; color: #4a3d34; line-height: 1.7;
+            margin-bottom: 16px; font-style: italic;
+        }
+        .avis-author { display: flex; align-items: center; gap: 10px; }
+        .avis-avatar {
+            width: 36px; height: 36px; border-radius: 50%;
+            background: linear-gradient(135deg, #009246, #ce2b37);
+            display: flex; align-items: center; justify-content: center;
+            color: #fff; font-size: 0.75rem; font-weight: 600;
+        }
+        .avis-name { font-size: 0.85rem; color: #2c2018; font-weight: 500; }
+        .avis-source { font-size: 0.65rem; color: #8a7a6e; text-transform: uppercase; letter-spacing: 1px; }
+        .avis-note {
+            text-align: center; margin-top: 40px; font-size: 0.85rem; color: #8a7a6e;
+        }
+        .avis-note i { color: #ce2b37; }
         #galerie { background: #fff; }
         .galerie-grid {
             display: grid; grid-template-columns: repeat(4, 1fr);
@@ -377,6 +404,7 @@
             <ul class="nav-links" id="navLinks">
                 <li><a href="#story">L'histoire</a></li>
                 <li><a href="#menu">Menu</a></li>
+                <li><a href="#avis">Avis</a></li>
                 <li><a href="#galerie">Galerie</a></li>
                 <li><a href="#contact">Contact</a></li>
                 <li><a href="tel:+33486491083" class="nav-cta"><i class="fas fa-phone"></i> 04 86 49 10 83</a></li>
@@ -572,6 +600,110 @@
         </div>
     </section>
 
+    <!-- ─── AVIS ─── -->
+    <section id="avis">
+        <div class="container">
+            <div class="section-header reveal">
+                <span class="section-tag"><i class="fas fa-star"></i> Avis</span>
+                <h2>Ils ont aimé, <em>vous aimerez</em></h2>
+                <p>Ce que nos clients disent de la Taverna dell'Orso.</p>
+            </div>
+            <div class="avis-slider">
+                <div class="avis-card reveal reveal-delay-1">
+                    <div class="avis-stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                    <div class="avis-text">"Cuisine simple et savoureuse. Entrée plat dessert 19€."</div>
+                    <div class="avis-author">
+                        <div class="avis-avatar">YB</div>
+                        <div><div class="avis-name">Yann Mathieu-Beniere</div><div class="avis-source">Google · 5 mai 2026</div></div>
+                    </div>
+                </div>
+                <div class="avis-card reveal reveal-delay-2">
+                    <div class="avis-stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                    <div class="avis-text">"Nous avons passé un excellent moment entre amis. Je vous recommande vivement ce lieu chaleureux."</div>
+                    <div class="avis-author">
+                        <div class="avis-avatar">AC</div>
+                        <div><div class="avis-name">antoine crey</div><div class="avis-source">Google · 4 mai 2026</div></div>
+                    </div>
+                </div>
+                <div class="avis-card reveal reveal-delay-3">
+                    <div class="avis-stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                    <div class="avis-text">"Ouvert récemment dans le village, de l'entrée au dessert nous nous sommes régalés et le jeune couple qui tient le restaurant est très sympathique."</div>
+                    <div class="avis-author">
+                        <div class="avis-avatar">CM</div>
+                        <div><div class="avis-name">Carole Mugnier</div><div class="avis-source">Google · 1 mai 2026</div></div>
+                    </div>
+                </div>
+                <div class="avis-card reveal reveal-delay-1">
+                    <div class="avis-stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                    <div class="avis-text">"J'ai apprécié mon déjeuner à la Taverna, et le conseil pour le choix du vin rouge italien a été appréciable. Je reviendrai certainement."</div>
+                    <div class="avis-author">
+                        <div class="avis-avatar">AL</div>
+                        <div><div class="avis-name">Alexis Lamotte</div><div class="avis-source">Google · 1 mai 2026</div></div>
+                    </div>
+                </div>
+                <div class="avis-card reveal reveal-delay-2">
+                    <div class="avis-stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                    <div class="avis-text">"Superbe adresse dans les Bauges ! Mention spéciale pour les glaces artisanales italienne qui sont absolument incroyables 🐻"</div>
+                    <div class="avis-author">
+                        <div class="avis-avatar">DM</div>
+                        <div><div class="avis-name">Dana Mercier</div><div class="avis-source">Google · 24 avril 2026</div></div>
+                    </div>
+                </div>
+                <div class="avis-card reveal reveal-delay-3">
+                    <div class="avis-stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                    <div class="avis-text">"On a passé un très bon moment ! Que se soit le service ou le repas tout est au top !! On recommande à 100%"</div>
+                    <div class="avis-author">
+                        <div class="avis-avatar">MC</div>
+                        <div><div class="avis-name">Marjorie Challe</div><div class="avis-source">Google · 29 avril 2026</div></div>
+                    </div>
+                </div>
+                <div class="avis-card reveal reveal-delay-1">
+                    <div class="avis-stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                    <div class="avis-text">"Très bon restaurant italien au milieu des Bauges, bravo à eux 👏"</div>
+                    <div class="avis-author">
+                        <div class="avis-avatar">KD</div>
+                        <div><div class="avis-name">kevin desbiolles</div><div class="avis-source">Google · 29 avril 2026</div></div>
+                    </div>
+                </div>
+                <div class="avis-card reveal reveal-delay-2">
+                    <div class="avis-stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                    <div class="avis-text">"On est venu manger à 4 à la Taverna, pour boire l'apéro et prendre des supers apéritifs ! On s'est régalé ! Vous serez bien reçu dans la joie et la bonne humeur"</div>
+                    <div class="avis-author">
+                        <div class="avis-avatar">LH</div>
+                        <div><div class="avis-name">Lorinne Hanhardt</div><div class="avis-source">Google · 23 avril 2026</div></div>
+                    </div>
+                </div>
+                <div class="avis-card reveal reveal-delay-3">
+                    <div class="avis-stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                    <div class="avis-text">"Super ambiance pour boire un verre ! A tester !"</div>
+                    <div class="avis-author">
+                        <div class="avis-avatar">AA</div>
+                        <div><div class="avis-name">arn aud</div><div class="avis-source">Google · 17 avril 2026</div></div>
+                    </div>
+                </div>
+                <div class="avis-card reveal reveal-delay-1">
+                    <div class="avis-stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                    <div class="avis-text">"Une excellente adresse où il fait bon vivre et cela fait du bien ! Très bien servi et très bien mangé. Un petit coin d'Italie dans les Bauges."</div>
+                    <div class="avis-author">
+                        <div class="avis-avatar">RG</div>
+                        <div><div class="avis-name">RAPHAEL GUETTE</div><div class="avis-source">Google · 17 avril 2026</div></div>
+                    </div>
+                </div>
+                <div class="avis-card reveal reveal-delay-2">
+                    <div class="avis-stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                    <div class="avis-text">"Très bon repas, service agréable. Je recommande !"</div>
+                    <div class="avis-author">
+                        <div class="avis-avatar">CC</div>
+                        <div><div class="avis-name">Chantal Chainey</div><div class="avis-source">Google · avril 2026</div></div>
+                    </div>
+                </div>
+            </div>
+            <div class="avis-note reveal">
+                <p><i class="fas fa-star"></i> Note moyenne : <strong>5/5</strong> sur Google — 11 avis</p>
+            </div>
+        </div>
+    </section>
+
     <!-- ─── GALERIE ─── -->
     <section id="galerie">
         <div class="container">
@@ -709,6 +841,7 @@
                     <a href="#accueil">Accueil</a>
                     <a href="#story">L'histoire</a>
                     <a href="#menu">Menu</a>
+                    <a href="#avis">Avis</a>
                     <a href="#galerie">Galerie</a>
                     <a href="#contact">Contact</a>
                 </div>
