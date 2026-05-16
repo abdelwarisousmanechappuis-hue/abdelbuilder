@@ -212,17 +212,20 @@
         #galerie { background: #fff; }
         .galerie-grid {
             display: grid; grid-template-columns: repeat(4, 1fr);
-            gap: 8px;
+            grid-auto-rows: 180px; gap: 10px;
         }
         .galerie-item {
-            border-radius: 4px; overflow: hidden; position: relative;
-            aspect-ratio: 1; background: #f5f0ed;
+            border-radius: 6px; overflow: hidden; position: relative;
+            background: #f5f0ed;
         }
         .galerie-item img {
             width: 100%; height: 100%; object-fit: cover; position: absolute; inset: 0;
             transition: transform 0.5s;
         }
         .galerie-item:hover img { transform: scale(1.05); }
+        .galerie-item.tall { grid-row: span 2; }
+        .galerie-item.wide { grid-column: span 2; }
+        .galerie-item.big { grid-column: span 2; grid-row: span 2; }
 
         /* ── CONTACT ── */
         #contact { background: #fefcfb; }
@@ -333,7 +336,10 @@
             .section-header h2 { font-size: 2rem; }
             .services-grid { grid-template-columns: 1fr; }
             .tarifs-grid { grid-template-columns: 1fr; }
-            .galerie-grid { grid-template-columns: repeat(2, 1fr); }
+            .galerie-grid { grid-template-columns: repeat(2, 1fr); grid-auto-rows: 140px; }
+            .galerie-item.tall { grid-row: span 2; }
+            .galerie-item.wide { grid-column: span 2; }
+            .galerie-item.big { grid-column: span 2; grid-row: span 2; }
             .contact-wrap { grid-template-columns: 1fr; }
             .footer-grid { grid-template-columns: 1fr; gap: 32px; }
             .cta-section h2 { font-size: 1.8rem; }
@@ -344,7 +350,7 @@
             .hero h1 { font-size: 2rem; }
             .hero-actions { flex-direction: column; }
             .btn { text-align: center; justify-content: center; }
-            .galerie-grid { grid-template-columns: 1fr 1fr; }
+            .galerie-grid { grid-template-columns: 1fr 1fr; grid-auto-rows: 120px; }
         }
     </style>
 </head>
@@ -484,22 +490,23 @@
                 <p>Découvrez mon travail à travers une sélection de photos de mes clientes et clients.</p>
             </div>
             <div class="galerie-grid">
-                <div class="galerie-item reveal reveal-delay-1"><img src="images/131130276_1246600255739703_6132670974515007773_n.jpg" alt="" loading="lazy"></div>
+                <div class="galerie-item big reveal reveal-delay-1"><img src="images/592951473_1350123060139898_8161448742648444082_n.jpg" alt="" loading="lazy"></div>
                 <div class="galerie-item reveal reveal-delay-2"><img src="images/480684881_1128463075639232_1890612936977832442_n.jpg" alt="" loading="lazy"></div>
                 <div class="galerie-item reveal reveal-delay-3"><img src="images/480881759_1128559342296272_60364470472676738_n.jpg" alt="" loading="lazy"></div>
-                <div class="galerie-item reveal reveal-delay-1"><img src="images/480606535_1129107135574826_1769847721001391634_n.jpg" alt="" loading="lazy"></div>
-                <div class="galerie-item reveal reveal-delay-2"><img src="images/480784962_1129107358908137_4003557194977396918_n.jpg" alt="" loading="lazy"></div>
-                <div class="galerie-item reveal reveal-delay-3"><img src="images/480872527_1129838852168321_2845614241862226814_n.jpg" alt="" loading="lazy"></div>
-                <div class="galerie-item reveal reveal-delay-1"><img src="images/482010394_1130100072142199_6009317558280524673_n.jpg" alt="" loading="lazy"></div>
-                <div class="galerie-item reveal reveal-delay-2"><img src="images/480775743_1130113102140896_787771383687575076_n.jpg" alt="" loading="lazy"></div>
-                <div class="galerie-item reveal reveal-delay-3"><img src="images/481047682_1133124275173112_6364979670925885763_n.jpg" alt="" loading="lazy"></div>
-                <div class="galerie-item reveal reveal-delay-1"><img src="images/481137113_1133657118453161_775236289564183689_n.jpg" alt="" loading="lazy"></div>
+                <div class="galerie-item reveal reveal-delay-1"><img src="images/480784962_1129107358908137_4003557194977396918_n.jpg" alt="" loading="lazy"></div>
+                <div class="galerie-item tall reveal reveal-delay-2"><img src="images/480606535_1129107135574826_1769847721001391634_n.jpg" alt="" loading="lazy"></div>
+                <div class="galerie-item reveal reveal-delay-3"><img src="images/482010394_1130100072142199_6009317558280524673_n.jpg" alt="" loading="lazy"></div>
+                <div class="galerie-item reveal reveal-delay-1"><img src="images/131130276_1246600255739703_6132670974515007773_n.jpg" alt="" loading="lazy"></div>
+                <div class="galerie-item wide reveal reveal-delay-2"><img src="images/480872527_1129838852168321_2845614241862226814_n.jpg" alt="" loading="lazy"></div>
+                <div class="galerie-item reveal reveal-delay-3"><img src="images/480775743_1130113102140896_787771383687575076_n.jpg" alt="" loading="lazy"></div>
+                <div class="galerie-item tall reveal reveal-delay-1"><img src="images/481047682_1133124275173112_6364979670925885763_n.jpg" alt="" loading="lazy"></div>
                 <div class="galerie-item reveal reveal-delay-2"><img src="images/484273193_1141818037637069_6201665228168423660_n.jpg" alt="" loading="lazy"></div>
                 <div class="galerie-item reveal reveal-delay-3"><img src="images/484036975_1141819104303629_8000906137333788753_n.jpg" alt="" loading="lazy"></div>
                 <div class="galerie-item reveal reveal-delay-1"><img src="images/497510014_1189740529511486_6408922258368017318_n.jpg" alt="" loading="lazy"></div>
-                <div class="galerie-item reveal reveal-delay-2"><img src="images/515597167_1226748949143977_5889407267120989087_n.jpg" alt="" loading="lazy"></div>
-                <div class="galerie-item reveal reveal-delay-3"><img src="images/513935583_1223380776147461_8593961698732405051_n.jpg" alt="" loading="lazy"></div>
+                <div class="galerie-item wide reveal reveal-delay-2"><img src="images/513935583_1223380776147461_8593961698732405051_n.jpg" alt="" loading="lazy"></div>
+                <div class="galerie-item reveal reveal-delay-3"><img src="images/481137113_1133657118453161_775236289564183689_n.jpg" alt="" loading="lazy"></div>
                 <div class="galerie-item reveal reveal-delay-1"><img src="images/513986863_1223381162814089_1365917653691858408_n.jpg" alt="" loading="lazy"></div>
+                <div class="galerie-item tall reveal reveal-delay-2"><img src="images/515597167_1226748949143977_5889407267120989087_n.jpg" alt="" loading="lazy"></div>
             </div>
         </div>
     </section>
