@@ -1,0 +1,646 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Agence des Bauges — Immobilier depuis 2005 | Savoie</title>
+<meta name="description" content="Agence immobilière familiale dans les Bauges et la Savoie. Vente, achat, location et gestion locative. Estimation gratuite.">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:'Segoe UI',system-ui,-apple-system,sans-serif;color:#0f1b2d;line-height:1.6;background:#fff}
+a{text-decoration:none;color:inherit}
+img{max-width:100%;height:auto;display:block}
+.container{max-width:1200px;margin:0 auto;padding:0 24px}
+.section{padding:100px 0}
+.section-title{text-align:center;margin-bottom:64px}
+.section-title h2{font-size:2.5rem;font-weight:700;color:#0f1b2d;letter-spacing:-.02em}
+.section-title p{color:#5a6577;margin-top:12px;font-size:1.125rem;max-width:600px;margin-left:auto;margin-right:auto}
+.gold{color:#c9a84c}
+.btn{display:inline-block;padding:16px 36px;border-radius:8px;font-weight:600;font-size:1rem;cursor:pointer;transition:all .3s;border:none;text-align:center}
+.btn-primary{background:#c9a84c;color:#0f1b2d}
+.btn-primary:hover{background:#b8962e;transform:translateY(-2px);box-shadow:0 8px 24px rgba(201,168,76,.35)}
+.btn-outline{background:transparent;color:#fff;border:2px solid #c9a84c}
+.btn-outline:hover{background:#c9a84c;color:#0f1b2d;transform:translateY(-2px)}
+.btn-dark{background:#0f1b2d;color:#fff}
+.btn-dark:hover{background:#1a2d47;transform:translateY(-2px)}
+
+/* NAV */
+nav{position:fixed;top:0;left:0;width:100%;z-index:1000;background:rgba(15,27,45,.95);backdrop-filter:blur(12px);padding:0 24px;transition:all .3s}
+nav .container{display:flex;align-items:center;justify-content:space-between;height:72px}
+.nav-logo{display:flex;align-items:center;gap:12px;font-weight:700;font-size:1.25rem;color:#fff}
+.nav-logo svg{flex-shrink:0}
+.nav-links{display:flex;list-style:none;gap:32px}
+.nav-links a{color:rgba(255,255,255,.8);font-size:.95rem;font-weight:500;transition:color .3s;position:relative}
+.nav-links a::after{content:'';position:absolute;bottom:-4px;left:0;width:0;height:2px;background:#c9a84c;transition:width .3s}
+.nav-links a:hover{color:#c9a84c}
+.nav-links a:hover::after{width:100%}
+.nav-toggle{display:none;flex-direction:column;gap:5px;cursor:pointer;background:none;border:none;padding:8px}
+.nav-toggle span{display:block;width:28px;height:2.5px;background:#fff;border-radius:2px;transition:all .3s}
+
+/* HERO */
+.hero{background:linear-gradient(135deg,#0f1b2d 0%,#1a2d47 60%,#2c4466 100%);min-height:100vh;display:flex;align-items:center;padding-top:72px;position:relative;overflow:hidden}
+.hero::before{content:'';position:absolute;inset:0;background:url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23c9a84c' fill-opacity='0.04'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");pointer-events:none}
+.hero-content{position:relative;z-index:2;text-align:center;max-width:900px;margin:0 auto;padding:60px 0}
+.hero-badge{display:inline-block;background:rgba(201,168,76,.15);border:1px solid rgba(201,168,76,.3);color:#c9a84c;padding:8px 24px;border-radius:50px;font-size:.875rem;font-weight:600;letter-spacing:.5px;margin-bottom:24px}
+.hero h1{font-size:3.5rem;font-weight:800;color:#fff;line-height:1.15;margin-bottom:20px;letter-spacing:-.02em}
+.hero h1 span{color:#c9a84c}
+.hero p{font-size:1.25rem;color:rgba(255,255,255,.7);max-width:640px;margin:0 auto 40px}
+.hero-buttons{display:flex;gap:16px;justify-content:center;flex-wrap:wrap}
+.hero-scroll{position:absolute;bottom:32px;left:50%;transform:translateX(-50%);color:rgba(255,255,255,.5);font-size:.8rem;display:flex;flex-direction:column;align-items:center;gap:8px;animation:float 2s ease-in-out infinite}
+@keyframes float{0%,100%{transform:translateX(-50%) translateY(0)}50%{transform:translateX(-50%) translateY(8px)}}
+
+/* ABOUT */
+.about{background:#fff}
+.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:center}
+.about-image{background:#f5f6f8;border-radius:16px;overflow:hidden;height:480px;display:flex;align-items:center;justify-content:center;position:relative}
+.about-image svg{width:100%;height:100%}
+.about-content h3{font-size:2rem;font-weight:700;margin-bottom:16px;color:#0f1b2d}
+.about-content p{color:#5a6577;font-size:1.05rem;margin-bottom:16px}
+.about-stats{display:grid;grid-template-columns:repeat(4,1fr);gap:24px;margin-top:32px}
+.stat{text-align:center}
+.stat-number{font-size:2rem;font-weight:800;color:#c9a84c}
+.stat-label{font-size:.85rem;color:#5a6577;margin-top:4px}
+
+/* SERVICES */
+.services{background:#f8f9fb}
+.services-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:24px}
+.service-card{background:#fff;border-radius:16px;padding:32px 24px;text-align:center;transition:all .4s;border:1px solid #eef0f3;position:relative;overflow:hidden}
+.service-card::before{content:'';position:absolute;top:0;left:0;right:0;height:4px;background:#c9a84c;transform:scaleX(0);transform-origin:left;transition:transform .4s}
+.service-card:hover{transform:translateY(-8px);box-shadow:0 20px 60px rgba(15,27,45,.1);border-color:rgba(201,168,76,.2)}
+.service-card:hover::before{transform:scaleX(1)}
+.service-card .icon{width:64px;height:64px;margin:0 auto 20px;border-radius:14px;display:flex;align-items:center;justify-content:center;background:rgba(201,168,76,.1);transition:background .3s}
+.service-card:hover .icon{background:#c9a84c}
+.service-card:hover .icon svg path{fill:#0f1b2d}
+.service-card h3{font-size:1.125rem;font-weight:700;margin-bottom:8px;color:#0f1b2d}
+.service-card p{font-size:.9rem;color:#5a6577;line-height:1.7}
+.service-card ul{list-style:none;margin-top:12px;text-align:left}
+.service-card ul li{font-size:.85rem;color:#5a6577;padding:4px 0;position:relative;padding-left:20px}
+.service-card ul li::before{content:'▸';position:absolute;left:0;color:#c9a84c;font-weight:700}
+
+/* PROPERTIES */
+.properties{background:#fff}
+.properties-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:32px}
+.property-card{border-radius:16px;overflow:hidden;background:#fff;border:1px solid #eef0f3;transition:all .4s;display:flex;flex-direction:column}
+.property-card:hover{transform:translateY(-8px);box-shadow:0 20px 60px rgba(15,27,45,.1);border-color:rgba(201,168,76,.2)}
+.property-img{height:240px;background:#f5f6f8;display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden}
+.property-img svg{width:100%;height:100%}
+.property-tag{position:absolute;top:16px;left:16px;background:#c9a84c;color:#0f1b2d;padding:6px 16px;border-radius:6px;font-size:.8rem;font-weight:700}
+.property-body{padding:24px;flex:1;display:flex;flex-direction:column}
+.property-price{font-size:1.5rem;font-weight:800;color:#0f1b2d;margin-bottom:4px}
+.property-price span{font-size:.9rem;font-weight:400;color:#5a6577}
+.property-title{font-size:1.125rem;font-weight:600;margin-bottom:12px;color:#0f1b2d}
+.property-details{display:flex;flex-wrap:wrap;gap:16px;margin-bottom:16px;padding:12px 0;border-top:1px solid #eef0f3;border-bottom:1px solid #eef0f3}
+.property-details span{display:flex;align-items:center;gap:6px;font-size:.875rem;color:#5a6577}
+.property-details svg{flex-shrink:0}
+.property-link{margin-top:auto;color:#c9a84c;font-weight:600;font-size:.9rem;display:inline-flex;align-items:center;gap:6px;transition:gap .3s}
+.property-link:hover{gap:12px}
+
+/* PRICING */
+.pricing{background:#f8f9fb}
+.pricing-table{max-width:800px;margin:0 auto;background:#fff;border-radius:16px;overflow:hidden;border:1px solid #eef0f3}
+.pricing-table table{width:100%;border-collapse:collapse}
+.pricing-table th{background:#0f1b2d;color:#fff;padding:20px 24px;text-align:left;font-size:1.05rem;font-weight:600}
+.pricing-table td{padding:18px 24px;border-bottom:1px solid #eef0f3;font-size:.95rem}
+.pricing-table tr:last-child td{border-bottom:none}
+.pricing-table tr:nth-child(even){background:#fafbfc}
+.pricing-table td:last-child{font-weight:700;color:#c9a84c;text-align:right}
+.pricing-note{text-align:center;margin-top:16px;color:#5a6577;font-size:.9rem}
+
+/* TESTIMONIALS */
+.testimonials{background:#fff}
+.testimonials-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:24px}
+.testimonial-card{background:#f8f9fb;border-radius:16px;padding:28px;border:1px solid #eef0f3;transition:all .3s}
+.testimonial-card:hover{box-shadow:0 8px 32px rgba(15,27,45,.06)}
+.testimonial-stars{color:#c9a84c;font-size:1rem;margin-bottom:12px;letter-spacing:2px}
+.testimonial-text{font-size:.95rem;color:#2c3e50;line-height:1.7;margin-bottom:16px;font-style:italic}
+.testimonial-author{font-weight:700;color:#0f1b2d;font-size:.9rem}
+.testimonial-role{font-size:.8rem;color:#5a6577;margin-top:2px}
+
+/* FAQ */
+.faq{background:#f8f9fb}
+.faq-list{max-width:800px;margin:0 auto;display:flex;flex-direction:column;gap:12px}
+.faq-item{background:#fff;border-radius:12px;overflow:hidden;border:1px solid #eef0f3;transition:all .3s}
+.faq-item:hover{border-color:rgba(201,168,76,.3)}
+.faq-question{display:flex;align-items:center;justify-content:space-between;padding:20px 24px;cursor:pointer;font-weight:600;font-size:1rem;color:#0f1b2d;background:none;border:none;width:100%;text-align:left}
+.faq-question::after{content:'+';font-size:1.25rem;color:#c9a84c;transition:transform .3s;font-weight:700}
+.faq-item.active .faq-question::after{transform:rotate(45deg)}
+.faq-answer{padding:0 24px;max-height:0;overflow:hidden;transition:all .4s}
+.faq-item.active .faq-answer{max-height:300px;padding:0 24px 20px}
+.faq-answer p{color:#5a6577;font-size:.95rem;line-height:1.7}
+
+/* CONTACT */
+.contact{background:#fff}
+.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:64px}
+.contact-info h3{font-size:1.5rem;font-weight:700;margin-bottom:24px;color:#0f1b2d}
+.contact-item{display:flex;gap:16px;margin-bottom:20px}
+.contact-item .icon{width:44px;height:44px;border-radius:10px;background:rgba(201,168,76,.1);display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.contact-item .label{font-size:.8rem;color:#5a6577;text-transform:uppercase;letter-spacing:.5px;font-weight:600}
+.contact-item .value{font-size:1rem;color:#0f1b2d;font-weight:500}
+.contact-hours{margin-top:24px;padding:20px;background:#f8f9fb;border-radius:12px}
+.contact-hours h4{font-size:.9rem;font-weight:700;margin-bottom:12px;color:#0f1b2d}
+.contact-hours table{width:100%;font-size:.875rem}
+.contact-hours td{padding:4px 0;color:#5a6577}
+.contact-hours td:last-child{text-align:right;font-weight:600;color:#0f1b2d}
+.contact-form{display:flex;flex-direction:column;gap:16px}
+.contact-form input,.contact-form select,.contact-form textarea{padding:14px 18px;border:1.5px solid #e0e3e8;border-radius:10px;font-size:.95rem;font-family:inherit;transition:border .3s;background:#fff;color:#0f1b2d}
+.contact-form input:focus,.contact-form select:focus,.contact-form textarea:focus{outline:none;border-color:#c9a84c;box-shadow:0 0 0 3px rgba(201,168,76,.12)}
+.contact-form textarea{resize:vertical;min-height:120px}
+.contact-form input::placeholder,.contact-form textarea::placeholder{color:#9ba3af}
+.contact-form .btn{width:100%}
+
+/* FOOTER */
+footer{background:#0f1b2d;color:rgba(255,255,255,.7);padding:48px 0 24px}
+.footer-grid{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:40px;margin-bottom:40px}
+footer h4{color:#fff;font-size:1.05rem;font-weight:600;margin-bottom:16px}
+footer p,footer a{font-size:.9rem;color:rgba(255,255,255,.6);transition:color .3s;display:block;line-height:2}
+footer a:hover{color:#c9a84c}
+.footer-social{display:flex;gap:12px;margin-top:16px}
+.footer-social a{width:40px;height:40px;border-radius:10px;border:1px solid rgba(255,255,255,.15);display:flex;align-items:center;justify-content:center;transition:all .3s}
+.footer-social a:hover{border-color:#c9a84c;background:rgba(201,168,76,.1)}
+.footer-bottom{border-top:1px solid rgba(255,255,255,.08);padding-top:24px;text-align:center;font-size:.85rem;color:rgba(255,255,255,.4)}
+.footer-bottom strong{color:#c9a84c}
+
+/* RESPONSIVE */
+@media(max-width:1024px){
+.services-grid{grid-template-columns:repeat(2,1fr)}
+.properties-grid{grid-template-columns:repeat(2,1fr)}
+.footer-grid{grid-template-columns:repeat(2,1fr)}
+}
+@media(max-width:768px){
+.section{padding:64px 0}
+.section-title h2{font-size:1.75rem}
+.hero h1{font-size:2rem}
+.hero p{font-size:1rem}
+.nav-links{display:none;position:absolute;top:72px;left:0;width:100%;background:rgba(15,27,45,.98);flex-direction:column;padding:24px;gap:16px}
+.nav-links.open{display:flex}
+.nav-toggle{display:flex}
+.about-grid{grid-template-columns:1fr}
+.about-stats{grid-template-columns:repeat(2,1fr);gap:16px}
+.about-image{height:280px}
+.services-grid{grid-template-columns:1fr}
+.properties-grid{grid-template-columns:1fr}
+.testimonials-grid{grid-template-columns:1fr}
+.contact-grid{grid-template-columns:1fr}
+.footer-grid{grid-template-columns:1fr;gap:32px}
+.hero-buttons{flex-direction:column;align-items:center}
+.btn{width:100%;max-width:320px}
+.pricing-table{overflow-x:auto}
+}
+@media(max-width:480px){
+.container{padding:0 16px}
+.hero h1{font-size:1.625rem}
+.about-stats{grid-template-columns:1fr 1fr}
+}
+</style>
+</head>
+<body>
+
+<nav role="navigation" aria-label="Navigation principale">
+  <div class="container">
+    <div class="nav-logo">
+      <svg width="32" height="32" viewBox="0 0 32 32" fill="none" aria-hidden="true">
+        <rect width="32" height="32" rx="8" fill="#c9a84c"/>
+        <path d="M16 6L6 14v12h8v-8h4v8h8V14L16 6z" fill="#0f1b2d"/>
+      </svg>
+      <span>Agence des Bauges</span>
+    </div>
+    <button class="nav-toggle" aria-label="Menu" id="navToggle">
+      <span></span><span></span><span></span>
+    </button>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#accueil">Accueil</a></li>
+      <li><a href="#a-propos">À propos</a></li>
+      <li><a href="#services">Services</a></li>
+      <li><a href="#biens">Biens</a></li>
+      <li><a href="#tarifs">Tarifs</a></li>
+      <li><a href="#avis">Avis</a></li>
+      <li><a href="#faq">FAQ</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </div>
+</nav>
+
+<section class="hero" id="accueil">
+  <div class="hero-content container">
+    <div class="hero-badge">Agence familiale — Savoie</div>
+    <h1>Trouvez le bien de vos rêves,<br><span>vendez au meilleur prix</span></h1>
+    <p>Depuis 2005, notre équipe vous accompagne dans tous vos projets immobiliers dans les Bauges et toute la Savoie. Estimation gratuite, visites virtuelles, accompagnement sur mesure.</p>
+    <div class="hero-buttons">
+      <a href="#contact" class="btn btn-primary">Estimer mon bien</a>
+      <a href="#biens" class="btn btn-outline">Consulter nos annonces</a>
+    </div>
+  </div>
+  <div class="hero-scroll">
+    <span>Découvrir</span>
+    <svg width="16" height="24" viewBox="0 0 16 24" fill="none"><path d="M8 0v20M1 13l7 7 7-7" stroke="rgba(255,255,255,.5)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+  </div>
+</section>
+
+<section class="section about" id="a-propos">
+  <div class="container">
+    <div class="about-grid">
+      <div class="about-image">
+        <svg viewBox="0 0 600 480" preserveAspectRatio="xMidYMid slice">
+          <rect width="600" height="480" fill="#e8ebf0"/>
+          <path d="M180 480l80-200 60 60 40-100 80 240H180zM300 180c0 16.6-13.4 30-30 30s-30-13.4-30-30 13.4-30 30-30 30 13.4 30 30z" fill="#c9a84c" opacity=".6"/>
+          <rect x="240" y="200" width="120" height="80" rx="4" fill="#0f1b2d" opacity=".15"/>
+          <rect x="370" y="30" width="180" height="130" rx="8" fill="#0f1b2d" opacity=".08"/>
+          <rect x="400" y="140" width="40" height="20" rx="2" fill="#0f1b2d" opacity=".05"/>
+          <circle cx="530" cy="60" r="12" fill="#c9a84c" opacity=".15"/>
+          <circle cx="530" cy="60" r="4" fill="#c9a84c" opacity=".3"/>
+        </svg>
+      </div>
+      <div class="about-content">
+        <h3>Une agence familiale <span class="gold">ancrée dans les Bauges</span></h3>
+        <p>Fondée en 2005 par Jean-Pierre et Marie Durand, l'Agence des Bauges est une agence indépendante qui place l'humain et la proximité au cœur de son métier. Nous connaissons chaque village, chaque quartier, chaque spécificité du marché savoyard.</p>
+        <p>Avec plus de 500 transactions réalisées et une équipe de 3 agents passionnés, nous vous offrons un accompagnement personnalisé, transparent et efficace, que vous vendiez, achetiez, louiez ou confiez votre bien en gestion.</p>
+        <div class="about-stats">
+          <div class="stat"><div class="stat-number">18</div><div class="stat-label">Ans d'expérience</div></div>
+          <div class="stat"><div class="stat-number">500+</div><div class="stat-label">Transactions</div></div>
+          <div class="stat"><div class="stat-number">3</div><div class="stat-label">Agents</div></div>
+          <div class="stat"><div class="stat-number">96%</div><div class="stat-label">Clients satisfaits</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section services" id="services">
+  <div class="container">
+    <div class="section-title">
+      <h2>Nos <span class="gold">services</span></h2>
+      <p>Des solutions complètes pour tous vos projets immobiliers, de l'estimation à la gestion locative.</p>
+    </div>
+    <div class="services-grid">
+      <div class="service-card">
+        <div class="icon">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none">
+            <path d="M21 12v7a2 2 0 01-2 2H5a2 2 0 01-2-2V5a2 2 0 012-2h7m5-1v6m0 0l-3-3m3 3l3-3M9 21v-6h6v6" stroke="#c9a84c" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </div>
+        <h3>Vente</h3>
+        <p>Nous optimisons la vente de votre bien avec une stratégie sur mesure.</p>
+        <ul>
+          <li>Estimation gratuite et sans engagement</li>
+          <li>Photographie professionnelle et drone</li>
+          <li>Visites virtuelles 360°</li>
+          <li>Diffusion sur 20+ portails</li>
+        </ul>
+      </div>
+      <div class="service-card">
+        <div class="icon">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none">
+            <path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2m8-10a4 4 0 100-8 4 4 0 000 8z" stroke="#c9a84c" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </div>
+        <h3>Achat</h3>
+        <p>Un accompagnement complet pour trouver le bien qui correspond à vos envies.</p>
+        <ul>
+          <li>Recherche personnalisée</li>
+          <li>Visites des biens présélectionnés</li>
+          <li>Négociation et montage du dossier</li>
+          <li>Accompagnement jusqu'à la signature</li>
+        </ul>
+      </div>
+      <div class="service-card">
+        <div class="icon">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none">
+            <path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2V9z" stroke="#c9a84c" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </div>
+        <h3>Location</h3>
+        <p>Des solutions de location claires et sécurisées pour propriétaires et locataires.</p>
+        <ul>
+          <li>Gestion locative complète</li>
+          <li>Garantie loyer impayé</li>
+          <li>État des lieux professionnel</li>
+          <li>Recherche de locataires</li>
+        </ul>
+      </div>
+      <div class="service-card">
+        <div class="icon">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none">
+            <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5" stroke="#c9a84c" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </div>
+        <h3>Gestion locative</h3>
+        <p>Déléguez-nous la gestion de votre bien en toute sérénité.</p>
+        <ul>
+          <li>Collecte des loyers et relances</li>
+          <li>Gestion des travaux d'entretien</li>
+          <li>Déclarations fiscales</li>
+          <li>Assistance juridique</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section properties" id="biens">
+  <div class="container">
+    <div class="section-title">
+      <h2>Biens <span class="gold">à la une</span></h2>
+      <p>Découvrez notre sélection de biens disponibles à la vente dans les Bauges et ses alentours.</p>
+    </div>
+    <div class="properties-grid">
+      <div class="property-card">
+        <div class="property-img">
+          <svg viewBox="0 0 400 240" preserveAspectRatio="xMidYMid slice">
+            <rect width="400" height="240" fill="#e8ebf0"/>
+            <rect x="100" y="80" width="200" height="120" rx="4" fill="#0f1b2d" opacity=".12"/>
+            <rect x="140" y="140" width="40" height="60" rx="2" fill="#0f1b2d" opacity=".08"/>
+            <polygon points="80,120 200,40 320,120" fill="#c9a84c" opacity=".15"/>
+            <rect x="160" y="50" width="80" height="30" rx="2" fill="#0f1b2d" opacity=".06"/>
+            <circle cx="320" cy="60" r="10" fill="#c9a84c" opacity=".1"/>
+          </svg>
+          <span class="property-tag">Exclusivité</span>
+        </div>
+        <div class="property-body">
+          <div class="property-price">295 000€</div>
+          <div class="property-title">Maison de village rénovée</div>
+          <div class="property-details">
+            <span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#5a6577" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18"/></svg> 95 m²</span>
+            <span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#5a6577" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2V9z"/></svg> 4 pièces</span>
+            <span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#5a6577" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg> Saint-Jean-de-Belleville</span>
+          </div>
+          <a href="#" class="property-link">Voir le détail <span aria-hidden="true">→</span></a>
+        </div>
+      </div>
+      <div class="property-card">
+        <div class="property-img">
+          <svg viewBox="0 0 400 240" preserveAspectRatio="xMidYMid slice">
+            <rect width="400" height="240" fill="#e8ebf0"/>
+            <rect x="80" y="60" width="240" height="140" rx="4" fill="#0f1b2d" opacity=".08"/>
+            <rect x="320" y="80" width="20" height="60" rx="2" fill="#0f1b2d" opacity=".05"/>
+            <rect x="300" y="60" width="20" height="20" rx="2" fill="#c9a84c" opacity=".08"/>
+            <rect x="100" y="120" width="30" height="80" rx="2" fill="#0f1b2d" opacity=".06"/>
+            <rect x="270" y="120" width="30" height="80" rx="2" fill="#0f1b2d" opacity=".06"/>
+            <rect x="150" y="80" width="30" height="30" rx="2" fill="#0f1b2d" opacity=".05"/>
+            <rect x="220" y="80" width="30" height="30" rx="2" fill="#0f1b2d" opacity=".05"/>
+          </svg>
+          <span class="property-tag">Coup de cœur</span>
+        </div>
+        <div class="property-body">
+          <div class="property-price">158 000€</div>
+          <div class="property-title">Appartement centre-ville</div>
+          <div class="property-details">
+            <span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#5a6577" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18"/></svg> 52 m²</span>
+            <span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#5a6577" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2V9z"/></svg> 3 pièces</span>
+            <span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#5a6577" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg> Chambéry</span>
+          </div>
+          <a href="#" class="property-link">Voir le détail <span aria-hidden="true">→</span></a>
+        </div>
+      </div>
+      <div class="property-card">
+        <div class="property-img">
+          <svg viewBox="0 0 400 240" preserveAspectRatio="xMidYMid slice">
+            <rect width="400" height="240" fill="#e8ebf0"/>
+            <rect x="50" y="100" width="300" height="100" fill="#0f1b2d" opacity=".08"/>
+            <rect x="160" y="40" width="80" height="60" rx="3" fill="#0f1b2d" opacity=".06"/>
+            <rect x="100" y="120" width="60" height="80" rx="2" fill="#0f1b2d" opacity=".04"/>
+            <rect x="240" y="120" width="60" height="80" rx="2" fill="#0f1b2d" opacity=".04"/>
+            <rect x="400" y="180" width="400" height="2" fill="#c9a84c" opacity=".04"/>
+            <circle cx="200" cy="70" r="8" fill="#c9a84c" opacity=".06"/>
+            <rect x="50" y="100" width="300" height="4" rx="2" fill="#c9a84c" opacity=".1"/>
+          </svg>
+          <span class="property-tag">Belle affaire</span>
+        </div>
+        <div class="property-body">
+          <div class="property-price">89 000€</div>
+          <div class="property-title">Terrain constructible</div>
+          <div class="property-details">
+            <span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#5a6577" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18"/></svg> 820 m²</span>
+            <span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#5a6577" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg> La Motte-en-Bauges</span>
+            <span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#5a6577" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg> Viabilisé</span>
+          </div>
+          <a href="#" class="property-link">Voir le détail <span aria-hidden="true">→</span></a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section pricing" id="tarifs">
+  <div class="container">
+    <div class="section-title">
+      <h2>Tarifs — <span class="gold">frais d'agence</span></h2>
+      <p>Des honoraires transparents et compétitifs. Pas de frais cachés.</p>
+    </div>
+    <div class="pricing-table">
+      <table>
+        <thead>
+          <tr><th>Prestation</th><th>Taux / Montant</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>Commission vente (charge acquéreur)</td><td>5 % TTC du prix de vente</td></tr>
+          <tr><td>Commission vente (charge vendeur)</td><td>4 % TTC du prix de vente</td></tr>
+          <tr><td>Location — frais de dossier locataire</td><td>1 mois de loyer</td></tr>
+          <tr><td>Location — frais de dossier propriétaire</td><td>8 % du loyer annuel</td></tr>
+          <tr><td>Gestion locative — honoraires mensuels</td><td>7 % du loyer encaissé</td></tr>
+          <tr><td>État des lieux</td><td>150 €</td></tr>
+          <tr><td>Estimation gratuite</td><td><span class="gold">Gratuit</span></td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="pricing-note">* Tous nos tarifs sont indiqués TTC. Devis personnalisé sur simple demande.</p>
+  </div>
+</section>
+
+<section class="section testimonials" id="avis">
+  <div class="container">
+    <div class="section-title">
+      <h2>Ce que disent <span class="gold">nos clients</span></h2>
+      <p>Chaque avis compte. Voici ce que les particuliers et professionnels pensent de notre travail.</p>
+    </div>
+    <div class="testimonials-grid">
+      <div class="testimonial-card">
+        <div class="testimonial-stars">★★★★★</div>
+        <p class="testimonial-text">"Vendu en 3 semaines au prix demandé. Équipe professionnelle et réactive. Je recommande vivement l'Agence des Bauges à tous les propriétaires."</p>
+        <div class="testimonial-author">Christine D.</div>
+        <div class="testimonial-role">Vendeuse — Saint-Pierre-d'Albigny</div>
+      </div>
+      <div class="testimonial-card">
+        <div class="testimonial-stars">★★★★★</div>
+        <p class="testimonial-text">"Achat de notre première maison accompagné de A à Z. Merci à toute l'équipe pour leur patience et leurs conseils avisés. Une expérience vraiment positive."</p>
+        <div class="testimonial-author">Lucas & Emma</div>
+        <div class="testimonial-role">Acheteurs — Aix-les-Bains</div>
+      </div>
+      <div class="testimonial-card">
+        <div class="testimonial-stars">★★★★★</div>
+        <p class="testimonial-text">"Je confie la gestion de mes deux appartements à l'Agence des Bauges depuis 3 ans. Jamais un loyer impayé, les locataires sont bien suivis. Un service fiable."</p>
+        <div class="testimonial-author">Philippe M.</div>
+        <div class="testimonial-role">Propriétaire bailleur — Chambéry</div>
+      </div>
+      <div class="testimonial-card">
+        <div class="testimonial-stars">★★★★★</div>
+        <p class="testimonial-text">"Grâce à leur visite virtuelle, nous avons visité la maison depuis Lyon avant de nous déplacer. Un gain de temps énorme. Et le bien correspondait parfaitement aux photos."</p>
+        <div class="testimonial-author">Claire R.</div>
+        <div class="testimonial-role">Acheteuse — Lyon</div>
+      </div>
+      <div class="testimonial-card">
+        <div class="testimonial-stars">★★★★☆</div>
+        <p class="testimonial-text">"Bonne expérience globale. L'estimation était juste et le suivi sérieux. Seul petit bémol sur les délais de réponse en pleine saison, mais l'équipe reste compétente."</p>
+        <div class="testimonial-author">Marc L.</div>
+        <div class="testimonial-role">Vendeur — Albertville</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section faq" id="faq">
+  <div class="container">
+    <div class="section-title">
+      <h2>Questions <span class="gold">fréquentes</span></h2>
+      <p>Tout ce que vous devez savoir avant de nous confier votre projet.</p>
+    </div>
+    <div class="faq-list">
+      <div class="faq-item active">
+        <button class="faq-question" aria-expanded="true">Comment se déroule une estimation gratuite ?</button>
+        <div class="faq-answer"><p>Nous prenons rendez-vous chez vous pour une visite complète du bien. Après analyse du marché local et des transactions récentes, nous vous remettons une estimation détaillée sous 48h, sans aucun engagement.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question" aria-expanded="false">Combien de temps faut-il pour vendre un bien ?</button>
+        <div class="faq-answer"><p>En moyenne, nos biens se vendent en 6 à 8 semaines grâce à notre stratégie de diffusion multi-canaux (20+ portails, réseau d'acheteurs, visites virtuelles). La durée dépend bien sûr du prix, de l'état du bien et de l'emplacement.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question" aria-expanded="false">Quels sont les frais d'agence à prévoir ?</button>
+        <div class="faq-answer"><p>Nos frais sont indiqués dans notre grille tarifaire. En vente, la commission est de 5 % TTC (charge acquéreur) ou 4 % (charge vendeur). En location, les frais s'élèvent à 1 mois de loyer. L'estimation est toujours gratuite.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question" aria-expanded="false">Proposez-vous des visites virtuelles ?</button>
+        <div class="faq-answer"><p>Oui, nous réalisons des visites virtuelles 360° pour tous nos biens à la vente. Cela permet aux acheteurs de visiter à distance et de filtrer leurs déplacements. Un vrai plus pour vendre plus vite.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question" aria-expanded="false">Que faire si un locataire ne paie pas son loyer ?</button>
+        <div class="faq-answer"><p>Avec notre formule de gestion locative, nous incluons une garantie loyer impayé. En cas de défaut, nous activons la procédure de recouvrement et vous êtes indemnisé sous 30 jours ouvrés.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section contact" id="contact">
+  <div class="container">
+    <div class="section-title">
+      <h2>Contactez-<span class="gold">nous</span></h2>
+      <p>Que vous souhaitiez vendre, acheter, louer ou simplement poser une question, nous sommes à votre écoute.</p>
+    </div>
+    <div class="contact-grid">
+      <div class="contact-info">
+        <h3>Nos coordonnées</h3>
+        <div class="contact-item">
+          <div class="icon">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#c9a84c" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          </div>
+          <div>
+            <div class="label">Adresse</div>
+            <div class="value">15 Grande Rue, 73630 Le Châtelard</div>
+          </div>
+        </div>
+        <div class="contact-item">
+          <div class="icon">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#c9a84c" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.362 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.338 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+          </div>
+          <div>
+            <div class="label">Téléphone</div>
+            <div class="value">04 79 63 00 00</div>
+          </div>
+        </div>
+        <div class="contact-item">
+          <div class="icon">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#c9a84c" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+          </div>
+          <div>
+            <div class="label">E-mail</div>
+            <div class="value">contact@agencedesbauges.fr</div>
+          </div>
+        </div>
+        <div class="contact-hours">
+          <h4>Horaires d'ouverture</h4>
+          <table>
+            <tr><td>Lundi — Vendredi</td><td>9h00 — 12h00 / 14h00 — 18h30</td></tr>
+            <tr><td>Samedi</td><td>9h00 — 12h00 / 14h00 — 17h00</td></tr>
+            <tr><td>Dimanche</td><td>Fermé (urgences uniquement)</td></tr>
+          </table>
+        </div>
+      </div>
+      <form class="contact-form" onsubmit="event.preventDefault(); alert('Merci pour votre message. Nous vous répondrons dans les plus brefs délais.');">
+        <input type="text" placeholder="Nom et prénom" required>
+        <input type="email" placeholder="Adresse e-mail" required>
+        <input type="tel" placeholder="Téléphone">
+        <select required>
+          <option value="" disabled selected>Motif de votre message</option>
+          <option>Estimation de mon bien</option>
+          <option>Recherche d'un bien</option>
+          <option>Location / Gestion locative</option>
+          <option>Autre demande</option>
+        </select>
+        <textarea placeholder="Votre message..." required></textarea>
+        <button type="submit" class="btn btn-primary">Envoyer le message</button>
+      </form>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <div style="display:flex;align-items:center;gap:10px;margin-bottom:12px">
+          <svg width="28" height="28" viewBox="0 0 32 32" fill="none"><rect width="32" height="32" rx="8" fill="#c9a84c"/><path d="M16 6L6 14v12h8v-8h4v8h8V14L16 6z" fill="#0f1b2d"/></svg>
+          <span style="color:#fff;font-weight:700;font-size:1.05rem">Agence des Bauges</span>
+        </div>
+        <p>Agence immobilière familiale dans les Bauges et la Savoie. Estimation gratuite, vente, achat, location et gestion locative.</p>
+        <div class="footer-social">
+          <a href="#" aria-label="Facebook"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3V2z"/></svg></a>
+          <a href="#" aria-label="Instagram"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="5"/><circle cx="17.5" cy="6.5" r="1.5"/></svg></a>
+          <a href="#" aria-label="LinkedIn"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2zM4 6a2 2 0 100-4 2 2 0 000 4z"/></svg></a>
+        </div>
+      </div>
+      <div>
+        <h4>Services</h4>
+        <a href="#services">Vente</a>
+        <a href="#services">Achat</a>
+        <a href="#services">Location</a>
+        <a href="#services">Gestion locative</a>
+        <a href="#tarifs">Nos tarifs</a>
+      </div>
+      <div>
+        <h4>À propos</h4>
+        <a href="#a-propos">Notre agence</a>
+        <a href="#avis">Avis clients</a>
+        <a href="#contact">Contact</a>
+        <a href="#faq">FAQ</a>
+        <a href="#biens">Nos annonces</a>
+      </div>
+      <div>
+        <h4>Contact</h4>
+        <p>15 Grande Rue<br>73630 Le Châtelard</p>
+        <p>04 79 63 00 00</p>
+        <p>contact@agencedesbauges.fr</p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      &copy; 2026 Agence des Bauges — Site généré par <strong>AbdelBuilder</strong>
+    </div>
+  </div>
+</footer>
+
+<script>
+document.getElementById('navToggle').addEventListener('click', function(){
+  this.classList.toggle('open');
+  document.getElementById('navLinks').classList.toggle('open');
+});
+document.querySelectorAll('.nav-links a').forEach(function(link){
+  link.addEventListener('click', function(){ document.getElementById('navLinks').classList.remove('open'); });
+});
+document.querySelectorAll('.faq-question').forEach(function(btn){
+  btn.addEventListener('click', function(){
+    var item = this.parentElement;
+    item.classList.toggle('active');
+    this.setAttribute('aria-expanded', item.classList.contains('active'));
+  });
+});
+</script>
+</body>
+</html>

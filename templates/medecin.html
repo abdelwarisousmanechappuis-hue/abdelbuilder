@@ -1,0 +1,605 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dr. Sophie Renard — Médecine Générale | Chambéry</title>
+<meta name="description" content="Cabinet médical du Dr. Sophie Renard à Chambéry. Médecine générale, pédiatrie, médecine du sport, téléconsultation. Prenez rendez-vous en ligne.">
+<style>
+*, ::before, ::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;font-size:16px}
+body{font-family:system-ui,-apple-system,'Segoe UI',Roboto,'Helvetica Neue',Arial,sans-serif;line-height:1.6;color:#1a1a2e;background:#fff}
+img{max-width:100%;height:auto;display:block}
+a{color:#00897b;text-decoration:none;transition:color .2s}
+a:hover{color:#004d40}
+.container{max-width:1140px;margin:0 auto;padding:0 20px}
+.section{padding:80px 0}
+.section-title{font-size:2rem;font-weight:700;text-align:center;margin-bottom:12px;color:#1a1a2e}
+.section-subtitle{text-align:center;color:#555;font-size:1.1rem;margin-bottom:48px;max-width:640px;margin-left:auto;margin-right:auto}
+.btn{display:inline-flex;align-items:center;gap:8px;padding:14px 32px;border-radius:50px;font-size:1rem;font-weight:600;border:none;cursor:pointer;transition:all .25s;text-decoration:none}
+.btn-primary{background:#00897b;color:#fff}
+.btn-primary:hover{background:#00695c;transform:translateY(-2px);box-shadow:0 8px 24px rgba(0,137,123,.3)}
+.btn-outline{background:transparent;color:#00897b;border:2px solid #00897b}
+.btn-outline:hover{background:#00897b;color:#fff;transform:translateY(-2px)}
+.btn-white{background:#fff;color:#00897b}
+.btn-white:hover{background:#e0f2f1;transform:translateY(-2px);box-shadow:0 8px 24px rgba(0,0,0,.15)}
+
+/* Nav */
+.nav{position:fixed;top:0;left:0;right:0;z-index:1000;background:rgba(255,255,255,.95);backdrop-filter:blur(10px);border-bottom:1px solid #e0e0e0;transition:box-shadow .3s}
+.nav:hover,.nav.scrolled{box-shadow:0 2px 20px rgba(0,0,0,.08)}
+.nav-inner{display:flex;align-items:center;justify-content:space-between;height:64px}
+.nav-logo{display:flex;align-items:center;gap:10px;font-weight:700;font-size:1.15rem;color:#1a1a2e}
+.nav-logo-icon{width:36px;height:36px;background:#00897b;border-radius:50%;display:flex;align-items:center;justify-content:center;color:#fff;font-size:1.1rem;flex-shrink:0}
+.nav-links{display:flex;gap:24px;list-style:none}
+.nav-links a{font-size:.9rem;font-weight:500;color:#444;padding:4px 0;border-bottom:2px solid transparent;transition:all .2s}
+.nav-links a:hover{color:#00897b;border-bottom-color:#00897b}
+.nav-toggle{display:none;flex-direction:column;gap:5px;background:none;border:none;cursor:pointer;padding:4px}
+.nav-toggle span{width:26px;height:3px;background:#1a1a2e;border-radius:3px;transition:all .3s}
+
+/* Hero */
+.hero{position:relative;padding:140px 0 100px;background:linear-gradient(135deg,#e3f2fd 0%,#e0f2f1 50%,#b2dfdb 100%);overflow:hidden}
+.hero::before{content:'';position:absolute;top:-60%;right:-20%;width:600px;height:600px;background:radial-gradient(circle,rgba(0,137,123,.08) 0%,transparent 70%);border-radius:50%}
+.hero::after{content:'';position:absolute;bottom:-30%;left:-10%;width:400px;height:400px;background:radial-gradient(circle,rgba(0,137,123,.06) 0%,transparent 70%);border-radius:50%}
+.hero-grid{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center;position:relative;z-index:1}
+.hero-badge{display:inline-flex;align-items:center;gap:6px;background:rgba(0,137,123,.1);color:#00897b;padding:6px 16px;border-radius:50px;font-size:.85rem;font-weight:600;margin-bottom:16px}
+.hero h1{font-size:2.75rem;font-weight:800;line-height:1.15;margin-bottom:16px;color:#1a1a2e}
+.hero h1 span{color:#00897b}
+.hero p{font-size:1.2rem;color:#444;margin-bottom:32px;max-width:520px}
+.hero-actions{display:flex;gap:16px;flex-wrap:wrap;margin-bottom:40px}
+.hero-stats{display:flex;gap:40px;flex-wrap:wrap}
+.hero-stat{text-align:center}
+.hero-stat-value{font-size:1.75rem;font-weight:800;color:#00897b}
+.hero-stat-label{font-size:.85rem;color:#555}
+.hero-visual{display:flex;justify-content:center;align-items:center}
+.hero-visual-inner{width:100%;max-width:460px;aspect-ratio:1;background:linear-gradient(135deg,#00897b,#004d40);border-radius:50% 50% 50% 20%;display:flex;flex-direction:column;align-items:center;justify-content:center;color:#fff;padding:40px;text-align:center;position:relative;box-shadow:0 24px 48px rgba(0,137,123,.25)}
+.hero-visual-inner .icon{font-size:4rem;margin-bottom:12px}
+.hero-visual-inner h3{font-size:1.3rem;font-weight:600}
+.hero-visual-inner p{font-size:.9rem;opacity:.85}
+.hero-badge-sm{position:absolute;background:#fff;color:#00897b;padding:6px 14px;border-radius:50px;font-size:.8rem;font-weight:600;box-shadow:0 4px 12px rgba(0,0,0,.1)}
+.hero-badge-sm.top-right{top:20px;right:20px}
+.hero-badge-sm.bottom-left{bottom:30px;left:-10px}
+
+/* About */
+.about{background:#fff}
+.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center}
+.about-image{background:#e0f2f1;border-radius:24px;aspect-ratio:4/5;display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden}
+.about-image-inner{text-align:center;padding:40px}
+.about-image-inner .avatar{width:120px;height:120px;background:#00897b;border-radius:50%;display:flex;align-items:center;justify-content:center;margin:0 auto 16px;color:#fff;font-size:3rem}
+.about-image-inner h3{font-size:1.4rem;font-weight:700;color:#1a1a2e}
+.about-image-inner p{color:#555;font-size:.95rem}
+.about-badge{position:absolute;bottom:20px;left:20px;background:#fff;border-radius:12px;padding:12px 20px;box-shadow:0 4px 16px rgba(0,0,0,.08)}
+.about-badge span{font-size:.9rem;color:#555}
+.about-badge strong{color:#00897b}
+.about-text h3{font-size:1.6rem;font-weight:700;margin-bottom:16px;color:#1a1a2e}
+.about-text p{color:#444;margin-bottom:16px;line-height:1.7}
+.about-values{display:grid;grid-template-columns:1fr 1fr 1fr;gap:20px;margin-top:24px}
+.about-value{background:#f5faf9;border-radius:12px;padding:20px;text-align:center}
+.about-value .icon{font-size:1.8rem;margin-bottom:8px}
+.about-value h4{font-size:.95rem;font-weight:600;color:#1a1a2e;margin-bottom:4px}
+.about-value p{font-size:.8rem;color:#666}
+
+/* Consultations */
+.consultations{background:#f5faf9}
+.consult-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:24px}
+.consult-card{background:#fff;border-radius:16px;padding:32px 24px;text-align:center;transition:all .3s;box-shadow:0 4px 12px rgba(0,0,0,.04);border:1px solid #e8f5e9}
+.consult-card:hover{transform:translateY(-6px);box-shadow:0 12px 32px rgba(0,137,123,.12);border-color:#00897b}
+.consult-card .icon{width:56px;height:56px;background:#e0f2f1;border-radius:16px;display:flex;align-items:center;justify-content:center;margin:0 auto 16px;font-size:1.5rem}
+.consult-card h3{font-size:1.15rem;font-weight:700;margin-bottom:4px}
+.consult-card .price{color:#00897b;font-weight:700;font-size:.95rem;margin-bottom:12px}
+.consult-card ul{list-style:none;text-align:left;font-size:.9rem;color:#555}
+.consult-card ul li{padding:4px 0;padding-left:20px;position:relative}
+.consult-card ul li::before{content:'✓';position:absolute;left:0;color:#00897b;font-weight:700}
+
+/* Horaires */
+.horaires{background:#fff}
+.horaires-table-wrap{max-width:640px;margin:0 auto;border-radius:16px;overflow:hidden;box-shadow:0 4px 20px rgba(0,0,0,.06)}
+.horaires-table{width:100%;border-collapse:collapse}
+.horaires-table th,.horaires-table td{padding:14px 24px;text-align:left;border-bottom:1px solid #e8f5e9}
+.horaires-table th{background:#e0f2f1;color:#00897b;font-weight:600;font-size:.9rem}
+.horaires-table td{font-size:.95rem}
+.horaires-table tr:last-child td{border-bottom:none}
+.horaires-table .closed{color:#ccc}
+.horaires-note{text-align:center;margin-top:16px;color:#666;font-size:.9rem}
+
+/* Avis */
+.avis{background:#f5faf9}
+.avis-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:24px}
+.avis-card{background:#fff;border-radius:16px;padding:28px;box-shadow:0 4px 12px rgba(0,0,0,.04);border:1px solid #e8f5e9;transition:transform .3s}
+.avis-card:hover{transform:translateY(-4px)}
+.avis-stars{color:#ffb300;font-size:1.1rem;letter-spacing:2px;margin-bottom:12px}
+.avis-card blockquote{font-size:.95rem;color:#444;line-height:1.6;margin-bottom:12px;font-style:italic}
+.avis-card blockquote::before{content:'"';color:#00897b;font-size:1.2rem}
+.avis-card blockquote::after{content:'"';color:#00897b;font-size:1.2rem}
+.avis-author{font-weight:600;color:#1a1a2e;font-size:.9rem}
+.avis-card .date{font-size:.8rem;color:#999;margin-top:4px}
+
+/* Prevention */
+.prevention{background:#fff}
+.prev-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:32px}
+.prev-card{border-radius:16px;overflow:hidden;box-shadow:0 4px 12px rgba(0,0,0,.04);border:1px solid #e8f5e9;transition:all .3s}
+.prev-card:hover{transform:translateY(-4px);box-shadow:0 12px 32px rgba(0,137,123,.1)}
+.prev-card-img{height:180px;display:flex;align-items:center;justify-content:center;font-size:3rem}
+.prev-card:nth-child(1) .prev-card-img{background:linear-gradient(135deg,#e3f2fd,#bbdefb)}
+.prev-card:nth-child(2) .prev-card-img{background:linear-gradient(135deg,#e0f2f1,#b2dfdb)}
+.prev-card:nth-child(3) .prev-card-img{background:linear-gradient(135deg,#fff3e0,#ffe0b2)}
+.prev-card-body{padding:28px}
+.prev-card-body h3{font-size:1.15rem;font-weight:700;margin-bottom:8px;color:#1a1a2e}
+.prev-card-body p{font-size:.9rem;color:#555;line-height:1.6}
+.prev-card-body .tag{display:inline-block;background:#e0f2f1;color:#00897b;font-size:.75rem;font-weight:600;padding:4px 10px;border-radius:50px;margin-top:12px}
+
+/* FAQ */
+.faq{background:#f5faf9}
+.faq-list{max-width:760px;margin:0 auto;display:flex;flex-direction:column;gap:12px}
+.faq-item{background:#fff;border-radius:12px;overflow:hidden;border:1px solid #e8f5e9;transition:box-shadow .3s}
+.faq-item:hover{box-shadow:0 4px 16px rgba(0,0,0,.06)}
+.faq-question{width:100%;display:flex;align-items:center;justify-content:space-between;padding:18px 24px;background:none;border:none;font-size:1rem;font-weight:600;color:#1a1a2e;cursor:pointer;text-align:left;gap:12px}
+.faq-question::after{content:'+';font-size:1.3rem;color:#00897b;font-weight:700;transition:transform .3s;flex-shrink:0}
+.faq-item.open .faq-question::after{transform:rotate(45deg)}
+.faq-answer{padding:0 24px;max-height:0;overflow:hidden;transition:all .3s}
+.faq-item.open .faq-answer{max-height:300px;padding:0 24px 18px}
+.faq-answer p{font-size:.95rem;color:#555;line-height:1.6}
+
+/* Contact */
+.contact{background:#fff}
+.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:48px}
+.contact-info{display:flex;flex-direction:column;gap:24px}
+.contact-item{display:flex;gap:16px;align-items:flex-start}
+.contact-item .icon{width:44px;height:44px;background:#e0f2f1;border-radius:12px;display:flex;align-items:center;justify-content:center;font-size:1.2rem;flex-shrink:0}
+.contact-item h4{font-size:.95rem;font-weight:600;margin-bottom:2px}
+.contact-item p,.contact-item a{font-size:.95rem;color:#555}
+.contact-map{width:100%;border-radius:16px;overflow:hidden;border:1px solid #e8f5e9;aspect-ratio:16/9;background:#e0f2f1;display:flex;align-items:center;justify-content:center;color:#00897b;font-size:.9rem;margin-top:16px}
+.contact-form{background:#f5faf9;border-radius:16px;padding:36px;border:1px solid #e8f5e9}
+.contact-form h3{font-size:1.3rem;font-weight:700;margin-bottom:20px}
+.form-group{margin-bottom:16px}
+.form-group label{display:block;font-size:.9rem;font-weight:600;color:#333;margin-bottom:6px}
+.form-group input,.form-group textarea,.form-group select{width:100%;padding:12px 16px;border:2px solid #e0e0e0;border-radius:10px;font-size:.95rem;font-family:inherit;transition:border-color .3s;background:#fff}
+.form-group input:focus,.form-group textarea:focus,.form-group select:focus{border-color:#00897b;outline:none}
+.form-group textarea{resize:vertical;min-height:110px}
+.form-row{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+
+/* Footer */
+.footer{background:#1a1a2e;color:#aaa;padding:32px 0}
+.footer-inner{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:16px}
+.footer a{color:#bbb}
+.footer a:hover{color:#fff}
+.footer-credit{font-size:.85rem}
+
+/* Responsive */
+@media(max-width:900px){
+  .hero-grid{grid-template-columns:1fr;gap:40px}
+  .hero{text-align:center;padding:120px 0 60px}
+  .hero p{margin-left:auto;margin-right:auto}
+  .hero-actions{justify-content:center}
+  .hero-stats{justify-content:center}
+  .hero-visual-inner{max-width:340px}
+  .about-grid{grid-template-columns:1fr;gap:40px}
+  .contact-grid{grid-template-columns:1fr;gap:32px}
+  .section{padding:60px 0}
+}
+@media(max-width:768px){
+  .nav-links{display:none;position:absolute;top:64px;left:0;right:0;background:#fff;flex-direction:column;padding:20px 24px;gap:16px;border-bottom:1px solid #e0e0e0;box-shadow:0 4px 20px rgba(0,0,0,.08)}
+  .nav-links.open{display:flex}
+  .nav-toggle{display:flex}
+  .hero h1{font-size:2rem}
+  .hero-stat-value{font-size:1.4rem}
+  .about-values{grid-template-columns:1fr}
+  .form-row{grid-template-columns:1fr}
+  .section-title{font-size:1.6rem}
+  .contact-form{padding:24px}
+  .hero-stats{gap:24px}
+}
+@media(max-width:480px){
+  .hero h1{font-size:1.6rem}
+  .hero{padding:100px 0 40px}
+  .section{padding:40px 0}
+  .consult-grid{grid-template-columns:1fr}
+  .avis-grid{grid-template-columns:1fr}
+  .prev-grid{grid-template-columns:1fr}
+}
+</style>
+</head>
+<body>
+
+<!-- Nav -->
+<nav class="nav" id="nav">
+  <div class="container nav-inner">
+    <a href="#" class="nav-logo">
+      <span class="nav-logo-icon">+</span>
+      Dr. Sophie Renard
+    </a>
+    <button class="nav-toggle" id="navToggle" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#about">À propos</a></li>
+      <li><a href="#consultations">Consultations</a></li>
+      <li><a href="#horaires">Horaires</a></li>
+      <li><a href="#avis">Avis</a></li>
+      <li><a href="#prevention">Prévention</a></li>
+      <li><a href="#faq">FAQ</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </div>
+</nav>
+
+<!-- Hero -->
+<section class="hero" id="hero">
+  <div class="container hero-grid">
+    <div>
+      <div class="hero-badge">&#9733; 4.9 — Médecine générale à Chambéry</div>
+      <h1>Votre santé, <span>notre priorité</span></h1>
+      <p>Cabinet médical moderne au cœur de Chambéry. Bienveillance, écoute et soins de qualité pour toute la famille.</p>
+      <div class="hero-actions">
+        <a href="#contact" class="btn btn-primary">&#128222; Prendre rendez-vous</a>
+        <a href="#consultations" class="btn btn-outline">Nos consultations</a>
+      </div>
+      <div class="hero-stats">
+        <div class="hero-stat">
+          <div class="hero-stat-value">15+</div>
+          <div class="hero-stat-label">ans d'expérience</div>
+        </div>
+        <div class="hero-stat">
+          <div class="hero-stat-value">5 000+</div>
+          <div class="hero-stat-label">patients suivis</div>
+        </div>
+        <div class="hero-stat">
+          <div class="hero-stat-value">4.9★</div>
+          <div class="hero-stat-label">satisfaction</div>
+        </div>
+      </div>
+    </div>
+    <div class="hero-visual">
+      <div class="hero-visual-inner">
+        <span class="hero-badge-sm top-right">&#9733; Recommandé</span>
+        <div class="icon">&#9820;</div>
+        <h3>Dr. Sophie Renard</h3>
+        <p>Médecine générale — DU Médecine du sport<br>Cabinet moderne à Chambéry</p>
+        <span class="hero-badge-sm bottom-left">&#128197; Nouveaux patients bienvenus</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- About -->
+<section class="section about" id="about">
+  <div class="container">
+    <h2 class="section-title">À propos du cabinet</h2>
+    <p class="section-subtitle">Un accompagnement médical personnalisé dans un cadre moderne et chaleureux</p>
+    <div class="about-grid">
+      <div class="about-image">
+        <div class="about-image-inner">
+          <div class="avatar">&#9820;</div>
+          <h3>Dr. Sophie Renard</h3>
+          <p>Médecine générale &amp; DU Médecine du sport</p>
+          <p style="font-size:.85rem;margin-top:8px;color:#666">Diplômée de l'Université de Grenoble</p>
+        </div>
+        <div class="about-badge">
+          <span>Cabinet équipé : <strong>ECG • Spirométrie • Doppler</strong></span>
+        </div>
+      </div>
+      <div class="about-text">
+        <h3>Une approche humaine et moderne de la médecine</h3>
+        <p>Le Dr. Sophie Renard exerce la médecine générale à Chambéry depuis plus de 15 ans. Diplômée de l'Université de Grenoble et titulaire d'un Diplôme Universitaire en Médecine du Sport, elle met son expertise au service de patients de tous âges.</p>
+        <p>Son cabinet, entièrement rénové en 2021, est équipé d'appareils de diagnostic modernes (ECG, spirométrie, Doppler, dermatoscope) permettant un premier bilan complet sans recourir systématiquement à des examens externes.</p>
+        <div class="about-values">
+          <div class="about-value">
+            <div class="icon">&#128172;</div>
+            <h4>Écoute</h4>
+            <p>Une consultation sans pression, le temps d'échanger</p>
+          </div>
+          <div class="about-value">
+            <div class="icon">&#128200;</div>
+            <h4>Prévention</h4>
+            <p>Suivi régulier, dépistages et vaccination</p>
+          </div>
+          <div class="about-value">
+            <div class="icon">&#129309;</div>
+            <h4>Bienveillance</h4>
+            <p>Respect, confidentialité, non-jugement</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Consultations -->
+<section class="section consultations" id="consultations">
+  <div class="container">
+    <h2 class="section-title">Nos consultations</h2>
+    <p class="section-subtitle">Des soins adaptés à chaque étape de la vie, de la pédiatrie à la médecine du sport</p>
+    <div class="consult-grid">
+      <div class="consult-card">
+        <div class="icon">&#128138;</div>
+        <h3>Médecine générale</h3>
+        <div class="price">25 € (secteur 1)</div>
+        <ul>
+          <li>Consultation adulte et enfant</li>
+          <li>Suivi de pathologies chroniques</li>
+          <li>Vaccination et prescriptions</li>
+          <li>Certificats médicaux</li>
+        </ul>
+      </div>
+      <div class="consult-card">
+        <div class="icon">&#128118;</div>
+        <h3>Pédiatrie</h3>
+        <div class="price">Suivi de l'enfant</div>
+        <ul>
+          <li>Suivi nourrisson et enfant</li>
+          <li>Courbes de croissance</li>
+          <li>Vaccinations obligatoires</li>
+          <li>Dépistage précoce</li>
+        </ul>
+      </div>
+      <div class="consult-card">
+        <div class="icon">&#9917;</div>
+        <h3>Médecine du sport</h3>
+        <div class="price">DU Médecine du sport</div>
+        <ul>
+          <li>Certificat de non-contre-indication</li>
+          <li>Suivi du sportif</li>
+          <li>Traumatologie légère</li>
+          <li>Conseils nutritionnels</li>
+        </ul>
+      </div>
+      <div class="consult-card">
+        <div class="icon">&#128187;</div>
+        <h3>Téléconsultation</h3>
+        <div class="price">25 € (pris en charge)</div>
+        <ul>
+          <li>Consultation par visio</li>
+          <li>Ordonnance dématérialisée</li>
+          <li>Arrêt de travail</li>
+          <li>Renouvellement traitement</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Horaires -->
+<section class="section horaires" id="horaires">
+  <div class="container">
+    <h2 class="section-title">Horaires d'ouverture</h2>
+    <p class="section-subtitle">Consultations sur rendez-vous. Urgences traitées dans la mesure du possible.</p>
+    <div class="horaires-table-wrap">
+      <table class="horaires-table">
+        <thead>
+          <tr><th>Jour</th><th>Matin</th><th>Après-midi</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>Lundi</td><td>8h00 – 12h00</td><td>14h00 – 18h00</td></tr>
+          <tr><td>Mardi</td><td>8h00 – 12h00</td><td>14h00 – 18h00</td></tr>
+          <tr><td>Mercredi</td><td>8h00 – 12h00</td><td>14h00 – 18h00</td></tr>
+          <tr><td>Jeudi</td><td>8h00 – 12h00</td><td>14h00 – 18h00</td></tr>
+          <tr><td>Vendredi</td><td>8h00 – 12h00</td><td>14h00 – 18h00</td></tr>
+          <tr><td>Samedi</td><td>9h00 – 12h00</td><td class="closed">Fermé</td></tr>
+          <tr><td>Dimanche</td><td class="closed" colspan="2">Fermé</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="horaires-note">&#128274; Consultation uniquement sur rendez-vous. Appelez au <strong>04 79 00 00 00</strong> ou prenez rendez-vous en ligne.</p>
+  </div>
+</section>
+
+<!-- Avis -->
+<section class="section avis" id="avis">
+  <div class="container">
+    <h2 class="section-title">Ce que disent nos patients</h2>
+    <p class="section-subtitle">L'avis de nos patients reflète notre engagement quotidien à leurs côtés</p>
+    <div class="avis-grid">
+      <div class="avis-card">
+        <div class="avis-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <blockquote>À l'écoute, consciencieuse, jamais d'attente excessive. Meilleur médecin du secteur depuis que je suis arrivé à Chambéry. Je recommande vivement.</blockquote>
+        <div class="avis-author">Antoine B.</div>
+        <div class="date">Consultation le 12 mars 2026</div>
+      </div>
+      <div class="avis-card">
+        <div class="avis-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <blockquote>Très bonne pédiatre pour mes enfants. Elle explique tout clairement, prend le temps de répondre à toutes mes questions. Mes enfants l'adorent.</blockquote>
+        <div class="avis-author">Carine M.</div>
+        <div class="date">Consultation le 28 février 2026</div>
+      </div>
+      <div class="avis-card">
+        <div class="avis-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <blockquote>Un médecin qui connaît son métier et qui se soucie vraiment de ses patients. Le suivi est excellent, les ordonnances toujours pertinentes. Merci docteur.</blockquote>
+        <div class="avis-author">Philippe D.</div>
+        <div class="date">Consultation le 15 février 2026</div>
+      </div>
+      <div class="avis-card">
+        <div class="avis-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <blockquote>Je consulte le Dr. Renard depuis 8 ans. Elle a suivi mes deux grossesses et suit maintenant mes enfants. Une confiance absolue. Le cabinet est moderne et agréable.</blockquote>
+        <div class="avis-author">Sophie L.</div>
+        <div class="date">Consultation le 2 février 2026</div>
+      </div>
+      <div class="avis-card">
+        <div class="avis-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <blockquote>La téléconsultation fonctionne parfaitement. J'ai obtenu mon ordonnance en 15 minutes chrono. Dr. Renard était disponible en visio le jour même. Très pratique.</blockquote>
+        <div class="avis-author">Marc T.</div>
+        <div class="date">Consultation le 22 janvier 2026</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Prevention -->
+<section class="section prevention" id="prevention">
+  <div class="container">
+    <h2 class="section-title">Prévention &amp; conseils santé</h2>
+    <p class="section-subtitle">La prévention est au cœur de notre pratique. Quelques rappels essentiels.</p>
+    <div class="prev-grid">
+      <div class="prev-card">
+        <div class="prev-card-img">&#128300;</div>
+        <div class="prev-card-body">
+          <h3>Dépistage : les gestes qui sauvent</h3>
+          <p>Le dépistage régulier permet de détecter précocement certaines pathologies et d'augmenter considérablement les chances de guérison. Cancer du sein (mammographie dès 50 ans, tous les 2 ans), cancer colorectal (test immunologique dès 50 ans, tous les 2 ans), cancer du col de l'utérus (frottis tous les 3 ans de 25 à 65 ans). N'attendez pas les symptômes : prévenir vaut mieux que guérir. Consultez votre médecin traitant pour établir votre calendrier de dépistage personnalisé.</p>
+          <span class="tag">&#128197; Dépistage</span>
+        </div>
+      </div>
+      <div class="prev-card">
+        <div class="prev-card-img">&#128137;</div>
+        <div class="prev-card-body">
+          <h3>Vaccination : protégez-vous et protégez les autres</h3>
+          <p>La vaccination est l'un des progrès les plus efficaces de la médecine moderne. En France, 11 vaccins sont obligatoires chez le nourrisson (DTP, coqueluche, rougeole, oreillons, rubéole, hépatite B, méningocoque C, pneumocoque). Le rappel contre la grippe saisonnière est recommandé chaque année pour les personnes de 65 ans et plus, les femmes enceintes et les personnes atteintes de maladies chroniques. Le rappel antitétanique est conseillé tous les 20 ans. Vérifiez votre carnet vaccinal lors de votre prochaine consultation.</p>
+          <span class="tag">&#128137; Vaccination</span>
+        </div>
+      </div>
+      <div class="prev-card">
+        <div class="prev-card-img">&#128202;</div>
+        <div class="prev-card-body">
+          <h3>Bilan annuel : faites le point sur votre santé</h3>
+          <p>Un bilan de santé annuel permet de faire le point sur votre état général, même en l'absence de symptômes. Au programme : contrôle du poids et de l'IMC, mesure de la tension artérielle, bilan sanguin (glycémie, cholestérol, bilan rénal), examen clinique complet, mise à jour vaccinale, et conseils personnalisés en nutrition et activité physique. Ce bilan est particulièrement important après 40 ans et en cas d'antécédents familiaux. Votre médecin traitant est votre interlocuteur privilégié pour ce suivi global.</p>
+          <span class="tag">&#128202; Bilan annuel</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="section faq" id="faq">
+  <div class="container">
+    <h2 class="section-title">Questions fréquentes</h2>
+    <p class="section-subtitle">Retrouvez les réponses aux questions les plus courantes sur notre cabinet</p>
+    <div class="faq-list">
+      <div class="faq-item open">
+        <button class="faq-question">Que faire en cas d'urgence médicale ?</button>
+        <div class="faq-answer">
+          <p>En cas d'urgence vitale, composez immédiatement le <strong>15</strong> (SAMU) ou le <strong>112</strong>. Pour une urgence moins grave, contactez le cabinet au 04 79 00 00 00. Nous réservons des créances d'urgence chaque jour. Si le cabinet est fermé, la régulation médicale du 15 vous orientera vers la structure adaptée (maison médicale de garde ou urgences hospitalières).</p>
+        </div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question">Comment se déroule une téléconsultation ?</button>
+        <div class="faq-answer">
+          <p>La téléconsultation se fait par visioconférence via un lien sécurisé envoyé par SMS ou e-mail. Elle est prise en charge par l'Assurance Maladie au même tarif qu'une consultation classique (25 €). Elle est idéale pour un renouvellement d'ordonnance, un arrêt de travail ou un conseil médical. Certains actes (examen clinique, auscultation) nécessitent une consultation en présentiel.</p>
+        </div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question">Faut-il avancer les frais ? La carte Vitale est-elle acceptée ?</button>
+        <div class="faq-answer">
+          <p>Oui, la carte Vitale est acceptée. Les consultations en secteur 1 (25 €) sont remboursées à 70 % par l'Assurance Maladie et 30 % par votre mutuelle. Vous pouvez payer par carte bancaire, espèces ou chèque. Le tiers payant est possible pour les patients en ALD (affection de longue durée), les bénéficiaires de la Complémentaire Santé Solidaire (C2S) et les femmes enceintes.</p>
+        </div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question">Acceptez-vous les nouveaux patients ?</button>
+        <div class="faq-answer">
+          <p>Oui, le cabinet accueille les nouveaux patients. Vous pouvez vous déclarer auprès de votre caisse d'Assurance Maladie en choisissant le Dr. Sophie Renard comme médecin traitant. N'hésitez pas à nous contacter pour une première consultation. Nous vous demanderons de venir avec vos derniers bilans médicaux et votre carte Vitale.</p>
+        </div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question">Puis-je obtenir une ordonnance en ligne ?</button>
+        <div class="faq-answer">
+          <p>Oui, après une téléconsultation, vous recevez une ordonnance dématérialisée par e-mail ou via un lien sécurisé. Cette ordonnance est valable en pharmacie. Pour les traitements chroniques, un suivi régulier en présentiel est nécessaire (au moins une consultation physique par an). Les ordonnances de stupéfiants ne peuvent être délivrées qu'en consultation physique.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Contact -->
+<section class="section contact" id="contact">
+  <div class="container">
+    <h2 class="section-title">Contact &amp; accès</h2>
+    <p class="section-subtitle">Prenez rendez-vous ou contactez-nous pour toute question</p>
+    <div class="contact-grid">
+      <div>
+        <div class="contact-info">
+          <div class="contact-item">
+            <div class="icon">&#128205;</div>
+            <div>
+              <h4>Adresse</h4>
+              <p>12 Rue de la République<br>73000 Chambéry</p>
+            </div>
+          </div>
+          <div class="contact-item">
+            <div class="icon">&#128222;</div>
+            <div>
+              <h4>Téléphone</h4>
+              <a href="tel:0479000000">04 79 00 00 00</a>
+            </div>
+          </div>
+          <div class="contact-item">
+            <div class="icon">&#9993;</div>
+            <div>
+              <h4>Email</h4>
+              <a href="mailto:contact@drrenard-chambery.fr">contact@drrenard-chambery.fr</a>
+            </div>
+          </div>
+          <div class="contact-item">
+            <div class="icon">&#128652;</div>
+            <div>
+              <h4>Accès</h4>
+              <p>Bus lignes A, B, C — arrêt « République »<br>Parking République à 50 m (30 min gratuites)</p>
+            </div>
+          </div>
+        </div>
+        <div class="contact-map">
+          <span>&#128205; 12 Rue de la République, 73000 Chambéry — Carte interactive</span>
+        </div>
+      </div>
+      <form class="contact-form" onsubmit="event.preventDefault();alert('Merci pour votre message. Nous vous répondrons dans les plus brefs délais.')">
+        <h3>Envoyez-nous un message</h3>
+        <div class="form-row">
+          <div class="form-group">
+            <label for="nom">Nom complet</label>
+            <input type="text" id="nom" placeholder="Votre nom" required>
+          </div>
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" id="email" placeholder="votre@email.fr" required>
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="sujet">Sujet</label>
+          <select id="sujet">
+            <option>Prise de rendez-vous</option>
+            <option>Demande d'ordonnance</option>
+            <option>Question médicale</option>
+            <option>Autre</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="message">Message</label>
+          <textarea id="message" placeholder="Votre message..." required></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary" style="width:100%;justify-content:center">Envoyer le message</button>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer class="footer">
+  <div class="container footer-inner">
+    <span>&copy; 2026 Dr. Sophie Renard — Cabinet médical, Chambéry</span>
+    <span class="footer-credit">Site par <a href="#">AbdelBuilder</a></span>
+  </div>
+</footer>
+
+<script>
+// Mobile nav toggle
+document.getElementById('navToggle').addEventListener('click', function(){
+  document.getElementById('navLinks').classList.toggle('open');
+});
+// Close nav on link click
+document.querySelectorAll('.nav-links a').forEach(a => {
+  a.addEventListener('click', () => {
+    document.getElementById('navLinks').classList.remove('open');
+  });
+});
+// Nav shadow on scroll
+window.addEventListener('scroll', function(){
+  document.getElementById('nav').classList.toggle('scrolled', window.scrollY > 20);
+});
+// FAQ accordion
+document.querySelectorAll('.faq-question').forEach(btn => {
+  btn.addEventListener('click', function(){
+    const item = this.parentElement;
+    const isOpen = item.classList.contains('open');
+    document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('open'));
+    if(!isOpen) item.classList.add('open');
+  });
+});
+</script>
+</body>
+</html>

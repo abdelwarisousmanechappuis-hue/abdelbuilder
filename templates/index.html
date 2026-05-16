@@ -4,27 +4,29 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Templates sites web professionnels | AbdelBuilder</title>
-<meta name="description" content="Templates HTML/CSS prêts à l'emploi : coiffure, restaurant, artisan. Personnalisez et déployez votre site en 1 heure. 29€ seulement.">
+<meta name="description" content="7 templates HTML/CSS prêts à l'emploi : coiffure, restaurant, artisan, photographe, coach sportif, garage auto, agence immobilière, médecin. Personnalisez et déployez votre site en 1 heure. 29€ seulement.">
 <style>
 * { margin: 0; padding: 0; box-sizing: border-box; }
 body { font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif; background: #0f0f1a; color: #e0e0f0; line-height: 1.6; }
-.container { max-width: 1000px; margin: 0 auto; padding: 0 20px; }
+.container { max-width: 1100px; margin: 0 auto; padding: 0 20px; }
 
 .header { text-align: center; padding: 60px 0 40px; }
 .header h1 { font-size: 2.5rem; background: linear-gradient(135deg, #6c5ce7, #00cec9); -webkit-background-clip: text; -webkit-text-fill-color: transparent; margin-bottom: 12px; }
-.header p { color: #8888aa; font-size: 1.1rem; max-width: 600px; margin: 0 auto; }
+.header p { color: #8888aa; font-size: 1.1rem; max-width: 650px; margin: 0 auto; }
 .header .price-badge { display: inline-block; background: linear-gradient(135deg, #6c5ce7, #00cec9); color: #fff; padding: 8px 24px; border-radius: 50px; font-weight: 700; font-size: 1.2rem; margin-top: 16px; }
+.header .count { color: #a29bfe; font-size: 0.9rem; margin-top: 8px; }
 
-.template-grid { display: grid; gap: 24px; padding: 20px 0 60px; }
-.template-card { background: #1a1a2e; border-radius: 20px; overflow: hidden; border: 1px solid #2a2a4a; display: flex; flex-direction: column; }
-.template-preview { padding: 40px; background: #12121f; min-height: 200px; display: flex; align-items: center; justify-content: center; font-size: 3rem; position: relative; }
-.template-preview .label { position: absolute; top: 16px; left: 16px; background: #6c5ce7; color: #fff; padding: 4px 14px; border-radius: 50px; font-size: 0.75rem; font-weight: 600; text-transform: uppercase; }
-.template-body { padding: 28px; flex: 1; display: flex; flex-direction: column; }
-.template-body h2 { font-size: 1.3rem; color: #fff; margin-bottom: 8px; }
-.template-body p { color: #8888aa; font-size: 0.9rem; margin-bottom: 12px; flex: 1; }
-.template-features { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 16px; }
-.template-features span { background: rgba(108,92,231,0.15); color: #a29bfe; padding: 4px 12px; border-radius: 50px; font-size: 0.75rem; font-weight: 500; }
-.template-body .btn { display: inline-block; background: linear-gradient(135deg, #6c5ce7, #00cec9); color: #fff; padding: 12px 28px; border-radius: 50px; font-weight: 600; font-size: 0.9rem; text-decoration: none; text-align: center; transition: opacity 0.3s; }
+.template-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(340px, 1fr)); gap: 20px; padding: 20px 0 60px; }
+.template-card { background: #1a1a2e; border-radius: 20px; overflow: hidden; border: 1px solid #2a2a4a; display: flex; flex-direction: column; transition: transform 0.3s, box-shadow 0.3s; }
+.template-card:hover { transform: translateY(-4px); box-shadow: 0 12px 40px rgba(108,92,231,0.15); }
+.template-preview { padding: 50px 40px; min-height: 180px; display: flex; align-items: center; justify-content: center; font-size: 3.2rem; position: relative; }
+.template-preview .label { position: absolute; top: 14px; left: 14px; color: #fff; padding: 4px 14px; border-radius: 50px; font-size: 0.7rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.5px; }
+.template-body { padding: 24px; flex: 1; display: flex; flex-direction: column; }
+.template-body h2 { font-size: 1.15rem; color: #fff; margin-bottom: 8px; }
+.template-body p { color: #8888aa; font-size: 0.85rem; margin-bottom: 12px; flex: 1; line-height: 1.6; }
+.template-features { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 14px; }
+.template-features span { background: rgba(108,92,231,0.15); color: #a29bfe; padding: 3px 10px; border-radius: 50px; font-size: 0.7rem; font-weight: 500; }
+.template-body .btn { display: inline-block; background: linear-gradient(135deg, #6c5ce7, #00cec9); color: #fff; padding: 11px 24px; border-radius: 50px; font-weight: 600; font-size: 0.85rem; text-decoration: none; text-align: center; transition: opacity 0.3s; }
 .template-body .btn:hover { opacity: 0.85; }
 
 .how { background: #1a1a2e; border-radius: 20px; padding: 40px; margin-bottom: 40px; border: 1px solid #2a2a4a; }
@@ -36,9 +38,9 @@ body { font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif; back
 .footer { text-align: center; padding: 30px 0; color: #555; font-size: 0.85rem; }
 .footer a { color: #6c5ce7; text-decoration: none; }
 
-@media (min-width: 700px) {
-  .template-card { flex-direction: row; }
-  .template-preview { flex: 0 0 280px; min-height: auto; }
+@media (max-width: 700px) {
+  .template-grid { grid-template-columns: 1fr; }
+  .header h1 { font-size: 1.8rem; }
 }
 </style>
 </head>
@@ -48,63 +50,161 @@ body { font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif; back
 
   <div class="header">
     <h1>&#x1F4E6; Templates site web</h1>
-    <p>Des sites prêts à l'emploi — tu personnalises le texte, tu déploies sur GitHub Pages, et t'as un site pro en 1 heure.</p>
+    <p>Des sites prêts à l'emploi, design professionnel, contenu riche. Tu personnalises le texte et tu déploies sur GitHub Pages en 1 heure.</p>
     <div class="price-badge">29€ l'unité</div>
+    <div class="count">7 templates disponibles</div>
   </div>
 
   <div class="template-grid">
 
     <div class="template-card">
       <div class="template-preview" style="background:linear-gradient(135deg,#1a1a2e,#16213e);color:#e84393;">
-        <div class="label">Coiffure</div>
+        <div class="label" style="background:#e84393;">Coiffure</div>
         &#x2702;
       </div>
       <div class="template-body">
-        <h2>Template Coiffure & Salon</h2>
-        <p>Site vitrine pour salon de coiffure, barbershop ou institut de beauté. Services, galerie, avis clients, contact.</p>
+        <h2>Salon de Coiffure & Beauté</h2>
+        <p>Site vitrine complet pour salon de coiffure, barbershop ou institut. Services & tarifs, galerie avant/après, avis clients, contact avec prise de RDV.</p>
         <div class="template-features">
           <span>Responsive</span>
-          <span>Galerie photos</span>
-          <span>Avis clients</span>
+          <span>Grille tarifs</span>
+          <span>Avis 5★</span>
+          <span>Galerie</span>
           <span>CTA téléphone</span>
         </div>
-        <a href="coiffure.html" class="btn" target="_blank">&#x1F50D; Voir le template</a>
+        <a href="coiffure.html" class="btn" target="_blank">&#x1F50D; Aperçu</a>
       </div>
     </div>
 
     <div class="template-card">
       <div class="template-preview" style="background:linear-gradient(135deg,#1a3c2a,#2c5a3e);color:#e8b83a;">
-        <div class="label">Restaurant</div>
+        <div class="label" style="background:#e8b83a;color:#1a3c2a;">Restaurant</div>
         &#x1F372;
       </div>
       <div class="template-body">
-        <h2>Template Restaurant & Bar</h2>
-        <p>Site complet pour restaurant, bar, pizzeria ou food-truck. Menu avec prix, galerie, avis, contact et Google Maps.</p>
+        <h2>Restaurant, Bar & Traiteur</h2>
+        <p>Site complet pour restaurant, pizzeria, bar ou food-truck. Menu complet avec prix par catégorie, galerie, avis Google, Google Maps et horaires.</p>
         <div class="template-features">
           <span>Responsive</span>
           <span>Menu avec prix</span>
           <span>Avis Google</span>
           <span>Google Maps</span>
+          <span>Galerie</span>
         </div>
-        <a href="restaurant.html" class="btn" target="_blank">&#x1F50D; Voir le template</a>
+        <a href="restaurant.html" class="btn" target="_blank">&#x1F50D; Aperçu</a>
       </div>
     </div>
 
     <div class="template-card">
       <div class="template-preview" style="background:linear-gradient(135deg,#2d2b55,#1a1a3e);color:#6c5ce7;">
-        <div class="label">Artisan / Service</div>
+        <div class="label" style="background:#6c5ce7;">Artisan</div>
         &#x1F527;
       </div>
       <div class="template-body">
-        <h2>Template Artisan & Service Pro</h2>
-        <p>Site pour artisans, entrepreneurs, coachs, auto-entrepreneurs. Présentation, services, galerie avant/après, contact.</p>
+        <h2>Artisan & Service Pro</h2>
+        <p>Site pour artisans, entrepreneurs, coachs, auto-entrepreneurs. Présentation, services détaillés, galerie avant/après, contact avec demande de devis.</p>
         <div class="template-features">
           <span>Responsive</span>
-          <span>Galerie photos</span>
-          <span>Section services</span>
+          <span>Grille services</span>
+          <span>Galerie avant/après</span>
           <span>CTA devis</span>
         </div>
-        <a href="artisan.html" class="btn" target="_blank">&#x1F50D; Voir le template</a>
+        <a href="artisan.html" class="btn" target="_blank">&#x1F50D; Aperçu</a>
+      </div>
+    </div>
+
+    <div class="template-card">
+      <div class="template-preview" style="background:linear-gradient(135deg,#0a0a0f,#1a1a2e);color:#c9a84c;">
+        <div class="label" style="background:#c9a84c;color:#0a0a0f;">Photographe</div>
+        &#x1F4F8;
+      </div>
+      <div class="template-body">
+        <h2>Photographe Professionnel</h2>
+        <p>Portfolio pour photographe mariage, portrait, famille. 6 prestations avec prix, galerie masonry, 6 témoignages clients, FAQ détaillée, formulaire de contact.</p>
+        <div class="template-features">
+          <span>Responsive</span>
+          <span>Grille tarifs</span>
+          <span>Masonry galerie</span>
+          <span>6 témoignages</span>
+          <span>FAQ</span>
+        </div>
+        <a href="photographe.html" class="btn" target="_blank">&#x1F50D; Aperçu</a>
+      </div>
+    </div>
+
+    <div class="template-card">
+      <div class="template-preview" style="background:linear-gradient(135deg,#0d0d1a,#1a1a2e);color:#00e676;">
+        <div class="label" style="background:#00e676;color:#0d0d1a;">Fitness</div>
+        &#x1F4AA;
+      </div>
+      <div class="template-body">
+        <h2>Coach Sportif & Fitness</h2>
+        <p>Site pour coach sportif, salle de sport, préparation marathon. 4 programmes avec tarifs, grille d'abonnements, 5 témoignages transformation, galerie exercices.</p>
+        <div class="template-features">
+          <span>Responsive</span>
+          <span>4 programmes</span>
+          <span>Grille tarifs</span>
+          <span>5 témoignages</span>
+          <span>FAQ</span>
+        </div>
+        <a href="coach-sportif.html" class="btn" target="_blank">&#x1F50D; Aperçu</a>
+      </div>
+    </div>
+
+    <div class="template-card">
+      <div class="template-preview" style="background:linear-gradient(135deg,#1a2a3a,#0f1b2d);color:#f39c12;">
+        <div class="label" style="background:#f39c12;color:#1a2a3a;">Garage</div>
+        &#x1F697;
+      </div>
+      <div class="template-body">
+        <h2>Garage Auto & Mécanicien</h2>
+        <p>Site pour garage automobile, centre auto, carrossier. 6 services avec prix, tableau des 12 prestations courantes, 5 avis clients, galerie avant/après.</p>
+        <div class="template-features">
+          <span>Responsive</span>
+          <span>6 services</span>
+          <span>Tableau tarifs</span>
+          <span>Avis clients</span>
+          <span>FAQ</span>
+        </div>
+        <a href="garage-auto.html" class="btn" target="_blank">&#x1F50D; Aperçu</a>
+      </div>
+    </div>
+
+    <div class="template-card">
+      <div class="template-preview" style="background:linear-gradient(135deg,#0f1b2d,#1a2a3e);color:#c9a84c;">
+        <div class="label" style="background:#c9a84c;color:#0f1b2d;">Immobilier</div>
+        &#x1F3E2;
+      </div>
+      <div class="template-body">
+        <h2>Agence Immobilière</h2>
+        <p>Site pour agence immobilière, chasseur immobilier, négociateur. 4 services, biens à la une avec prix, tableau commissions, 5 avis clients, formulaire estimation.</p>
+        <div class="template-features">
+          <span>Responsive</span>
+          <span>Biens à la une</span>
+          <span>Tableau frais</span>
+          <span>5 avis</span>
+          <span>Formulaire</span>
+        </div>
+        <a href="agence-immobiliere.html" class="btn" target="_blank">&#x1F50D; Aperçu</a>
+      </div>
+    </div>
+
+    <div class="template-card">
+      <div class="template-preview" style="background:linear-gradient(135deg,#e0f2f1,#b2dfdb);color:#00897b;">
+        <div class="label" style="background:#00897b;color:#fff;">Médecin</div>
+        &#x1FA7A;
+      </div>
+      <div class="template-body">
+        <h2>Cabinet Médical & Santé</h2>
+        <p>Site pour médecin généraliste, dentiste, kiné, cabinet paramédical. 4 consultations avec prix, horaires, 5 avis patients, articles prévention, téléconsultation.</p>
+        <div class="template-features">
+          <span>Responsive</span>
+          <span>Tarifs consultation</span>
+          <span>Horaires</span>
+          <span>5 avis</span>
+          <span>Articles prévention</span>
+        </div>
+        <a href="medecin.html" class="btn" target="_blank">&#x1F50D; Aperçu</a>
       </div>
     </div>
 
@@ -113,11 +213,11 @@ body { font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif; back
   <div class="how">
     <h2>&#x1F4A1; Comment ça marche</h2>
     <ol>
-      <li><strong>Tu achètes</strong> le template sur Gumroad (paiement via carte ou PayPal)</li>
-      <li><strong>Tu reçois</strong> le fichier HTML par email</li>
-      <li><strong>Tu ouvres</strong> dans un éditeur (Bloc-notes, VS Code) et tu remplaces les textes entre <code>=== ... ===</code></li>
-      <li><strong>Tu pushes</strong> sur GitHub Pages — et t'as un site pro en ligne gratuitement</li>
-      <li><strong>Support inclus</strong> : je t'aide si t'es bloqué</li>
+      <li><strong>Tu achètes</strong> le template sur Gumroad (paiement carte ou PayPal)</li>
+      <li><strong>Tu reçois</strong> le fichier HTML par email, prêt à l'emploi</li>
+      <li><strong>Tu ouvres</strong> dans VS Code (ou Bloc-notes) et tu remplaces les textes entre <code>=== ... ===</code></li>
+      <li><strong>Tu déploies</strong> sur GitHub Pages gratuitement — site en ligne en 10 minutes</li>
+      <li><strong>Support inclus</strong> : je réponds à tes questions par email</li>
     </ol>
   </div>
 

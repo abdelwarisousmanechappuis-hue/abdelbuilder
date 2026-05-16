@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Garage du Centre — Votre mécanicien de confiance depuis 1998</title>
+<meta name="description" content="Garage du Centre à [Ville] : révision, freinage, courroie distribution, climatisation, diagnostic électronique, pneus. Devis gratuit, agréé toutes marques.">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{--blue:#1a2a3a;--blue-light:#2c4055;--orange:#f39c12;--orange-dark:#d68910;--orange-light:#f5b041;--white:#fff;--gray-50:#f8f9fa;--gray-100:#ecf0f1;--gray-200:#ddd;--gray-300:#bbb;--gray-600:#666;--gray-800:#444;--text:#333;--shadow:0 2px 20px rgba(0,0,0,.08);--radius:8px;--transition:.3s ease}
+html{scroll-behavior:smooth}
+body{font-family:'Segoe UI',system-ui,-apple-system,sans-serif;color:var(--text);line-height:1.6;background:var(--gray-50)}
+.container{max-width:1140px;margin:0 auto;padding:0 20px}
+section{padding:80px 0}
+.section-title{text-align:center;font-size:2rem;font-weight:700;color:var(--blue);margin-bottom:12px}
+.section-subtitle{text-align:center;color:var(--gray-600);margin-bottom:50px;font-size:1.05rem}
+
+/* Header */
+header{background:var(--blue);color:var(--white);padding:14px 0;position:sticky;top:0;z-index:100;box-shadow:0 2px 10px rgba(0,0,0,.15)}
+.header-inner{display:flex;justify-content:space-between;align-items:center}
+.logo{font-size:1.4rem;font-weight:800;letter-spacing:-.5px}
+.logo span{color:var(--orange)}
+nav a{color:var(--white);text-decoration:none;margin-left:24px;font-size:.9rem;font-weight:500;transition:color var(--transition)}
+nav a:hover{color:var(--orange)}
+
+/* Hero */
+.hero{background:linear-gradient(135deg,var(--blue)0%,var(--blue-light)100%);color:var(--white);text-align:center;padding:100px 20px 90px;position:relative;overflow:hidden}
+.hero::before{content:'';position:absolute;inset:0;background:url("data:image/svg+xml,%3Csvg width='60' height='60' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M30 5L35 20H50L38 30l4 16L30 38 18 46l4-16L10 20h15z' fill='rgba(255,255,255,.03)'/%3E%3C/svg%3E") repeat;pointer-events:none}
+.hero h1{font-size:2.6rem;font-weight:800;margin-bottom:16px;position:relative}
+.hero h1 span{color:var(--orange)}
+.hero p{font-size:1.15rem;opacity:.9;margin-bottom:30px;max-width:620px;margin-inline:auto;position:relative}
+.btn{display:inline-block;background:var(--orange);color:var(--white);padding:14px 36px;border-radius:50px;font-weight:700;font-size:1rem;text-decoration:none;transition:background var(--transition),transform var(--transition);border:none;cursor:pointer}
+.btn:hover{background:var(--orange-dark);transform:translateY(-2px)}
+.hero-badges{display:flex;justify-content:center;gap:16px;margin-top:32px;flex-wrap:wrap;position:relative}
+.badge{background:rgba(255,255,255,.1);backdrop-filter:blur(4px);border:1px solid rgba(255,255,255,.2);padding:8px 20px;border-radius:50px;font-size:.85rem;font-weight:500}
+
+/* About */
+.about{background:var(--white)}
+.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:50px;align-items:center}
+.about-image{background:var(--gray-100);border-radius:var(--radius);height:320px;display:flex;align-items:center;justify-content:center;font-size:4rem;color:var(--gray-300)}
+.about-stats{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-top:30px}
+.stat{text-align:center;padding:20px;background:var(--gray-50);border-radius:var(--radius)}
+.stat-number{font-size:2rem;font-weight:800;color:var(--orange);display:block}
+.stat-label{font-size:.85rem;color:var(--gray-600);margin-top:4px}
+
+/* Services */
+.services{background:var(--gray-50)}
+.services-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.service-card{background:var(--white);border-radius:var(--radius);padding:30px 24px;box-shadow:var(--shadow);transition:transform var(--transition),box-shadow var(--transition);border-top:3px solid var(--orange)}
+.service-card:hover{transform:translateY(-5px);box-shadow:0 8px 30px rgba(0,0,0,.12)}
+.service-icon{font-size:2rem;margin-bottom:12px}
+.service-card h3{font-size:1.1rem;color:var(--blue);margin-bottom:6px}
+.service-card .price{color:var(--orange);font-weight:700;font-size:.95rem;margin-bottom:8px}
+.service-card p{font-size:.9rem;color:var(--gray-600);line-height:1.5}
+
+/* Tarifs */
+.tarifs{background:var(--white)}
+.tarifs-table{width:100%;border-collapse:collapse;max-width:700px;margin:0 auto}
+.tarifs-table th,.tarifs-table td{padding:14px 20px;text-align:left;border-bottom:1px solid var(--gray-100)}
+.tarifs-table th{background:var(--blue);color:var(--white);font-weight:600;font-size:.9rem}
+.tarifs-table th:last-child{text-align:right}
+.tarifs-table td:last-child{text-align:right;font-weight:700;color:var(--orange)}
+.tarifs-table tr:nth-child(even){background:var(--gray-50)}
+.tarifs-table tr:hover{background:var(--gray-100)}
+.tarifs-note{text-align:center;margin-top:20px;font-size:.9rem;color:var(--gray-600)}
+
+/* Avis */
+.avis{background:var(--gray-50)}
+.avis-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:24px}
+.avis-card{background:var(--white);border-radius:var(--radius);padding:28px;box-shadow:var(--shadow)}
+.stars{color:var(--orange);font-size:1.1rem;letter-spacing:2px;margin-bottom:10px}
+.avis-card blockquote{font-style:italic;color:var(--text);margin-bottom:14px;font-size:.95rem}
+.avis-author{font-weight:700;color:var(--blue);font-size:.9rem}
+.avis-author small{color:var(--gray-600);font-weight:400}
+
+/* Galerie */
+.galerie{background:var(--white)}
+.galerie-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.galerie-item{position:relative;border-radius:var(--radius);overflow:hidden;height:200px;background:var(--gray-100);display:flex;align-items:center;justify-content:center;flex-direction:column;transition:transform var(--transition)}
+.galerie-item:hover{transform:scale(1.02)}
+.galerie-item .placeholder-icon{font-size:2.5rem;color:var(--gray-300);margin-bottom:6px}
+.galerie-item .label{font-size:.8rem;color:var(--gray-600);font-weight:500}
+.galerie-item .badge-ba{position:absolute;bottom:10px;left:10px;background:var(--blue);color:var(--white);font-size:.7rem;padding:2px 10px;border-radius:4px}
+.galerie-item .badge-ap{position:absolute;bottom:10px;right:10px;background:var(--orange);color:var(--white);font-size:.7rem;padding:2px 10px;border-radius:4px}
+
+/* FAQ */
+.faq{background:var(--gray-50)}
+.faq-list{max-width:720px;margin:0 auto;display:flex;flex-direction:column;gap:10px}
+.faq-item{border:1px solid var(--gray-200);border-radius:var(--radius);overflow:hidden;background:var(--white)}
+.faq-question{width:100%;padding:18px 22px;text-align:left;background:none;border:none;font-size:1rem;font-weight:600;color:var(--blue);cursor:pointer;display:flex;justify-content:space-between;align-items:center;transition:background var(--transition)}
+.faq-question:hover{background:var(--gray-50)}
+.faq-question::after{content:'+';font-size:1.3rem;color:var(--orange);transition:transform var(--transition)}
+.faq-item.active .faq-question::after{transform:rotate(45deg)}
+.faq-answer{padding:0 22px 18px;font-size:.92rem;color:var(--gray-600);line-height:1.6;display:none}
+.faq-item.active .faq-answer{display:block}
+
+/* Contact */
+.contact{background:var(--white)}
+.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:40px}
+.contact-info h3{font-size:1.1rem;color:var(--blue);margin-bottom:20px}
+.contact-info p{font-size:.95rem;color:var(--gray-600);margin-bottom:10px;display:flex;align-items:center;gap:10px}
+.contact-info .icon{font-size:1.2rem;width:24px;text-align:center}
+.contact-hours{margin-top:20px;padding:18px;background:var(--gray-50);border-radius:var(--radius)}
+.contact-hours h4{font-size:.95rem;color:var(--blue);margin-bottom:8px}
+.contact-hours p{font-size:.88rem;color:var(--gray-600);margin-bottom:4px}
+.contact-form{display:flex;flex-direction:column;gap:14px}
+.contact-form input,.contact-form textarea,.contact-form select{padding:13px 16px;border:1px solid var(--gray-200);border-radius:var(--radius);font-size:.95rem;font-family:inherit;outline:none;transition:border var(--transition)}
+.contact-form input:focus,.contact-form textarea:focus,.contact-form select:focus{border-color:var(--orange)}
+.contact-form textarea{resize:vertical;min-height:100px}
+.contact-form .btn{width:100%;text-align:center}
+
+/* Footer */
+footer{background:var(--blue);color:rgba(255,255,255,.7);text-align:center;padding:30px 20px;font-size:.88rem}
+footer a{color:var(--orange);text-decoration:none}
+footer strong{color:var(--white)}
+
+/* Responsive */
+@media(max-width:968px){
+.services-grid{grid-template-columns:repeat(2,1fr)}
+.about-grid{grid-template-columns:1fr}
+.about-image{height:220px;font-size:3rem}
+.galerie-grid{grid-template-columns:repeat(2,1fr)}
+}
+@media(max-width:640px){
+section{padding:50px 0}
+.hero{padding:70px 20px 60px}
+.hero h1{font-size:1.7rem}
+.header-inner{flex-direction:column;gap:10px}
+nav a{margin:0 10px;font-size:.82rem}
+.services-grid{grid-template-columns:1fr}
+.contact-grid{grid-template-columns:1fr}
+.about-stats{grid-template-columns:1fr}
+.galerie-grid{grid-template-columns:1fr}
+.avis-grid{grid-template-columns:1fr}
+.tarifs-table th,.tarifs-table td{padding:10px 12px;font-size:.85rem}
+}
+@media(max-width:480px){
+.hero h1{font-size:1.4rem}
+.hero-badges{gap:8px}
+.badge{font-size:.75rem;padding:5px 14px}
+.btn{padding:12px 24px;font-size:.9rem}
+}
+</style>
+</head>
+<body>
+
+<header>
+<div class="container header-inner">
+<div class="logo">Garage <span>du Centre</span></div>
+<nav>
+<a href="#services">Services</a>
+<a href="#tarifs">Tarifs</a>
+<a href="#avis">Avis</a>
+<a href="#contact">Contact</a>
+</nav>
+</div>
+</header>
+
+<section class="hero">
+<div class="container">
+<h1>Votre mécanicien <span>de confiance</span> depuis 1998</h1>
+<p>Au Garage du Centre, l'excellence mécanique au service de votre véhicule. Diagnostic précis, réparations durables et transparence des prix.</p>
+<a href="#contact" class="btn">Prendre RDV en ligne</a>
+<div class="hero-badges">
+<span class="badge">&#9989; Garage agréé</span>
+<span class="badge">&#9989; Pièces d'origine</span>
+<span class="badge">&#9989; Devis gratuit</span>
+<span class="badge">&#9989; Toutes marques</span>
+</div>
+</div>
+</section>
+
+<section class="about" id="about">
+<div class="container">
+<h2 class="section-title">&#192; propos</h2>
+<p class="section-subtitle">Une histoire de famille au service des automobilistes depuis plus de 25 ans</p>
+<div class="about-grid">
+<div>
+<p>Fondé en 1998 par Jean-Claude Mercier, le <strong>Garage du Centre</strong> est une affaire familiale transmise avec passion. Aujourd'hui dirigé par son fils Antoine et une équipe de <strong>3 mécaniciens diplômés</strong>, nous mettons notre expérience au service de tous les conducteurs de la région.</p>
+<p style="margin-top:14px;">&#201;quipé d'un matériel de diagnostic dernière génération, notre atelier prend en charge <strong>toutes les marques</strong> (fran&#231;aises, allemandes, asiatiques) pour l'entretien courant comme les réparations les plus complexes. Notre credo : un travail soigné, des pièces de qualité et des prix justes.</p>
+<div class="about-stats">
+<div class="stat"><span class="stat-number">27</span><span class="stat-label">Années d'expérience</span></div>
+<div class="stat"><span class="stat-number">3</span><span class="stat-label">Mécaniciens</span></div>
+<div class="stat"><span class="stat-number">15 000+</span><span class="stat-label">Clients satisfaits</span></div>
+</div>
+</div>
+<div class="about-image">
+&#128663;
+</div>
+</div>
+</div>
+</section>
+
+<section class="services" id="services">
+<div class="container">
+<h2 class="section-title">Nos services</h2>
+<p class="section-subtitle">Des prestations complètes pour l'entretien et la réparation de votre véhicule</p>
+<div class="services-grid">
+
+<div class="service-card">
+<div class="service-icon">&#128736;</div>
+<h3>Révision complète</h3>
+<div class="price">&#224; partir de 89€</div>
+<p>Vidange moteur, remplacement filtres (huile, air, habitacle), contrôle des niveaux, pression pneus et éclairage. Carnet tamponné.</p>
+</div>
+
+<div class="service-card">
+<div class="service-icon">&#128659;</div>
+<h3>Freinage</h3>
+<div class="price">79€ / train</div>
+<p>Remplacement plaquettes et disques, purge du liquide de frein, contrôle de l'usure et de l'étrier. Sécurité optimale garantie.</p>
+</div>
+
+<div class="service-card">
+<div class="service-icon">&#9881;</div>
+<h3>Courroie distribution</h3>
+<div class="price">Dès 350€</div>
+<p>Changement complet courroie, galets tendeurs et pompe à eau. Repose au bon couple et contrôle du calage moteur.</p>
+</div>
+
+<div class="service-card">
+<div class="service-icon">&#127777;</div>
+<h3>Climatisation</h3>
+<div class="price">59€</div>
+<p>Recharge de gaz, contrôle d'étanchéité, désinfection du circuit et changement filtre habitacle. Air sain et frais.</p>
+</div>
+
+<div class="service-card">
+<div class="service-icon">&#128187;</div>
+<h3>Diagnostic électronique</h3>
+<div class="price">45€</div>
+<p>Passage valise diagnostic, lecture et effacement des défauts, analyse des capteurs et calculateurs. Rapport détaillé fourni.</p>
+</div>
+
+<div class="service-card">
+<div class="service-icon">&#9901;</div>
+<h3>Pneus</h3>
+<div class="price">Montage offert</div>
+<p>Vente des grandes marques (Michelin, Continental, Pirelli), montage, équilibrage et recyclage des anciens pneus inclus.</p>
+</div>
+
+</div>
+</div>
+</section>
+
+<section class="tarifs" id="tarifs">
+<div class="container">
+<h2 class="section-title">Nos tarifs</h2>
+<p class="section-subtitle">Des prix transparents, sans mauvaise surprise. Devis gratuit en atelier.</p>
+<table class="tarifs-table">
+<thead><tr><th>Prestation</th><th>Prix TTC</th></tr></thead>
+<tbody>
+<tr><td>Révision complète (essence)</td><td>89€</td></tr>
+<tr><td>Révision complète (diesel)</td><td>109€</td></tr>
+<tr><td>Vidange moteur + filtre</td><td>55€</td></tr>
+<tr><td>Freinage complet (train avant)</td><td>79€</td></tr>
+<tr><td>Freinage complet (train arrière)</td><td>69€</td></tr>
+<tr><td>Courroie distribution (selon moteur)</td><td>350€ &ndash; 580€</td></tr>
+<tr><td>Embrayage complet</td><td>390€ &ndash; 650€</td></tr>
+<tr><td>Diagnostic électronique</td><td>45€</td></tr>
+<tr><td>Recharge climatisation</td><td>59€</td></tr>
+<tr><td>Montage pneu (1 unité)</td><td>Offert *</td></tr>
+<tr><td>Pare-brise &Eacute;change standard</td><td>120€ &ndash; 250€</td></tr>
+<tr><td>Forfait révision + freinage</td><td>149€</td></tr>
+</tbody>
+</table>
+<p class="tarifs-note">* Montage offert sur achat de 2 pneus minimum. Prix susceptibles de varier selon véhicule. Demandez votre devis personnalisé.</p>
+</div>
+</section>
+
+<section class="avis" id="avis">
+<div class="container">
+<h2 class="section-title">Ce que disent nos clients</h2>
+<p class="section-subtitle">Des automobilistes comme vous, satisfaits d'un travail bien fait.</p>
+<div class="avis-grid">
+
+<div class="avis-card">
+<div class="stars">&#9733; &#9733; &#9733; &#9733; &#9733;</div>
+<blockquote>&#171; Garage sérieux, tarifs honnêtes. Distribution changée sur ma Clio 4, aucun problème depuis. Antoine m'a tout expliqué en détail avant de commencer. Je recommande vivement. &#187;</blockquote>
+<div class="avis-author">Pierre M. <small>&mdash; Renault Clio 4</small></div>
+</div>
+
+<div class="avis-card">
+<div class="stars">&#9733; &#9733; &#9733; &#9733; &#9733;</div>
+<blockquote>&#171; Je viens depuis 10 ans, jamais déçu. Toujours des conseils sans chercher à vendre pour rien. La révision de ma 308 a été faite rapidement et à un prix imbattable. &#187;</blockquote>
+<div class="avis-author">Sophie L. <small>&mdash; Peugeot 308</small></div>
+</div>
+
+<div class="avis-card">
+<div class="stars">&#9733; &#9733; &#9733; &#9733; &#9733;</div>
+<blockquote>&#171; Un excellent accueil et un travail soigné. J'ai fait refaire l'embrayage de mon Scénic 3. Le rapport qualité-prix est excellent et le délai tenu. &#187;</blockquote>
+<div class="avis-author">Karim B. <small>&mdash; Renault Scénic 3</small></div>
+</div>
+
+<div class="avis-card">
+<div class="stars">&#9733; &#9733; &#9733; &#9733; &#9733;</div>
+<blockquote>&#171; J'ai eu un souci de clim en plein été, ils m'ont pris en urgence et réparé le jour même. Équipe compétente et sympathique. Merci encore ! &#187;</blockquote>
+<div class="avis-author">&Eacute;lodie R. <small>&mdash; Citroën C3</small></div>
+</div>
+
+<div class="avis-card">
+<div class="stars">&#9733; &#9733; &#9733; &#9733; &#9733;</div>
+<blockquote>&#171; Garage de confiance. Mon fils y amène sa Mégane, j'y amène ma Golf. Les prix sont clairs, le travail est propre et les conseils avisés. &#187;</blockquote>
+<div class="avis-author">Alain D. <small>&mdash; VW Golf 7 / Renault Mégane</small></div>
+</div>
+
+</div>
+</div>
+</section>
+
+<section class="galerie" id="galerie">
+<div class="container">
+<h2 class="section-title">Avant / Après</h2>
+<p class="section-subtitle">Quelques exemples de nos interventions en atelier.</p>
+<div class="galerie-grid">
+<div class="galerie-item">
+<div class="placeholder-icon">&#128247;</div>
+<div class="label">Freinage complet</div>
+<span class="badge-ba">Avant</span>
+<span class="badge-ap">Après</span>
+</div>
+<div class="galerie-item">
+<div class="placeholder-icon">&#128247;</div>
+<div class="label">Distribution + pompe</div>
+<span class="badge-ba">Avant</span>
+<span class="badge-ap">Après</span>
+</div>
+<div class="galerie-item">
+<div class="placeholder-icon">&#128247;</div>
+<div class="label">Remplacement embrayage</div>
+<span class="badge-ba">Avant</span>
+<span class="badge-ap">Après</span>
+</div>
+<div class="galerie-item">
+<div class="placeholder-icon">&#128247;</div>
+<div class="label">Réfection moteur</div>
+<span class="badge-ba">Avant</span>
+<span class="badge-ap">Après</span>
+</div>
+<div class="galerie-item">
+<div class="placeholder-icon">&#128247;</div>
+<div class="label">Montage pneus</div>
+<span class="badge-ba">Avant</span>
+<span class="badge-ap">Après</span>
+</div>
+<div class="galerie-item">
+<div class="placeholder-icon">&#128247;</div>
+<div class="label">Désinfection clim</div>
+<span class="badge-ba">Avant</span>
+<span class="badge-ap">Après</span>
+</div>
+</div>
+</div>
+</section>
+
+<section class="faq" id="faq">
+<div class="container">
+<h2 class="section-title">Foire aux questions</h2>
+<p class="section-subtitle">Les réponses aux questions les plus fréquentes.</p>
+<div class="faq-list">
+
+<div class="faq-item">
+<button class="faq-question">Comment obtenir un devis ?</button>
+<div class="faq-answer">Vous pouvez nous appeler, passer à l'atelier ou remplir le formulaire de contact ci-dessous. Nous établissons un devis détaillé gratuit sous 24h en semaine.</div>
+</div>
+
+<div class="faq-item">
+<button class="faq-question">Quelle garantie sur les réparations ?</button>
+<div class="faq-answer">Toutes nos réparations sont garanties 2 ans (pièce et main-d'œuvre) conformément à la législation. Les pièces d'origine constructeur bénéficient de la garantie du fabricant.</div>
+</div>
+
+<div class="faq-item">
+<button class="faq-question">Prenez-vous toutes les marques ?</button>
+<div class="faq-answer">Oui, nous travaillons sur toutes les marques françaises (Renault, Peugeot, Citroën, DS), allemandes (VW, BMW, Mercedes, Audi) et asiatiques (Toyota, Honda, Hyundai, Kia).</div>
+</div>
+
+<div class="faq-item">
+<button class="faq-question">Quels moyens de paiement acceptez-vous ?</button>
+<div class="faq-answer">Nous acceptons les espèces, chèques, cartes bancaires (CB, Visa, Mastercard) et le paiement en plusieurs fois sans frais dès 150€ d'achat.</div>
+</div>
+
+<div class="faq-item">
+<button class="faq-question">Puis-je venir en urgence sans rendez-vous ?</button>
+<div class="faq-answer">Oui, nous gardons des créneaux réservés pour les urgences (panne, voyant allumé, fuite). Appelez-nous avant pour qu'on vous accueille au mieux.</div>
+</div>
+
+</div>
+</div>
+</section>
+
+<section class="contact" id="contact">
+<div class="container">
+<h2 class="section-title">Contactez-nous</h2>
+<p class="section-subtitle">Prenez rendez-vous ou demandez un devis gratuit dès aujourd'hui.</p>
+<div class="contact-grid">
+<div class="contact-info">
+<h3>Garage du Centre</h3>
+<p><span class="icon">&#128205;</span> 15 Rue de la Gare, 75000 [Ville]</p>
+<p><span class="icon">&#128222;</span> 01 23 45 67 89</p>
+<p><span class="icon">&#128231;</span> contact@garageducentre.fr</p>
+<div class="contact-hours">
+<h4>&#128338; Horaires d'ouverture</h4>
+<p>Lundi &ndash; Vendredi : 8h &ndash; 12h &bull; 14h &ndash; 18h</p>
+<p>Samedi : 9h &ndash; 12h</p>
+<p>Dimanche : Fermé</p>
+</div>
+</div>
+<form class="contact-form">
+<input type="text" placeholder="Nom et prénom" required>
+<input type="tel" placeholder="Téléphone">
+<select required>
+<option value="">Type de véhicule</option>
+<option>Citadine</option>
+<option>Berline</option>
+<option>SUV / 4x4</option>
+<option>Utilitaire</option>
+<option>Autre</option>
+</select>
+<textarea placeholder="Description de l'intervention souhaitée..." required></textarea>
+<button type="submit" class="btn">Envoyer ma demande</button>
+</form>
+</div>
+</div>
+</section>
+
+<footer>
+<div class="container">
+<p>&copy; 2026 Garage du Centre. Réalisé avec <strong>AbdelBuilder</strong> &mdash; <a href="#">Mentions légales</a></p>
+</div>
+</footer>
+
+<script>
+document.querySelectorAll('.faq-question').forEach(btn => {
+btn.addEventListener('click', () => {
+const item = btn.parentElement;
+const isActive = item.classList.contains('active');
+document.querySelectorAll('.faq-item').forEach(el => el.classList.remove('active'));
+if(!isActive) item.classList.add('active');
+});
+});
+document.querySelector('.contact-form').addEventListener('submit', function(e){
+e.preventDefault();
+alert('Merci pour votre demande ! Nous vous recontacterons dans les plus brefs délais.');
+this.reset();
+});
+</script>
+
+</body>
+</html>
